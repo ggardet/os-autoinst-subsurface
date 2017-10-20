@@ -21,27 +21,27 @@ This is the openqa/os-autoinst test repo for Subsurface
 - Get needles and tests:
 
   ```
-  git clone openqa-subsurface
+  git clone https://github.com/ggardet/os-autoinst-subsurface
   ```
 
-- Create symlink from os-autoinst-distri-{opensuse, fedora}/tests/subsurface to point to openqa-subsurface/tests/subsurface/ 
+- Create symlink from os-autoinst-distri-{opensuse, fedora}/tests/subsurface to point to os-autoinst-subsurface/tests/subsurface/ 
 
   ```
-  ln -s ../../openqa-subsurface/tests/subsurface/ os-autoinst-distri-opensuse/tests/subsurface 
-  ln -s ../../openqa-subsurface/tests/subsurface/ os-autoinst-distri-fedora/tests/subsurface
+  ln -s ../../os-autoinst-subsurface/tests/subsurface/ os-autoinst-distri-opensuse/tests/subsurface 
+  ln -s ../../os-autoinst-subsurface/tests/subsurface/ os-autoinst-distri-fedora/tests/subsurface
   ```
 
 
 - ISO:
- - Get latest openSUSE Tumbleweed Live KDE:
- ```
- wget http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-KDE-Live-x86_64-Snapshot20171010-Media.iso
- ```
- - And/or Fedora 26 Live KDE :
- ```
- wget https://download.fedoraproject.org/pub/fedora/linux/releases/26/Spins/x86_64/iso/Fedora-KDE-Live-x86_64-26-1.5.iso
- ```
- - And create symlinks in `isos/$HOST/` folder (we do not want to strore big ISO files in this repo)
+  - Get latest openSUSE Tumbleweed Live KDE:
+  ```
+  wget http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-KDE-Live-x86_64-Snapshot20171010-Media.iso
+  ```
+  - And/or Fedora 26 Live KDE :
+  ```
+  wget https://download.fedoraproject.org/pub/fedora/linux/releases/26/Spins/x86_64/iso/Fedora-KDE-Live-x86_64-26-1.5.iso
+  ```
+  - And create symlinks in `isos/` folder (we do not want to strore big ISO files in this repo)
 
 
 
