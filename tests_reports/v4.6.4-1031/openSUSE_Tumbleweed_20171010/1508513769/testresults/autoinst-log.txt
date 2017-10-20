@@ -1,0 +1,868 @@
+15:36:07.6646 11610 git hash of test distribution: 28643eaa99f99cc9efa4438294185b267d106840
+15:36:07.9921 11610 scheduling boot tests/subsurface/boot.pm
+15:36:07.9929 11610 scheduling install_subsurface tests/subsurface/install_subsurface.pm
+15:36:07.9936 11610 scheduling start_subsurface tests/subsurface/start_subsurface.pm
+15:36:07.9942 11610 scheduling subsurface_dive_planner tests/subsurface/subsurface_dive_planner.pm
+15:36:07.9969 11610 init needles from ..//needles
+15:36:08.0025 11610 loaded 35 needles
+15:36:08.2084 11615 started mgmt loop with pid 11615
+15:36:08.2229 11615 running /usr/bin/qemu-img create raid/1 -f qcow2 10G
+15:36:08.4895 11619 QEMU emulator version 2.9.0(openSUSE Leap 42.3)
+ Copyright (c) 2003-2017 Fabrice Bellard and the QEMU Project developers
+
+15:36:08.4899 11619 starting: /usr/bin/qemu-system-x86_64 -serial file:serial0 -soundhw ac97 -global isa-fdc.driveA= -vga cirrus -m 3072 -netdev user,id=qanet0 -device virtio-net,netdev=qanet0,mac=52:54:00:12:34:56 -device virtio-scsi-pci,id=scsi0 -device virtio-blk,drive=hd1 -drive file=raid/l1,cache=unsafe,if=none,id=hd1,format=qcow2 -drive media=cdrom,if=none,id=cd0,format=raw,file=../isos/opensuse/openSUSE-Tumbleweed-KDE-Live-x86_64-Snapshot20171010-Media.iso -device scsi-cd,drive=cd0,bus=scsi0.0 -boot once=d,menu=on,splash-time=5000 -device usb-ehci -device usb-tablet -smp 3 -enable-kvm -no-shutdown -vnc :90,share=force-shared -qmp unix:qmp_socket,server,nowait -monitor unix:hmp_socket,server,nowait -S -monitor telnet:127.0.0.1:15222,server,nowait
+15:36:09.4180 11615 pointer type 0 0 640 480 -257
+15:36:09.4184 11615 led state 0 1 1 -261
+15:36:09.4352 11615 hmpsocket 13, qmpsocket 14
+15:36:09.4363 11615 EVENT {"event":"RESUME","timestamp":{"seconds":1508513769,"microseconds":436242}}
+15:36:09.4496 11614 Snapshots are supported
+15:36:09.4504 11614 ||| starting boot tests/subsurface/boot.pm at 2017-10-20 15:36:09
+15:36:09.4607 11614 <<< testapi::assert_screen(mustmatch='bootloader', timeout=30)
+15:36:10.5379 11615 MATCH(bootloader-opensuse-tw-live-kde-20171001:0.00)
+15:36:10.5975 11615 MATCH(bootloader-fedora-26-live-kde:0.00)
+15:36:10.5977 11615 no match: 29.0s
+15:36:11.5221 11615 MATCH(bootloader-opensuse-tw-live-kde-20171001:0.00)
+15:36:11.5636 11615 MATCH(bootloader-fedora-26-live-kde:0.00)
+15:36:11.5639 11615 no match: 28.0s
+15:36:12.5284 11615 MATCH(bootloader-opensuse-tw-live-kde-20171001:0.00)
+15:36:12.5656 11615 MATCH(bootloader-fedora-26-live-kde:0.00)
+15:36:12.5658 11615 no match: 27.0s
+15:36:13.5177 11615 MATCH(bootloader-opensuse-tw-live-kde-20171001:0.00)
+15:36:13.5565 11615 MATCH(bootloader-fedora-26-live-kde:0.00)
+15:36:13.5567 11615 no match: 26.0s
+15:36:14.5343 11615 MATCH(bootloader-opensuse-tw-live-kde-20171001:0.00)
+15:36:14.6183 11615 MATCH(bootloader-fedora-26-live-kde:0.00)
+15:36:14.6185 11615 no match: 25.0s
+15:36:15.5295 11615 MATCH(bootloader-opensuse-tw-live-kde-20171001:0.00)
+15:36:15.5702 11615 MATCH(bootloader-fedora-26-live-kde:0.00)
+15:36:15.5704 11615 no match: 24.0s
+15:36:16.5466 11615 MATCH(bootloader-opensuse-tw-live-kde-20171001:0.00)
+15:36:16.5884 11615 MATCH(bootloader-fedora-26-live-kde:0.00)
+15:36:16.5887 11615 no match: 23.0s
+15:36:17.5378 11615 MATCH(bootloader-opensuse-tw-live-kde-20171001:0.00)
+15:36:17.5770 11615 MATCH(bootloader-fedora-26-live-kde:0.00)
+15:36:17.5773 11615 no match: 22.0s
+15:36:18.5327 11615 MATCH(bootloader-opensuse-tw-live-kde-20171001:1.00)
+15:36:18.5803 11615 MATCH(bootloader-fedora-26-live-kde:0.00)
+15:36:18.7401 11614 >>> testapi::_handle_found_needle: found bootloader-opensuse-tw-live-kde-20171001, similarity 1.00 @ 0/0
+15:36:18.7407 11614 <<< testapi::send_key(key='ret')
+15:36:18.9514 11614 <<< testapi::assert_screen(mustmatch='desktop', timeout=300)
+15:36:19.5505 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:19.6484 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:19.7451 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:19.7455 11615 no match: 299.5s
+15:36:20.5366 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:20.6139 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:20.6923 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:20.6925 11615 no match: 298.5s
+15:36:21.5492 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:21.6378 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:21.7169 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:21.7172 11615 no match: 297.5s
+15:36:22.5264 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:22.6058 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:22.6910 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:22.6913 11615 no match: 296.5s
+15:36:23.5366 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:23.6233 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:23.7036 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:23.7040 11615 no match: 295.5s
+15:36:24.5316 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:24.6069 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:24.6817 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:24.6820 11615 no match: 294.5s
+15:36:25.5507 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:25.6335 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:25.7139 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:25.7141 11615 no match: 293.5s
+15:36:25.7145 11615 pointer type 1 0 720 400 -257
+15:36:26.5465 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:26.6363 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:26.7163 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:26.7165 11615 no match: 292.5s
+15:36:27.5470 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:27.6441 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:27.7232 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:27.7235 11615 no match: 291.5s
+15:36:28.5435 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:28.6378 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:28.7214 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:28.7285 11615 no match: 290.5s
+15:36:29.5531 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:29.6453 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:29.7232 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:29.7235 11615 no match: 289.5s
+15:36:30.5633 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:30.6571 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:30.7398 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:30.7401 11615 no match: 288.5s
+15:36:31.4567 11615 no change: 287.5s
+15:36:32.5578 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:32.6527 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:32.7320 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:32.7323 11615 no match: 286.5s
+15:36:33.5636 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:33.6609 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:33.7649 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:33.7717 11615 no match: 285.5s
+15:36:34.4593 11615 no change: 284.5s
+15:36:35.5582 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:35.6649 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:35.7381 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:35.7384 11615 no match: 283.5s
+15:36:36.4609 11615 no change: 282.5s
+15:36:37.4625 11615 no change: 281.5s
+15:36:38.5554 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:38.6530 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:38.7253 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:38.7315 11615 no match: 280.5s
+15:36:39.4644 11615 no change: 279.5s
+15:36:40.4657 11615 no change: 278.5s
+15:36:41.4665 11615 no change: 277.5s
+15:36:42.5705 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:42.6636 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:42.7468 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:42.7471 11615 no match: 276.5s
+15:36:43.5661 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:43.6601 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:43.7402 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:43.7470 11615 no match: 275.5s
+15:36:44.5596 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:44.6552 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:44.7369 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:44.7373 11615 no match: 274.5s
+15:36:45.5632 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:45.6553 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:45.7380 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:45.7383 11615 no match: 273.5s
+15:36:46.4706 11615 no change: 272.5s
+15:36:47.4707 11615 no change: 271.5s
+15:36:48.5651 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:48.6614 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:48.7479 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:48.7545 11615 no match: 270.5s
+15:36:49.5615 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:49.6531 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:49.7321 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:49.7324 11615 no match: 269.5s
+15:36:50.4732 11615 no change: 268.5s
+15:36:51.4743 11615 no change: 267.5s
+15:36:52.4755 11615 no change: 266.5s
+15:36:53.5717 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:53.6759 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:53.7584 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:53.7652 11615 no match: 265.5s
+15:36:54.5695 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:54.6629 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:54.7447 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:54.7449 11615 no match: 264.5s
+15:36:55.5781 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:55.6730 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:55.7676 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:55.7679 11615 no match: 263.5s
+15:36:56.6101 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:56.7197 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:56.8055 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:56.8058 11615 no match: 262.5s
+15:36:57.5921 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:57.7004 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:57.7942 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:57.7948 11615 no match: 261.5s
+15:36:58.5804 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:58.6848 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:58.7673 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:58.7742 11615 no match: 260.5s
+15:36:59.5878 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:36:59.6916 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:36:59.7831 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:36:59.7835 11615 no match: 259.5s
+15:37:00.5902 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:37:00.6909 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:37:00.7713 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:37:00.7718 11615 no match: 258.5s
+15:37:01.5829 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:37:01.6833 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:37:01.7671 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:37:01.7674 11615 no match: 257.5s
+15:37:02.5827 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:37:02.6801 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:37:02.7701 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:37:02.7706 11615 no match: 256.5s
+15:37:03.5833 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:37:03.6846 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:37:03.7687 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:37:03.7758 11615 no match: 255.5s
+15:37:04.4870 11615 no change: 254.5s
+15:37:05.5905 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:37:05.6960 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:37:05.7759 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:37:05.7764 11615 no match: 253.5s
+15:37:06.5810 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.28)
+15:37:06.6685 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.28)
+15:37:06.7485 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:37:06.7488 11615 no match: 252.5s
+15:37:07.4892 11615 no change: 251.5s
+15:37:08.5726 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.28)
+15:37:08.6515 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.28)
+15:37:08.7327 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:37:08.7395 11615 no match: 250.5s
+15:37:09.5711 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.28)
+15:37:09.6523 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.28)
+15:37:09.7334 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:37:09.7337 11615 no match: 249.5s
+15:37:10.4961 11615 no change: 248.5s
+15:37:11.5793 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:37:11.6527 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:37:11.7249 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:37:11.7251 11615 no match: 247.5s
+15:37:12.4988 11615 no change: 246.5s
+15:37:13.5933 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:37:13.6689 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:37:13.7475 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:37:13.7541 11615 no match: 245.5s
+15:37:14.4998 11615 no change: 244.5s
+15:37:15.5009 11615 no change: 243.5s
+15:37:16.5749 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:1.00)
+15:37:16.6571 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.76)
+15:37:16.7326 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:37:16.8866 11614 >>> testapi::_handle_found_needle: found desktop-opensuse-tw-live-kde-20171010, similarity 1.00 @ 0/0
+15:37:16.8876 11614 <<< testapi::x11_start_program(timeout=undef, options=undef)
+15:37:16.8879 11614 <<< testapi::send_key(key='alt-f2')
+15:37:17.0957 11614 <<< testapi::mouse_hide(border_offset=1)
+15:37:17.0966 11615 mouse_move 1023, 767
+15:37:17.0967 11615 send_pointer_event 0, 1023, 767, 1
+15:37:17.1049 11614 <<< testapi::check_screen(mustmatch='desktop-runner', timeout=30)
+15:37:17.5593 11615 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+15:37:17.6703 11615 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:37:17.7166 11615 MATCH(desktop-runner-live-kde-20171001:0.00)
+15:37:17.7169 11615 no match: 29.6s
+15:37:18.5202 11615 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+15:37:18.5392 11615 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:37:18.5586 11615 MATCH(desktop-runner-live-kde-20171001:0.96)
+15:37:18.7026 11614 >>> testapi::_handle_found_needle: found desktop-runner-live-kde-20171001, similarity 0.96 @ 245/0
+15:37:18.7030 11614 <<< testapi::type_string(string='konsole', max_interval=13, wait_screen_changes=0)
+15:37:20.8222 11614 <<< testapi::wait_still_screen(stilltime=1, timeout=30, simlvl=47)
+15:37:22.3896 11614 >>> testapi::wait_still_screen: detected same image for 1 seconds
+15:37:22.5344 11614 <<< testapi::send_key(key='ret')
+15:37:22.7418 11614 <<< testapi::wait_still_screen(stilltime=7, timeout=30, simlvl=47)
+15:37:32.0071 11614 >>> testapi::wait_still_screen: detected same image for 7 seconds
+15:37:32.0074 11614 <<< testapi::check_screen(mustmatch='desktop-runner-border', timeout=2)
+15:37:32.0202 11615 NO matching needles for desktop-runner-border
+15:37:32.0208 11615 no match: 2.0s
+15:37:33.0271 11615 no match: 1.0s
+15:37:34.3347 11614 >>> testapi::_check_backend_response: match=desktop-runner-border timed out after 2
+15:37:34.3796 11614 <<< testapi::assert_screen(mustmatch='konsole', timeout=300)
+15:37:35.1421 11615 MATCH(konsole-fedora-26:0.00)
+15:37:35.2398 11615 MATCH(konsole-live-kde-20171001:1.00)
+15:37:35.3914 11614 >>> testapi::_handle_found_needle: found konsole-live-kde-20171001, similarity 1.00 @ 0/0
+15:37:35.3920 11614 <<< testapi::type_string(string='clear
+', max_interval=250, wait_screen_changes=0)
+15:37:35.5597 11614 <<< testapi::type_string(string='su -c \'bash\'
+', max_interval=250, wait_screen_changes=0)
+15:37:35.8826 11614 <<< testapi::type_string(string='whoami > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:37:36.3750 11614 <<< testapi::wait_serial(timeout=10, regexp='root')
+15:37:38.5127 11614 >>> testapi::wait_serial: root: ok
+15:37:38.5130 11614 <<< testapi::type_string(string='cd /tmp
+', max_interval=250, wait_screen_changes=0)
+15:37:38.7174 11614 <<< testapi::type_string(string='which tput 2>&1 && PS1="\\[$(tput bold 2; tput setaf 1)\\]#\\[$(tput sgr0)\\] "
+', max_interval=250, wait_screen_changes=0)
+15:37:40.6166 11614 <<< testapi::type_string(string='clear
+', max_interval=250, wait_screen_changes=0)
+15:37:40.7649 11614 <<< testapi::assert_script_run(cmd='chmod 666 /dev/ttyS0', wait=90, fail_message=undef)
+15:37:40.7652 11614 <<< testapi::type_string(string='chmod 666 /dev/ttyS0', max_interval=250, wait_screen_changes=0)
+15:37:41.2597 11614 <<< testapi::type_string(string=' ; echo A6OHh-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:37:42.0385 11614 <<< testapi::wait_serial(timeout=90, regexp=qr/(?^:A6OHh-\d+-)/)
+15:37:44.1633 11614 >>> testapi::wait_serial: (?^:A6OHh-\d+-): ok
+15:37:44.1636 11614 <<< testapi::type_string(string='exit
+', max_interval=250, wait_screen_changes=0)
+15:37:44.2900 11614 <<< testapi::assert_script_run(cmd='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/scripthG~aq.sh', wait=90, fail_message=undef)
+15:37:44.2906 11614 <<< testapi::type_string(string='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/scripthG~aq.sh', max_interval=250, wait_screen_changes=0)
+15:37:46.2854 11614 <<< testapi::type_string(string=' ; echo N2FN_-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:37:47.0698 11614 <<< testapi::wait_serial(timeout=90, regexp=qr/(?^:N2FN_-\d+-)/)
+15:37:49.2029 11614 >>> testapi::wait_serial: (?^:N2FN_-\d+-): ok
+15:37:49.2032 11614 <<< testapi::script_run(cmd='clear', wait=undef)
+15:37:49.2033 11614 <<< testapi::type_string(string='clear', max_interval=250, wait_screen_changes=0)
+15:37:49.3279 11614 <<< testapi::type_string(string=' ; echo JgRME-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:37:50.1429 11614 <<< testapi::wait_serial(timeout=30, regexp=qr/(?^:JgRME-\d+-)/)
+15:37:52.2639 11614 >>> testapi::wait_serial: (?^:JgRME-\d+-): ok
+15:37:52.2643 11614 <<< testapi::type_string(string='(/bin/bash -eox pipefail /tmp/scripthG~aq.sh ; echo SCRIPT_FINISHEDhG~aq-$?-)| tee /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:37:54.6274 11614 <<< testapi::wait_serial(timeout=90, regexp='SCRIPT_FINISHEDhG~aq-\\d+-', record_output=1)
+15:37:56.7609 11614 >>> testapi::wait_serial: SCRIPT_FINISHEDhG~aq-\d+-: ok
+15:37:56.7612 11614 <<< testapi::record_info(title='linux_id', output='opensuse', result='ok')
+15:37:56.7617 11614 <<< testapi::assert_script_run(cmd='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/scriptFdQAU.sh', wait=90, fail_message=undef)
+15:37:56.7619 11614 <<< testapi::type_string(string='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/scriptFdQAU.sh', max_interval=250, wait_screen_changes=0)
+15:37:58.7889 11614 <<< testapi::type_string(string=' ; echo oWtpC-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:37:59.5616 11614 <<< testapi::wait_serial(regexp=qr/(?^:oWtpC-\d+-)/, timeout=90)
+15:38:01.6985 11614 >>> testapi::wait_serial: (?^:oWtpC-\d+-): ok
+15:38:01.6988 11614 <<< testapi::script_run(cmd='clear', wait=undef)
+15:38:01.6990 11614 <<< testapi::type_string(string='clear', max_interval=250, wait_screen_changes=0)
+15:38:01.8238 11614 <<< testapi::type_string(string=' ; echo JgRME-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:38:02.5876 11614 <<< testapi::wait_serial(timeout=30, regexp=qr/(?^:JgRME-\d+-)/)
+15:38:04.7334 11614 >>> testapi::wait_serial: (?^:JgRME-\d+-): ok
+15:38:04.7337 11614 <<< testapi::type_string(string='(/bin/bash -eox pipefail /tmp/scriptFdQAU.sh ; echo SCRIPT_FINISHEDFdQAU-$?-)| tee /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:38:07.0658 11614 <<< testapi::wait_serial(timeout=90, regexp='SCRIPT_FINISHEDFdQAU-\\d+-', record_output=1)
+15:38:09.2307 11614 >>> testapi::wait_serial: SCRIPT_FINISHEDFdQAU-\d+-: ok
+15:38:09.2310 11614 <<< testapi::record_info(title='linux_name', output='openSUSE Tumbleweed', result='ok')
+15:38:09.2315 11614 <<< testapi::assert_script_run(cmd='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/scriptIIqOL.sh', wait=90, fail_message=undef)
+15:38:09.2316 11614 <<< testapi::type_string(string='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/scriptIIqOL.sh', max_interval=250, wait_screen_changes=0)
+15:38:11.2280 11614 <<< testapi::type_string(string=' ; echo DMZbK-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:38:12.0139 11614 <<< testapi::wait_serial(regexp=qr/(?^:DMZbK-\d+-)/, timeout=90)
+15:38:14.1639 11614 >>> testapi::wait_serial: (?^:DMZbK-\d+-): ok
+15:38:14.1642 11614 <<< testapi::script_run(cmd='clear', wait=undef)
+15:38:14.1644 11614 <<< testapi::type_string(string='clear', max_interval=250, wait_screen_changes=0)
+15:38:14.2879 11614 <<< testapi::type_string(string=' ; echo JgRME-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:38:15.0553 11614 <<< testapi::wait_serial(regexp=qr/(?^:JgRME-\d+-)/, timeout=30)
+15:38:17.1928 11614 >>> testapi::wait_serial: (?^:JgRME-\d+-): ok
+15:38:17.1931 11614 <<< testapi::type_string(string='(/bin/bash -eox pipefail /tmp/scriptIIqOL.sh ; echo SCRIPT_FINISHEDIIqOL-$?-)| tee /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:38:19.5597 11614 <<< testapi::wait_serial(record_output=1, regexp='SCRIPT_FINISHEDIIqOL-\\d+-', timeout=90)
+15:38:21.7010 11614 >>> testapi::wait_serial: SCRIPT_FINISHEDIIqOL-\d+-: ok
+15:38:21.7013 11614 <<< testapi::record_info(title='linux_version', output='20171010', result='ok')
+15:38:21.7017 11614 <<< testapi::assert_script_run(cmd='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/script6xeoq.sh', wait=90, fail_message=undef)
+15:38:21.7019 11614 <<< testapi::type_string(string='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/script6xeoq.sh', max_interval=250, wait_screen_changes=0)
+15:38:23.6990 11614 <<< testapi::type_string(string=' ; echo ~vJTr-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:38:24.4678 11614 <<< testapi::wait_serial(regexp=qr/(?^:~vJTr-\d+-)/, timeout=90)
+15:38:26.6268 11614 >>> testapi::wait_serial: (?^:~vJTr-\d+-): ok
+15:38:26.6271 11614 <<< testapi::script_run(cmd='clear', wait=undef)
+15:38:26.6272 11614 <<< testapi::type_string(string='clear', max_interval=250, wait_screen_changes=0)
+15:38:26.7514 11614 <<< testapi::type_string(string=' ; echo JgRME-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:38:27.5224 11614 <<< testapi::wait_serial(regexp=qr/(?^:JgRME-\d+-)/, timeout=30)
+15:38:29.6527 11614 >>> testapi::wait_serial: (?^:JgRME-\d+-): ok
+15:38:29.6531 11614 <<< testapi::type_string(string='(/bin/bash -eox pipefail /tmp/script6xeoq.sh ; echo SCRIPT_FINISHED6xeoq-$?-)| tee /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:38:31.9999 11614 <<< testapi::wait_serial(timeout=90, regexp='SCRIPT_FINISHED6xeoq-\\d+-', record_output=1)
+15:38:34.1398 11614 >>> testapi::wait_serial: SCRIPT_FINISHED6xeoq-\d+-: ok
+15:38:34.1401 11614 <<< testapi::record_info(title='linux_prettyname', output='openSUSE Tumbleweed', result='ok')
+15:38:34.1403 11614 <<< testapi::type_string(string='exit
+', max_interval=250, wait_screen_changes=0)
+15:38:34.2647 11614 <<< testapi::assert_screen(mustmatch='desktop', timeout=300)
+15:38:34.3624 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:38:34.4607 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:38:34.5652 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:38:34.5655 11615 no match: 300.0s
+15:38:35.3479 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:38:35.4258 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:38:35.5009 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:38:35.5013 11615 no match: 299.0s
+15:38:36.2674 11615 no change: 298.0s
+15:38:37.2686 11615 no change: 297.0s
+15:38:38.3402 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:1.00)
+15:38:38.4132 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.75)
+15:38:38.4841 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:38:38.6191 11614 >>> testapi::_handle_found_needle: found desktop-opensuse-tw-live-kde-20171010, similarity 1.00 @ 0/0
+15:38:38.6205 11614 ||| finished boot subsurface at 2017-10-20 15:38:38 (149 s)
+15:38:38.6210 11614 ||| starting install_subsurface tests/subsurface/install_subsurface.pm at 2017-10-20 15:38:38
+15:38:38.6221 11614 <<< testapi::x11_start_program(timeout=undef, options=undef)
+15:38:38.6223 11614 <<< testapi::send_key(key='alt-f2')
+15:38:38.8305 11614 <<< testapi::mouse_hide(border_offset=1)
+15:38:38.8318 11615 send_pointer_event 0, 1018, 762, 1
+15:38:38.8319 11615 mouse_move 1023, 767
+15:38:38.8319 11615 send_pointer_event 0, 1023, 767, 1
+15:38:38.8330 11614 <<< testapi::check_screen(mustmatch='desktop-runner', timeout=30)
+15:38:39.3086 11615 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+15:38:39.3440 11615 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:38:39.3798 11615 MATCH(desktop-runner-live-kde-20171001:0.96)
+15:38:39.5239 11614 >>> testapi::_handle_found_needle: found desktop-runner-live-kde-20171001, similarity 0.96 @ 245/0
+15:38:39.5242 11614 <<< testapi::type_string(string='konsole', max_interval=13, wait_screen_changes=0)
+15:38:41.6423 11614 <<< testapi::wait_still_screen(stilltime=1, timeout=30, simlvl=47)
+15:38:43.1966 11614 >>> testapi::wait_still_screen: detected same image for 1 seconds
+15:38:43.3536 11614 <<< testapi::send_key(key='ret')
+15:38:43.5598 11614 <<< testapi::wait_still_screen(stilltime=7, timeout=30, simlvl=47)
+15:38:52.8064 11614 >>> testapi::wait_still_screen: detected same image for 7 seconds
+15:38:52.8071 11614 <<< testapi::check_screen(mustmatch='desktop-runner-border', timeout=2)
+15:38:52.8084 11615 NO matching needles for desktop-runner-border
+15:38:52.8089 11615 no match: 2.0s
+15:38:53.8100 11615 no match: 1.0s
+15:38:55.0812 11614 >>> testapi::_check_backend_response: match=desktop-runner-border timed out after 2
+15:38:55.1315 11614 <<< testapi::assert_screen(mustmatch='konsole', timeout=300)
+15:38:55.9175 11615 MATCH(konsole-fedora-26:0.00)
+15:38:55.9998 11615 MATCH(konsole-live-kde-20171001:1.00)
+15:38:56.1388 11614 >>> testapi::_handle_found_needle: found konsole-live-kde-20171001, similarity 1.00 @ 0/0
+15:38:56.1391 11614 <<< testapi::type_string(string='clear
+', max_interval=250, wait_screen_changes=0)
+15:38:56.3046 11614 <<< testapi::type_string(string='su -c \'bash\'
+', max_interval=250, wait_screen_changes=0)
+15:38:56.6280 11614 <<< testapi::type_string(string='whoami > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:38:57.1212 11614 <<< testapi::wait_serial(timeout=10, regexp='root')
+15:38:59.2608 11614 >>> testapi::wait_serial: root: ok
+15:38:59.2611 11614 <<< testapi::type_string(string='cd /tmp
+', max_interval=250, wait_screen_changes=0)
+15:38:59.4597 11614 <<< testapi::type_string(string='which tput 2>&1 && PS1="\\[$(tput bold 2; tput setaf 1)\\]#\\[$(tput sgr0)\\] "
+', max_interval=250, wait_screen_changes=0)
+15:39:01.3563 11614 <<< testapi::type_string(string='clear
+', max_interval=250, wait_screen_changes=0)
+15:39:01.5041 11614 <<< testapi::script_run(cmd='systemctl mask packagekit.service', wait=undef)
+15:39:01.5043 11614 <<< testapi::type_string(string='systemctl mask packagekit.service', max_interval=250, wait_screen_changes=0)
+15:39:02.3413 11614 <<< testapi::type_string(string=' ; echo qn0D_-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:39:03.1130 11614 <<< testapi::wait_serial(timeout=30, regexp=qr/(?^:qn0D_-\d+-)/)
+15:39:05.2498 11614 >>> testapi::wait_serial: (?^:qn0D_-\d+-): ok
+15:39:05.2501 11614 <<< testapi::script_run(cmd='systemctl stop packagekit.service', wait=undef)
+15:39:05.2502 11614 <<< testapi::type_string(string='systemctl stop packagekit.service', max_interval=250, wait_screen_changes=0)
+15:39:06.0897 11614 <<< testapi::type_string(string=' ; echo UuEDj-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:39:06.8696 11614 <<< testapi::wait_serial(timeout=30, regexp=qr/(?^:UuEDj-\d+-)/)
+15:39:08.9934 11614 >>> testapi::wait_serial: (?^:UuEDj-\d+-): ok
+15:39:08.9937 11614 <<< testapi::assert_script_run(cmd='rpm --import https://download.opensuse.org/repositories/home:/Subsurface-Divelog/openSUSE_Tumbleweed/repodata/repomd.xml.key', wait=90, fail_message=undef)
+15:39:08.9938 11614 <<< testapi::type_string(string='rpm --import https://download.opensuse.org/repositories/home:/Subsurface-Divelog/openSUSE_Tumbleweed/repodata/repomd.xml.key', max_interval=250, wait_screen_changes=0)
+15:39:12.0999 11614 <<< testapi::type_string(string=' ; echo tdvYf-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:39:12.8767 11614 <<< testapi::wait_serial(regexp=qr/(?^:tdvYf-\d+-)/, timeout=90)
+15:39:17.0024 11614 >>> testapi::wait_serial: (?^:tdvYf-\d+-): ok
+15:39:17.0027 11614 <<< testapi::assert_script_run(cmd='zypper --non-interactive ar -f https://download.opensuse.org/repositories/home:/Subsurface-Divelog/openSUSE_Tumbleweed/home:Subsurface-Divelog.repo', wait=300, fail_message=undef)
+15:39:17.0029 11614 <<< testapi::type_string(string='zypper --non-interactive ar -f https://download.opensuse.org/repositories/home:/Subsurface-Divelog/openSUSE_Tumbleweed/home:Subsurface-Divelog.repo', max_interval=250, wait_screen_changes=0)
+15:39:20.6755 11614 <<< testapi::type_string(string=' ; echo K3qcP-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:39:21.4559 11614 <<< testapi::wait_serial(regexp=qr/(?^:K3qcP-\d+-)/, timeout=300)
+15:39:23.5916 11614 >>> testapi::wait_serial: (?^:K3qcP-\d+-): ok
+15:39:23.5919 11614 <<< testapi::assert_script_run(cmd='zypper --non-interactive install subsurfacedaily', wait=600, fail_message=undef)
+15:39:23.5920 11614 <<< testapi::type_string(string='zypper --non-interactive install subsurfacedaily', max_interval=250, wait_screen_changes=0)
+15:39:24.7785 11614 <<< testapi::type_string(string=' ; echo Fq_dt-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:39:25.5559 11614 <<< testapi::wait_serial(timeout=600, regexp=qr/(?^:Fq_dt-\d+-)/)
+15:40:37.7868 11614 >>> testapi::wait_serial: (?^:Fq_dt-\d+-): ok
+15:40:37.7871 11614 <<< testapi::type_string(string='exit
+', max_interval=250, wait_screen_changes=0)
+15:40:37.9136 11614 <<< testapi::assert_script_run(cmd='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/scriptuXALj.sh', wait=90, fail_message=undef)
+15:40:37.9138 11614 <<< testapi::type_string(string='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/scriptuXALj.sh', max_interval=250, wait_screen_changes=0)
+15:40:39.9437 11614 <<< testapi::type_string(string=' ; echo 9AW7C-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:40:40.7155 11614 <<< testapi::wait_serial(timeout=90, regexp=qr/(?^:9AW7C-\d+-)/)
+15:40:42.8443 11614 >>> testapi::wait_serial: (?^:9AW7C-\d+-): ok
+15:40:42.8446 11614 <<< testapi::script_run(cmd='clear', wait=undef)
+15:40:42.8447 11614 <<< testapi::type_string(string='clear', max_interval=250, wait_screen_changes=0)
+15:40:42.9699 11614 <<< testapi::type_string(string=' ; echo JgRME-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:40:43.7442 11614 <<< testapi::wait_serial(regexp=qr/(?^:JgRME-\d+-)/, timeout=30)
+15:40:45.8807 11614 >>> testapi::wait_serial: (?^:JgRME-\d+-): ok
+15:40:45.8810 11614 <<< testapi::type_string(string='(/bin/bash -eox pipefail /tmp/scriptuXALj.sh ; echo SCRIPT_FINISHEDuXALj-$?-)| tee /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:40:48.2222 11614 <<< testapi::wait_serial(record_output=1, regexp='SCRIPT_FINISHEDuXALj-\\d+-', timeout=90)
+15:40:50.3602 11614 >>> testapi::wait_serial: SCRIPT_FINISHEDuXALj-\d+-: ok
+15:40:50.3606 11614 <<< testapi::record_info(title='subsurface_version', output='Subsurface v4.6.4-1031, built with libdivecomputer v0.6.0-devel-Subsurface-branch (0099aeeb7088c7ff3c4513f100b1cb5516f48233)', result='ok')
+15:40:50.3609 11614 <<< testapi::type_string(string='exit
+', max_interval=250, wait_screen_changes=0)
+15:40:50.4920 11614 <<< testapi::assert_screen(mustmatch='desktop', timeout=300)
+15:40:50.6010 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:40:50.7041 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:40:50.8039 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:40:50.8042 11615 no match: 300.0s
+15:40:51.5834 11615 MATCH(desktop-opensuse-tw-live-kde-20171010:1.00)
+15:40:51.6551 11615 MATCH(desktop-opensuse-tw-live-kde-20171001:0.75)
+15:40:51.7303 11615 MATCH(desktop-fedora-26-live-kde:0.00)
+15:40:51.8606 11614 >>> testapi::_handle_found_needle: found desktop-opensuse-tw-live-kde-20171010, similarity 1.00 @ 0/0
+15:40:51.8615 11614 ||| finished install_subsurface subsurface at 2017-10-20 15:40:51 (133 s)
+15:40:51.8620 11614 ||| starting start_subsurface tests/subsurface/start_subsurface.pm at 2017-10-20 15:40:51
+15:40:51.8629 11614 <<< testapi::x11_start_program(timeout=undef, options=undef)
+15:40:51.8631 11614 <<< testapi::send_key(key='alt-f2')
+15:40:52.0690 11614 <<< testapi::mouse_hide(border_offset=1)
+15:40:52.0696 11615 send_pointer_event 0, 1018, 762, 1
+15:40:52.0698 11615 mouse_move 1023, 767
+15:40:52.0699 11615 send_pointer_event 0, 1023, 767, 1
+15:40:52.0706 11614 <<< testapi::check_screen(mustmatch='desktop-runner', timeout=30)
+15:40:52.5622 11615 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+15:40:52.5978 11615 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:40:52.6379 11615 MATCH(desktop-runner-live-kde-20171001:0.99)
+15:40:52.7862 11614 >>> testapi::_handle_found_needle: found desktop-runner-live-kde-20171001, similarity 0.99 @ 245/0
+15:40:52.7865 11614 <<< testapi::type_string(string='konsole', max_interval=13, wait_screen_changes=0)
+15:40:54.9289 11614 <<< testapi::wait_still_screen(stilltime=1, timeout=30, simlvl=47)
+15:40:56.4883 11614 >>> testapi::wait_still_screen: detected same image for 1 seconds
+15:40:56.6339 11614 <<< testapi::send_key(key='ret')
+15:40:56.8406 11614 <<< testapi::wait_still_screen(stilltime=7, timeout=30, simlvl=47)
+15:41:10.1896 11614 >>> testapi::wait_still_screen: detected same image for 7 seconds
+15:41:10.1899 11614 <<< testapi::check_screen(mustmatch='desktop-runner-border', timeout=2)
+15:41:10.1906 11615 NO matching needles for desktop-runner-border
+15:41:10.1913 11615 no match: 2.0s
+15:41:11.1924 11615 no match: 1.0s
+15:41:12.4619 11614 >>> testapi::_check_backend_response: match=desktop-runner-border timed out after 2
+15:41:12.5043 11614 <<< testapi::assert_screen(mustmatch='konsole', timeout=300)
+15:41:13.2820 11615 MATCH(konsole-fedora-26:0.00)
+15:41:13.3837 11615 MATCH(konsole-live-kde-20171001:1.00)
+15:41:13.5135 11614 >>> testapi::_handle_found_needle: found konsole-live-kde-20171001, similarity 1.00 @ 0/0
+15:41:13.5139 11614 <<< testapi::assert_script_run(cmd='mkdir -p ~/.subsurface/', wait=90, fail_message=undef)
+15:41:13.5142 11614 <<< testapi::type_string(string='mkdir -p ~/.subsurface/', max_interval=250, wait_screen_changes=0)
+15:41:14.0851 11614 <<< testapi::type_string(string=' ; echo 7hhux-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:41:14.8547 11614 <<< testapi::wait_serial(regexp=qr/(?^:7hhux-\d+-)/, timeout=90)
+15:41:17.0122 11614 >>> testapi::wait_serial: (?^:7hhux-\d+-): ok
+15:41:17.0125 11614 <<< testapi::assert_script_run(cmd='curl https://raw.githubusercontent.com/Subsurface-divelog/subsurface/master/dives/test13.xml -o ~/.subsurface/test13.xml', wait=90, fail_message=undef)
+15:41:17.0127 11614 <<< testapi::type_string(string='curl https://raw.githubusercontent.com/Subsurface-divelog/subsurface/master/dives/test13.xml -o ~/.subsurface/test13.xml', max_interval=250, wait_screen_changes=0)
+15:41:20.0036 11614 <<< testapi::type_string(string=' ; echo 7KaGh-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:41:20.7886 11614 <<< testapi::wait_serial(regexp=qr/(?^:7KaGh-\d+-)/, timeout=90)
+15:41:23.9306 11614 >>> testapi::wait_serial: (?^:7KaGh-\d+-): ok
+15:41:23.9309 11614 <<< testapi::assert_script_run(cmd='curl https://raw.githubusercontent.com/Subsurface-divelog/subsurface/master/dives/test16.xml -o ~/.subsurface/test16.xml', wait=90, fail_message=undef)
+15:41:23.9310 11614 <<< testapi::type_string(string='curl https://raw.githubusercontent.com/Subsurface-divelog/subsurface/master/dives/test16.xml -o ~/.subsurface/test16.xml', max_interval=250, wait_screen_changes=0)
+15:41:26.9428 11614 <<< testapi::type_string(string=' ; echo 87WJe-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:41:27.7282 11614 <<< testapi::wait_serial(regexp=qr/(?^:87WJe-\d+-)/, timeout=90)
+15:41:29.8899 11614 >>> testapi::wait_serial: (?^:87WJe-\d+-): ok
+15:41:29.8903 11614 <<< testapi::assert_script_run(cmd='curl https://raw.githubusercontent.com/Subsurface-divelog/subsurface/master/dives/test47.xml -o ~/.subsurface/test47.xml', wait=90, fail_message=undef)
+15:41:29.8904 11614 <<< testapi::type_string(string='curl https://raw.githubusercontent.com/Subsurface-divelog/subsurface/master/dives/test47.xml -o ~/.subsurface/test47.xml', max_interval=250, wait_screen_changes=0)
+15:41:32.9328 11614 <<< testapi::type_string(string=' ; echo Yg2mh-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:41:33.7076 11614 <<< testapi::wait_serial(regexp=qr/(?^:Yg2mh-\d+-)/, timeout=90)
+15:41:35.8319 11614 >>> testapi::wait_serial: (?^:Yg2mh-\d+-): ok
+15:41:35.8322 11614 <<< testapi::type_string(string='exit
+', max_interval=250, wait_screen_changes=0)
+15:41:35.9598 11614 <<< testapi::x11_start_program(timeout=undef, options=undef)
+15:41:35.9600 11614 <<< testapi::send_key(key='alt-f2')
+15:41:36.1653 11614 <<< testapi::mouse_hide(border_offset=1)
+15:41:36.1659 11615 send_pointer_event 0, 1018, 762, 1
+15:41:36.1660 11615 mouse_move 1023, 767
+15:41:36.1660 11615 send_pointer_event 0, 1023, 767, 1
+15:41:36.1667 11614 <<< testapi::check_screen(mustmatch='desktop-runner', timeout=30)
+15:41:36.2122 11615 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+15:41:36.2564 11615 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:41:36.2961 11615 MATCH(desktop-runner-live-kde-20171001:0.00)
+15:41:36.2965 11615 no match: 30.0s
+15:41:37.1856 11615 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+15:41:37.2034 11615 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:41:37.2222 11615 MATCH(desktop-runner-live-kde-20171001:0.99)
+15:41:37.3536 11614 >>> testapi::_handle_found_needle: found desktop-runner-live-kde-20171001, similarity 0.99 @ 245/0
+15:41:37.3541 11614 <<< testapi::type_string(string='subsurface', max_interval=13, wait_screen_changes=0)
+15:41:40.3874 11614 <<< testapi::wait_still_screen(stilltime=1, timeout=30, simlvl=47)
+15:41:41.9394 11614 >>> testapi::wait_still_screen: detected same image for 1 seconds
+15:41:42.0750 11614 <<< testapi::send_key(key='ret')
+15:41:42.2828 11614 <<< testapi::wait_still_screen(stilltime=7, timeout=30, simlvl=47)
+15:42:00.6963 11614 >>> testapi::wait_still_screen: detected same image for 7 seconds
+15:42:00.6966 11614 <<< testapi::check_screen(mustmatch='desktop-runner-border', timeout=2)
+15:42:00.6973 11615 NO matching needles for desktop-runner-border
+15:42:00.6985 11615 no match: 2.0s
+15:42:01.6995 11615 no match: 1.0s
+15:42:02.9937 11614 >>> testapi::_check_backend_response: match=desktop-runner-border timed out after 2
+15:42:03.0343 11614 <<< testapi::check_screen(mustmatch='subsurface-check-for-updates', timeout=30)
+15:42:03.8496 11615 MATCH(subsurface-check-for-updates-dive-test47-20171001:0.00)
+15:42:03.9592 11615 MATCH(subsurface-check-for-updates-nodive-20171001:0.00)
+15:42:04.0551 11615 MATCH(subsurface-check-for-updates-nodive-fedora-26:0.00)
+15:42:04.0554 11615 no match: 29.3s
+15:42:04.7019 11615 no change: 28.3s
+15:42:05.7030 11615 no change: 27.3s
+15:42:06.7041 11615 no change: 26.3s
+15:42:07.7910 11615 MATCH(subsurface-check-for-updates-dive-test47-20171001:0.00)
+15:42:07.8677 11615 MATCH(subsurface-check-for-updates-nodive-20171001:0.00)
+15:42:07.9415 11615 MATCH(subsurface-check-for-updates-nodive-fedora-26:0.00)
+15:42:07.9418 11615 no match: 25.3s
+15:42:08.7060 11615 no change: 24.3s
+15:42:09.7072 11615 no change: 23.3s
+15:42:10.7084 11615 no change: 22.3s
+15:42:11.7094 11615 no change: 21.3s
+15:42:12.7105 11615 no change: 20.3s
+15:42:13.7120 11615 no change: 19.3s
+15:42:14.7128 11615 no change: 18.3s
+15:42:15.7132 11615 no change: 17.3s
+15:42:16.7149 11615 no change: 16.3s
+15:42:17.7154 11615 no change: 15.3s
+15:42:18.7164 11615 no change: 14.3s
+15:42:19.7172 11615 no change: 13.3s
+15:42:20.7185 11615 no change: 12.3s
+15:42:21.7201 11615 no change: 11.3s
+15:42:22.7204 11615 no change: 10.3s
+15:42:23.7214 11615 no change: 9.3s
+15:42:24.7226 11615 no change: 8.3s
+15:42:25.7238 11615 no change: 7.3s
+15:42:26.7241 11615 no change: 6.3s
+15:42:27.7252 11615 no change: 5.3s
+15:42:28.7296 11615 no change: 4.3s
+15:42:29.7273 11615 no change: 3.3s
+15:42:30.7327 11615 no change: 2.3s
+15:42:31.7292 11615 no change: 1.3s
+15:42:32.7365 11615 no change: 0.3s
+15:42:33.8179 11615 MATCH(subsurface-check-for-updates-dive-test47-20171001:0.00)
+15:42:33.8944 11615 MATCH(subsurface-check-for-updates-nodive-20171001:0.00)
+15:42:33.9687 11615 MATCH(subsurface-check-for-updates-nodive-fedora-26:0.00)
+15:42:34.2330 11614 >>> testapi::_check_backend_response: match=subsurface-check-for-updates timed out after 30
+15:42:34.2658 11614 <<< testapi::mouse_set(x=700, y=370)
+15:42:34.2664 11615 mouse_move 700, 370
+15:42:34.2665 11615 send_pointer_event 0, 700, 370, 1
+15:42:34.2689 11614 <<< testapi::assert_screen(mustmatch='subsurface-auto-check-for-updates', timeout=30)
+15:42:34.7692 11615 MATCH(subsurface-auto-check-for-updates-20171001:1.00)
+15:42:34.8086 11615 MATCH(subsurface-auto-check-for-updates-fedora-26:0.00)
+15:42:34.9666 11614 >>> testapi::_handle_found_needle: found subsurface-auto-check-for-updates-20171001, similarity 1.00 @ 173/262
+15:42:34.9669 11614 <<< testapi::mouse_set(x=520, y=385)
+15:42:34.9674 11615 mouse_move 520, 385
+15:42:34.9675 11615 send_pointer_event 0, 520, 385, 1
+15:42:34.9680 11614 <<< testapi::mouse_click(button='left', cursor_down='0.15')
+15:42:34.9685 11615 pointer_event 1 520, 385
+15:42:34.9685 11615 send_pointer_event 1, 520, 385, 1
+15:42:35.1229 11615 pointer_event 0 520, 385
+15:42:35.1230 11615 send_pointer_event 0, 520, 385, 1
+15:42:35.1237 11614 <<< testapi::mouse_set(x=822, y=13)
+15:42:35.1242 11615 mouse_move 822, 13
+15:42:35.1243 11615 send_pointer_event 0, 822, 13, 1
+15:42:35.1250 11614 <<< testapi::mouse_click(button='left', cursor_down='0.15')
+15:42:35.1256 11615 pointer_event 1 822, 13
+15:42:35.1257 11615 send_pointer_event 1, 822, 13, 1
+15:42:35.2767 11615 pointer_event 0 822, 13
+15:42:35.2769 11615 send_pointer_event 0, 822, 13, 1
+15:42:35.2893 11614 <<< testapi::assert_screen(mustmatch='subsurface-main-screen-nodive', timeout=30)
+15:42:35.8851 11615 MATCH(subsurface-main-window-nodive2-fedora-26:0.00)
+15:42:35.9847 11615 MATCH(subsurface-main-window-nodive-fedora-26:0.00)
+15:42:36.0749 11615 MATCH(subsurface-main-window-nodive-opensuse:0.00)
+15:42:36.0752 11615 no match: 29.6s
+15:42:36.8101 11615 MATCH(subsurface-main-window-nodive2-fedora-26:0.00)
+15:42:36.8900 11615 MATCH(subsurface-main-window-nodive-fedora-26:0.00)
+15:42:36.9655 11615 MATCH(subsurface-main-window-nodive-opensuse:1.00)
+15:42:37.0906 11614 >>> testapi::_handle_found_needle: found subsurface-main-window-nodive-opensuse, similarity 1.00 @ 0/28
+15:42:52.0912 11614 <<< testapi::send_key(key='alt-f4')
+15:42:52.2975 11614 <<< testapi::x11_start_program(timeout=undef, options=undef)
+15:42:52.2977 11614 <<< testapi::send_key(key='alt-f2')
+15:42:52.5192 11614 <<< testapi::mouse_hide(border_offset=1)
+15:42:52.5195 11615 mouse_move 1023, 767
+15:42:52.5196 11615 send_pointer_event 0, 1023, 767, 1
+15:42:52.5207 11614 <<< testapi::check_screen(mustmatch='desktop-runner', timeout=30)
+15:42:52.5824 11615 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+15:42:52.6259 11615 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:42:52.6754 11615 MATCH(desktop-runner-live-kde-20171001:0.00)
+15:42:52.6757 11615 no match: 30.0s
+15:42:53.5530 11615 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+15:42:53.5686 11615 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:42:53.5861 11615 MATCH(desktop-runner-live-kde-20171001:0.99)
+15:42:53.7390 11614 >>> testapi::_handle_found_needle: found desktop-runner-live-kde-20171001, similarity 0.99 @ 245/0
+15:42:53.7394 11614 <<< testapi::type_string(string='subsurface ~/.subsurface/test13.xml', max_interval=13, wait_screen_changes=0)
+15:43:04.3764 11614 <<< testapi::wait_still_screen(stilltime=1, timeout=30, simlvl=47)
+15:43:05.9061 11614 >>> testapi::wait_still_screen: detected same image for 1 seconds
+15:43:06.0359 11614 <<< testapi::send_key(key='ret')
+15:43:06.2431 11614 <<< testapi::wait_still_screen(stilltime=7, timeout=30, simlvl=47)
+15:43:19.0197 11614 >>> testapi::wait_still_screen: detected same image for 7 seconds
+15:43:19.0206 11614 <<< testapi::check_screen(mustmatch='desktop-runner-border', timeout=2)
+15:43:19.0227 11615 NO matching needles for desktop-runner-border
+15:43:19.0240 11615 no match: 2.0s
+15:43:20.0251 11615 no match: 1.0s
+15:43:21.2915 11614 >>> testapi::_check_backend_response: match=desktop-runner-border timed out after 2
+15:43:21.3288 11614 <<< testapi::check_screen(mustmatch='subsurface-warning-old-datafile', timeout=30)
+15:43:22.1524 11615 MATCH(subsurface-warning-old-datafile-fedora:0.00)
+15:43:22.1962 11615 MATCH(subsurface-warning-old-datafile-opensuse:1.00)
+15:43:22.3349 11614 >>> testapi::_handle_found_needle: found subsurface-warning-old-datafile-opensuse, similarity 1.00 @ 165/246
+15:43:22.3353 11614 <<< testapi::send_key(key='ret')
+15:43:22.5450 11614 <<< testapi::assert_screen(mustmatch='subsurface-main-screen-dive-test13', timeout=30)
+15:43:23.1315 11615 MATCH(subsurface-main-window-dive-test13-opensuse:0.15)
+15:43:23.2483 11615 MATCH(subsurface-main-window-dive-test13-fedora:0.00)
+15:43:23.2485 11615 no match: 29.5s
+15:43:24.0979 11615 MATCH(subsurface-main-window-dive-test13-opensuse:1.00)
+15:43:24.1676 11615 MATCH(subsurface-main-window-dive-test13-fedora:0.00)
+15:43:24.2771 11614 >>> testapi::_handle_found_needle: found subsurface-main-window-dive-test13-opensuse, similarity 1.00 @ 0/28
+15:43:39.2775 11614 <<< testapi::send_key(key='alt-f4')
+15:43:39.4886 11614 <<< testapi::x11_start_program(timeout=undef, options=undef)
+15:43:39.4888 11614 <<< testapi::send_key(key='alt-f2')
+15:43:39.6962 11614 <<< testapi::mouse_hide(border_offset=1)
+15:43:39.6968 11615 send_pointer_event 0, 1018, 762, 1
+15:43:39.6969 11615 mouse_move 1023, 767
+15:43:39.6970 11615 send_pointer_event 0, 1023, 767, 1
+15:43:39.6975 11614 <<< testapi::check_screen(mustmatch='desktop-runner', timeout=30)
+15:43:39.7403 11615 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+15:43:39.7797 11615 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:43:39.8208 11615 MATCH(desktop-runner-live-kde-20171001:0.00)
+15:43:39.8211 11615 no match: 30.0s
+15:43:40.7172 11615 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+15:43:40.7325 11615 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:43:40.7532 11615 MATCH(desktop-runner-live-kde-20171001:0.99)
+15:43:40.8841 11614 >>> testapi::_handle_found_needle: found desktop-runner-live-kde-20171001, similarity 0.99 @ 245/0
+15:43:40.8845 11614 <<< testapi::type_string(string='subsurface ~/.subsurface/test16.xml', max_interval=13, wait_screen_changes=0)
+15:43:51.4842 11614 <<< testapi::wait_still_screen(stilltime=1, timeout=30, simlvl=47)
+15:43:52.5239 11614 >>> testapi::wait_still_screen: detected same image for 1 seconds
+15:43:52.6651 11614 <<< testapi::send_key(key='ret')
+15:43:52.8797 11614 <<< testapi::wait_still_screen(stilltime=7, timeout=30, simlvl=47)
+15:44:10.2342 11614 >>> testapi::wait_still_screen: detected same image for 7 seconds
+15:44:10.2349 11614 <<< testapi::check_screen(mustmatch='desktop-runner-border', timeout=2)
+15:44:10.2361 11615 NO matching needles for desktop-runner-border
+15:44:10.2370 11615 no match: 2.0s
+15:44:11.2384 11615 no match: 1.0s
+15:44:12.5129 11614 >>> testapi::_check_backend_response: match=desktop-runner-border timed out after 2
+15:44:12.5514 11614 <<< testapi::check_screen(mustmatch='subsurface-warning-old-datafile', timeout=30)
+15:44:13.2812 11615 MATCH(subsurface-warning-old-datafile-fedora:0.00)
+15:44:13.3185 11615 MATCH(subsurface-warning-old-datafile-opensuse:1.00)
+15:44:13.4623 11614 >>> testapi::_handle_found_needle: found subsurface-warning-old-datafile-opensuse, similarity 1.00 @ 165/246
+15:44:13.4628 11614 <<< testapi::send_key(key='ret')
+15:44:13.6737 11614 <<< testapi::assert_screen(mustmatch='subsurface-main-screen-dive-test16', timeout=30)
+15:44:14.3372 11615 MATCH(subsurface-main-window-dive-test16-fedora:0.00)
+15:44:14.4192 11615 MATCH(subsurface-main-window-dive-test16-opensuse:1.00)
+15:44:14.5400 11614 >>> testapi::_handle_found_needle: found subsurface-main-window-dive-test16-opensuse, similarity 1.00 @ 0/28
+15:44:29.5404 11614 <<< testapi::send_key(key='alt-f4')
+15:44:29.7478 11614 <<< testapi::x11_start_program(timeout=undef, options=undef)
+15:44:29.7480 11614 <<< testapi::send_key(key='alt-f2')
+15:44:29.9548 11614 <<< testapi::mouse_hide(border_offset=1)
+15:44:29.9562 11615 send_pointer_event 0, 1018, 762, 1
+15:44:29.9566 11615 mouse_move 1023, 767
+15:44:29.9567 11615 send_pointer_event 0, 1023, 767, 1
+15:44:29.9574 11614 <<< testapi::check_screen(mustmatch='desktop-runner', timeout=30)
+15:44:30.0119 11615 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+15:44:30.0511 11615 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:44:30.0908 11615 MATCH(desktop-runner-live-kde-20171001:0.00)
+15:44:30.0912 11615 no match: 30.0s
+15:44:30.9867 11615 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+15:44:30.9996 11615 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:44:31.0142 11615 MATCH(desktop-runner-live-kde-20171001:0.99)
+15:44:31.1664 11614 >>> testapi::_handle_found_needle: found desktop-runner-live-kde-20171001, similarity 0.99 @ 245/0
+15:44:31.1667 11614 <<< testapi::type_string(string='subsurface ~/.subsurface/test47.xml', max_interval=13, wait_screen_changes=0)
+15:44:41.7931 11614 <<< testapi::wait_still_screen(stilltime=1, timeout=30, simlvl=47)
+15:44:42.8299 11614 >>> testapi::wait_still_screen: detected same image for 1 seconds
+15:44:42.9673 11614 <<< testapi::send_key(key='ret')
+15:44:43.1730 11614 <<< testapi::wait_still_screen(stilltime=7, timeout=30, simlvl=47)
+15:44:56.5848 11614 >>> testapi::wait_still_screen: detected same image for 7 seconds
+15:44:56.5852 11614 <<< testapi::check_screen(mustmatch='desktop-runner-border', timeout=2)
+15:44:56.5860 11615 NO matching needles for desktop-runner-border
+15:44:56.5867 11615 no match: 2.0s
+15:44:57.5879 11615 no match: 1.0s
+15:44:58.8471 11614 >>> testapi::_check_backend_response: match=desktop-runner-border timed out after 2
+15:44:58.8829 11614 <<< testapi::assert_screen(mustmatch='subsurface-main-screen-dive-test47', timeout=30)
+15:44:59.6951 11615 MATCH(subsurface-main-window-dive-test47-fedora-highlighted:0.00)
+15:44:59.7853 11615 MATCH(subsurface-main-window-dive-test47-20171010:1.00)
+15:44:59.8876 11615 MATCH(subsurface-main-window-dive-test47-fedora:0.06)
+15:44:59.9900 11615 MATCH(subsurface-main-window-dive-test47-at1.16-fedora:0.00)
+15:45:00.0984 11615 MATCH(subsurface-main-window-dive-test47-at5-20171010:0.00)
+15:45:00.1816 11615 MATCH(subsurface-main-window-dive-test47-20171001:0.69)
+15:45:00.2668 11615 MATCH(subsurface-main-window-dive-test47-at5-20171001:0.00)
+15:45:00.4020 11614 >>> testapi::_handle_found_needle: found subsurface-main-window-dive-test47-20171010, similarity 1.00 @ 0/28
+15:45:15.4027 11614 <<< testapi::send_key(key='alt-f4')
+15:45:15.6127 11614 <<< testapi::x11_start_program(timeout=undef, options=undef)
+15:45:15.6129 11614 <<< testapi::send_key(key='alt-f2')
+15:45:15.8220 11614 <<< testapi::mouse_hide(border_offset=1)
+15:45:15.8227 11615 send_pointer_event 0, 1018, 762, 1
+15:45:15.8229 11615 mouse_move 1023, 767
+15:45:15.8229 11615 send_pointer_event 0, 1023, 767, 1
+15:45:15.8243 11614 <<< testapi::check_screen(mustmatch='desktop-runner', timeout=30)
+15:45:15.8752 11615 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+15:45:15.9166 11615 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:45:15.9563 11615 MATCH(desktop-runner-live-kde-20171001:0.00)
+15:45:15.9566 11615 no match: 30.0s
+15:45:16.8453 11615 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+15:45:16.8639 11615 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:45:16.8886 11615 MATCH(desktop-runner-live-kde-20171001:0.99)
+15:45:17.0239 11614 >>> testapi::_handle_found_needle: found desktop-runner-live-kde-20171001, similarity 0.99 @ 245/0
+15:45:17.0245 11614 <<< testapi::type_string(string='subsurface --import ~/.subsurface/test47.xml', max_interval=13, wait_screen_changes=0)
+15:45:30.3462 11614 <<< testapi::wait_still_screen(stilltime=1, timeout=30, simlvl=47)
+15:45:31.9084 11614 >>> testapi::wait_still_screen: detected same image for 1 seconds
+15:45:32.0533 11614 <<< testapi::send_key(key='ret')
+15:45:32.2602 11614 <<< testapi::wait_still_screen(stilltime=7, timeout=30, simlvl=47)
+15:45:45.6388 11614 >>> testapi::wait_still_screen: detected same image for 7 seconds
+15:45:45.6395 11614 <<< testapi::check_screen(mustmatch='desktop-runner-border', timeout=2)
+15:45:45.6419 11615 NO matching needles for desktop-runner-border
+15:45:45.6424 11615 no match: 2.0s
+15:45:46.6437 11615 no match: 1.0s
+15:45:47.9079 11614 >>> testapi::_check_backend_response: match=desktop-runner-border timed out after 2
+15:45:47.9389 11614 <<< testapi::assert_screen(mustmatch='subsurface-main-screen-dive-test47', timeout=30)
+15:45:48.7423 11615 MATCH(subsurface-main-window-dive-test47-fedora-highlighted:0.00)
+15:45:48.8285 11615 MATCH(subsurface-main-window-dive-test47-20171010:1.00)
+15:45:48.9238 11615 MATCH(subsurface-main-window-dive-test47-fedora:0.06)
+15:45:49.0081 11615 MATCH(subsurface-main-window-dive-test47-at1.16-fedora:0.00)
+15:45:49.1022 11615 MATCH(subsurface-main-window-dive-test47-at5-20171010:0.00)
+15:45:49.1953 11615 MATCH(subsurface-main-window-dive-test47-20171001:0.69)
+15:45:49.2919 11615 MATCH(subsurface-main-window-dive-test47-at5-20171001:0.00)
+15:45:49.4183 11614 >>> testapi::_handle_found_needle: found subsurface-main-window-dive-test47-20171010, similarity 1.00 @ 0/28
+15:46:04.4187 11614 <<< testapi::send_key(key='alt-f4')
+15:46:04.6273 11614 <<< testapi::assert_screen(mustmatch='subsurface-warning-save-changes', timeout=30)
+15:46:04.6682 11615 MATCH(subsurface-warning-save-changes-fedora:0.00)
+15:46:04.7072 11615 MATCH(subsurface-warning-save-changes-opensuse:0.00)
+15:46:04.7075 11615 no match: 30.0s
+15:46:05.6574 11615 MATCH(subsurface-warning-save-changes-fedora:0.00)
+15:46:05.6825 11615 MATCH(subsurface-warning-save-changes-opensuse:1.00)
+15:46:05.8121 11614 >>> testapi::_handle_found_needle: found subsurface-warning-save-changes-opensuse, similarity 1.00 @ 249/250
+15:46:05.8124 11614 <<< testapi::mouse_set(x=581, y=377)
+15:46:05.8129 11615 mouse_move 581, 377
+15:46:05.8130 11615 send_pointer_event 0, 581, 377, 1
+15:46:05.8137 11614 <<< testapi::mouse_click(button='left', cursor_down='0.15')
+15:46:05.8147 11615 pointer_event 1 581, 377
+15:46:05.8148 11615 send_pointer_event 1, 581, 377, 1
+15:46:05.9656 11615 pointer_event 0 581, 377
+15:46:05.9658 11615 send_pointer_event 0, 581, 377, 1
+15:46:05.9684 11614 <<< testapi::x11_start_program(timeout=undef, options=undef)
+15:46:05.9685 11614 <<< testapi::send_key(key='alt-f2')
+15:46:06.1744 11614 <<< testapi::mouse_hide(border_offset=1)
+15:46:06.1749 11615 mouse_move 1023, 767
+15:46:06.1750 11615 send_pointer_event 0, 1023, 767, 1
+15:46:06.1753 11614 <<< testapi::check_screen(mustmatch='desktop-runner', timeout=30)
+15:46:06.6844 11615 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+15:46:06.7197 11615 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:46:06.7534 11615 MATCH(desktop-runner-live-kde-20171001:0.96)
+15:46:06.8750 11614 >>> testapi::_handle_found_needle: found desktop-runner-live-kde-20171001, similarity 0.96 @ 245/0
+15:46:06.8753 11614 <<< testapi::type_string(string='subsurface ~/.subsurface/$USER.xml', max_interval=13, wait_screen_changes=0)
+15:46:17.1972 11614 <<< testapi::wait_still_screen(stilltime=1, timeout=30, simlvl=47)
+15:46:18.7346 11614 >>> testapi::wait_still_screen: detected same image for 1 seconds
+15:46:18.8779 11614 <<< testapi::send_key(key='ret')
+15:46:19.0851 11614 <<< testapi::wait_still_screen(stilltime=7, timeout=30, simlvl=47)
+15:46:32.4239 11614 >>> testapi::wait_still_screen: detected same image for 7 seconds
+15:46:32.4247 11614 <<< testapi::check_screen(mustmatch='desktop-runner-border', timeout=2)
+15:46:32.4257 11615 NO matching needles for desktop-runner-border
+15:46:32.4264 11615 no match: 2.0s
+15:46:33.4281 11615 no match: 1.0s
+15:46:34.7113 11614 >>> testapi::_check_backend_response: match=desktop-runner-border timed out after 2
+15:46:34.7401 11614 <<< testapi::assert_screen(mustmatch='subsurface-main-screen-nodive', timeout=30)
+15:46:35.5216 11615 MATCH(subsurface-main-window-nodive2-fedora-26:0.00)
+15:46:35.6118 11615 MATCH(subsurface-main-window-nodive-fedora-26:0.00)
+15:46:35.7040 11615 MATCH(subsurface-main-window-nodive-opensuse:1.00)
+15:46:35.8189 11614 >>> testapi::_handle_found_needle: found subsurface-main-window-nodive-opensuse, similarity 1.00 @ 0/28
+15:46:50.8205 11614 ||| finished start_subsurface subsurface at 2017-10-20 15:46:50 (359 s)
+15:46:50.8212 11614 ||| starting subsurface_dive_planner tests/subsurface/subsurface_dive_planner.pm at 2017-10-20 15:46:50
+15:46:50.8221 11614 <<< testapi::mouse_set(x=520, y=385)
+15:46:50.8228 11615 mouse_move 520, 385
+15:46:50.8228 11615 send_pointer_event 0, 520, 385, 1
+15:46:50.8235 11614 <<< testapi::mouse_click(button='left', cursor_down='0.15')
+15:46:50.8241 11615 pointer_event 1 520, 385
+15:46:50.8242 11615 send_pointer_event 1, 520, 385, 1
+15:46:50.9760 11615 pointer_event 0 520, 385
+15:46:50.9762 11615 send_pointer_event 0, 520, 385, 1
+15:46:50.9777 11614 <<< testapi::send_key(key='ctrl-l')
+15:46:51.1922 11614 <<< testapi::mouse_set(x=515, y=405)
+15:46:51.1926 11615 mouse_move 515, 405
+15:46:51.1927 11615 send_pointer_event 0, 515, 405, 1
+15:46:51.1933 11614 <<< testapi::assert_screen(mustmatch='subsurface-dive-planner-start', timeout=30)
+15:46:51.2962 11615 MATCH(subsurface-dive-planner-start-opensuse:0.00)
+15:46:51.4044 11615 MATCH(subsurface-dive-planner-start-fedora-26:0.00)
+15:46:51.4046 11615 no match: 30.0s
+15:46:52.2698 11615 MATCH(subsurface-dive-planner-start-opensuse:0.99)
+15:46:52.3466 11615 MATCH(subsurface-dive-planner-start-fedora-26:0.00)
+15:46:52.4812 11614 >>> testapi::_handle_found_needle: found subsurface-dive-planner-start-opensuse, similarity 0.99 @ 0/0
+15:47:07.4820 11614 <<< testapi::mouse_set(x=375, y=95)
+15:47:07.4832 11615 mouse_move 375, 95
+15:47:07.4834 11615 send_pointer_event 0, 375, 95, 1
+15:47:07.4839 11614 <<< testapi::mouse_click(button='left', cursor_down='0.15')
+15:47:07.4843 11615 pointer_event 1 375, 95
+15:47:07.4844 11615 send_pointer_event 1, 375, 95, 1
+15:47:07.6413 11615 pointer_event 0 375, 95
+15:47:07.6414 11615 send_pointer_event 0, 375, 95, 1
+15:47:22.6429 11614 <<< testapi::assert_screen(mustmatch='subsurface-main-screen', timeout=30)
+15:47:22.7479 11615 MATCH(subsurface-main-window-dive-test16-fedora:0.00)
+15:47:22.8346 11615 MATCH(subsurface-main-window-dive-test47-fedora-highlighted:0.00)
+15:47:22.9198 11615 MATCH(subsurface-main-window-dive-test16-opensuse:0.00)
+15:47:23.0037 11615 MATCH(subsurface-main-window-dive-test47-20171010:0.00)
+15:47:23.0885 11615 MATCH(subsurface-main-window-dive-test13-opensuse:0.00)
+15:47:23.1790 11615 MATCH(subsurface-main-window-dive-test47-fedora:0.00)
+15:47:23.2778 11615 MATCH(subsurface-main-window-nodive2-fedora-26:0.00)
+15:47:23.3677 11615 MATCH(subsurface-main-window-dive-test47-at1.16-fedora:0.00)
+15:47:23.4503 11615 MATCH(subsurface-main-window-dive-test47-at5-20171010:0.00)
+15:47:23.5349 11615 MATCH(subsurface-main-window-nodive-fedora-26:0.00)
+15:47:23.6188 11615 MATCH(subsurface-main-window-dive-test47-20171001:0.00)
+15:47:23.7045 11615 MATCH(subsurface-main-window-nodive-opensuse:0.98)
+15:47:23.7863 11615 MATCH(subsurface-main-window-dive-test13-fedora:0.00)
+15:47:23.8687 11615 MATCH(subsurface-main-window-dive-test47-at5-20171001:0.00)
+15:47:23.9858 11614 >>> testapi::_handle_found_needle: found subsurface-main-window-nodive-opensuse, similarity 0.98 @ 0/28
+15:47:23.9866 11614 ||| finished subsurface_dive_planner subsurface at 2017-10-20 15:47:23 (33 s)
+15:47:23.9875 11610 awaiting death of testpid 11614
+15:47:23.9914 11610 test process exited: 11614
+15:47:23.9915 11610 awaiting death of commands process
+15:47:23.9978 11610 commands process exited: 11612
+15:47:23.9980 11610 isotovideo done
+15:47:23.9986 11615 EVENT {"timestamp":{"microseconds":406045,"seconds":1508513803},"data":{"path":"/machine/peripheral-anon/device[0]/virtio-backend"},"event":"NIC_RX_FILTER_CHANGED"}
+15:47:23.9988 11615 EVENT {"data":{"server":{"service":"5990","websocket":false,"auth":"none","family":"ipv4","host":"0.0.0.0"},"client":{"websocket":false,"service":"39586","host":"127.0.0.1","family":"ipv4"}},"timestamp":{"microseconds":189620,"seconds":1508514197},"event":"VNC_CONNECTED"}
+15:47:23.9989 11615 EVENT {"timestamp":{"microseconds":190560,"seconds":1508514197},"data":{"client":{"host":"127.0.0.1","family":"ipv4","websocket":false,"service":"39586"},"server":{"service":"5990","websocket":false,"family":"ipv4","host":"0.0.0.0","auth":"none"}},"event":"VNC_INITIALIZED"}
+15:47:24.0000 11610 BACKEND SHUTDOWN 
+15:47:24.0005 11615 waitpid for 11619 returned 0
+15:47:24.0006 11615 sending TERM to qemu pid: 11619
+15:47:25.0009 11615 waitpid for 11619 returned 11619
+15:47:25.0768 11615 QEMU: qemu-system-x86_64: terminating on signal 15 from pid 11615 (/usr/bin/isotovideo: backend)
+15:47:25.0774 11615 sending magic and exit
+15:47:25.0777 11610 received magic close

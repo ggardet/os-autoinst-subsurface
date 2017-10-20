@@ -1,0 +1,260 @@
+{
+   "dents" : 0,
+   "details" : [
+      {
+         "result" : "ok",
+         "needle" : "subsurface-dive-planner-start-opensuse",
+         "json" : "needles/subsurface-dive-planner-start-opensuse.json",
+         "properties" : [],
+         "tags" : [
+            "subsurface-dive-planner-start"
+         ],
+         "area" : [
+            {
+               "similarity" : 99,
+               "x" : 0,
+               "h" : 730,
+               "y" : 0,
+               "w" : "1024",
+               "result" : "ok"
+            }
+         ],
+         "screenshot" : "subsurface_dive_planner-1.png",
+         "needles" : [
+            {
+               "name" : "subsurface-dive-planner-start-fedora-26",
+               "area" : [
+                  {
+                     "x" : 0,
+                     "similarity" : 0,
+                     "h" : 730,
+                     "w" : "1024",
+                     "result" : "fail",
+                     "y" : 0
+                  }
+               ],
+               "error" : 1,
+               "json" : "needles/subsurface-dive-planner-start-fedora-26.json"
+            }
+         ]
+      },
+      {
+         "needles" : [
+            {
+               "json" : "needles/subsurface-main-window-dive-test13-fedora.json",
+               "error" : 1,
+               "name" : "subsurface-main-window-dive-test13-fedora",
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "w" : "1024",
+                     "y" : 0,
+                     "h" : 702,
+                     "x" : 0,
+                     "similarity" : 0
+                  }
+               ]
+            },
+            {
+               "error" : 1,
+               "name" : "subsurface-main-window-dive-test13-opensuse",
+               "area" : [
+                  {
+                     "x" : 0,
+                     "similarity" : 0,
+                     "h" : 702,
+                     "w" : "1024",
+                     "result" : "fail",
+                     "y" : 0
+                  }
+               ],
+               "json" : "needles/subsurface-main-window-dive-test13-opensuse.json"
+            },
+            {
+               "error" : 1,
+               "name" : "subsurface-main-window-dive-test16-fedora",
+               "area" : [
+                  {
+                     "y" : 0,
+                     "w" : "1024",
+                     "result" : "fail",
+                     "similarity" : 0,
+                     "x" : 0,
+                     "h" : 702
+                  }
+               ],
+               "json" : "needles/subsurface-main-window-dive-test16-fedora.json"
+            },
+            {
+               "json" : "needles/subsurface-main-window-dive-test16-opensuse.json",
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "w" : "1024",
+                     "y" : 0,
+                     "h" : 702,
+                     "x" : 0,
+                     "similarity" : 0
+                  }
+               ],
+               "name" : "subsurface-main-window-dive-test16-opensuse",
+               "error" : 1
+            },
+            {
+               "json" : "needles/subsurface-main-window-dive-test47-20171001.json",
+               "error" : 1,
+               "name" : "subsurface-main-window-dive-test47-20171001",
+               "area" : [
+                  {
+                     "h" : 702,
+                     "x" : 0,
+                     "similarity" : 0,
+                     "w" : "1024",
+                     "result" : "fail",
+                     "y" : 0
+                  }
+               ]
+            },
+            {
+               "json" : "needles/subsurface-main-window-dive-test47-20171010.json",
+               "area" : [
+                  {
+                     "similarity" : 0,
+                     "x" : 0,
+                     "h" : 702,
+                     "y" : 0,
+                     "w" : "1024",
+                     "result" : "fail"
+                  }
+               ],
+               "name" : "subsurface-main-window-dive-test47-20171010",
+               "error" : 1
+            },
+            {
+               "json" : "needles/subsurface-main-window-dive-test47-at1.16-fedora.json",
+               "area" : [
+                  {
+                     "h" : 702,
+                     "similarity" : 0,
+                     "x" : 0,
+                     "y" : 0,
+                     "w" : "1024",
+                     "result" : "fail"
+                  }
+               ],
+               "name" : "subsurface-main-window-dive-test47-at1.16-fedora",
+               "error" : 1
+            },
+            {
+               "json" : "needles/subsurface-main-window-dive-test47-at5-20171001.json",
+               "error" : 1,
+               "area" : [
+                  {
+                     "similarity" : 0,
+                     "x" : 0,
+                     "h" : 702,
+                     "y" : 0,
+                     "result" : "fail",
+                     "w" : "1024"
+                  }
+               ],
+               "name" : "subsurface-main-window-dive-test47-at5-20171001"
+            },
+            {
+               "name" : "subsurface-main-window-dive-test47-at5-20171010",
+               "area" : [
+                  {
+                     "y" : 0,
+                     "w" : "1024",
+                     "result" : "fail",
+                     "h" : 702,
+                     "similarity" : 0,
+                     "x" : 0
+                  }
+               ],
+               "error" : 1,
+               "json" : "needles/subsurface-main-window-dive-test47-at5-20171010.json"
+            },
+            {
+               "json" : "needles/subsurface-main-window-dive-test47-fedora.json",
+               "error" : 1,
+               "name" : "subsurface-main-window-dive-test47-fedora",
+               "area" : [
+                  {
+                     "h" : 702,
+                     "x" : 0,
+                     "similarity" : 0,
+                     "result" : "fail",
+                     "w" : "1024",
+                     "y" : 0
+                  }
+               ]
+            },
+            {
+               "json" : "needles/subsurface-main-window-dive-test47-fedora-highlighted.json",
+               "area" : [
+                  {
+                     "y" : 0,
+                     "w" : "1024",
+                     "result" : "fail",
+                     "h" : 702,
+                     "similarity" : 0,
+                     "x" : 0
+                  }
+               ],
+               "name" : "subsurface-main-window-dive-test47-fedora-highlighted",
+               "error" : 1
+            },
+            {
+               "name" : "subsurface-main-window-nodive-fedora-26",
+               "area" : [
+                  {
+                     "h" : 702,
+                     "x" : 0,
+                     "similarity" : 0,
+                     "w" : "1024",
+                     "result" : "fail",
+                     "y" : 27
+                  }
+               ],
+               "error" : 1,
+               "json" : "needles/subsurface-main-window-nodive-fedora-26.json"
+            },
+            {
+               "name" : "subsurface-main-window-nodive2-fedora-26",
+               "area" : [
+                  {
+                     "x" : 0,
+                     "similarity" : 0,
+                     "h" : 702,
+                     "result" : "fail",
+                     "w" : "1024",
+                     "y" : 25
+                  }
+               ],
+               "error" : 1,
+               "json" : "needles/subsurface-main-window-nodive2-fedora-26.json"
+            }
+         ],
+         "screenshot" : "subsurface_dive_planner-2.png",
+         "area" : [
+            {
+               "h" : 702,
+               "similarity" : 98,
+               "x" : 0,
+               "y" : 28,
+               "result" : "ok",
+               "w" : "1024"
+            }
+         ],
+         "json" : "needles/subsurface-main-window-nodive-opensuse.json",
+         "properties" : [],
+         "tags" : [
+            "subsurface-main-screen"
+         ],
+         "needle" : "subsurface-main-window-nodive-opensuse",
+         "result" : "ok"
+      }
+   ],
+   "result" : "ok"
+}

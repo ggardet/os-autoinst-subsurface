@@ -1,0 +1,16 @@
+{
+  "area": [
+    {
+      "xpos": 247,
+      "ypos": 251,
+      "width": 508,
+      "height": 157,
+      "type": "match",
+      "match": 90
+    }
+  ],
+  "tags": [
+    "subsurface-warning-save-changes"
+  ],
+  "properties": []
+}

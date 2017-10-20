@@ -1,0 +1,244 @@
+{
+   "details" : [
+      {
+         "json" : "needles/desktop-runner-live-kde-20171001.json",
+         "properties" : [],
+         "tags" : [
+            "desktop-runner"
+         ],
+         "result" : "ok",
+         "needle" : "desktop-runner-live-kde-20171001",
+         "screenshot" : "install_subsurface-1.png",
+         "needles" : [
+            {
+               "area" : [
+                  {
+                     "h" : 40,
+                     "similarity" : 0,
+                     "x" : 296,
+                     "y" : 0,
+                     "w" : "481",
+                     "result" : "fail"
+                  }
+               ],
+               "name" : "desktop-runner-fedora-26-live-kde",
+               "error" : 1,
+               "json" : "needles/desktop-runner-fedora-26-live-kde.json"
+            },
+            {
+               "name" : "desktop-runner-fedora-26-live-kde-misplaced",
+               "area" : [
+                  {
+                     "h" : 40,
+                     "x" : 69,
+                     "similarity" : 0,
+                     "w" : "477",
+                     "result" : "fail",
+                     "y" : 2
+                  }
+               ],
+               "error" : 1,
+               "json" : "needles/desktop-runner-fedora-26-live-kde-misplaced.json"
+            }
+         ],
+         "area" : [
+            {
+               "similarity" : 95,
+               "x" : 245,
+               "h" : 42,
+               "y" : 0,
+               "result" : "ok",
+               "w" : "533"
+            }
+         ]
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "install_subsurface-3.png"
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "install_subsurface-4.png",
+         "tags" : [
+            "desktop-runner-border"
+         ]
+      },
+      {
+         "area" : [
+            {
+               "result" : "ok",
+               "w" : "1024",
+               "y" : 0,
+               "h" : 730,
+               "x" : 0,
+               "similarity" : 100
+            }
+         ],
+         "screenshot" : "install_subsurface-5.png",
+         "needles" : [
+            {
+               "error" : 1,
+               "area" : [
+                  {
+                     "w" : "1024",
+                     "result" : "fail",
+                     "y" : 0,
+                     "h" : 730,
+                     "x" : 0,
+                     "similarity" : 0
+                  }
+               ],
+               "name" : "konsole-fedora-26",
+               "json" : "needles/konsole-fedora-26.json"
+            }
+         ],
+         "result" : "ok",
+         "needle" : "konsole-live-kde-20171001",
+         "properties" : [],
+         "tags" : [
+            "konsole"
+         ],
+         "json" : "needles/konsole-live-kde-20171001.json"
+      },
+      {
+         "screenshot" : "install_subsurface-7.png",
+         "result" : "unk"
+      },
+      {
+         "title" : "wait_serial",
+         "result" : "ok",
+         "text" : "install_subsurface-8.txt"
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "install_subsurface-10.png"
+      },
+      {
+         "title" : "wait_serial",
+         "result" : "ok",
+         "text" : "install_subsurface-11.txt"
+      },
+      {
+         "screenshot" : "install_subsurface-13.png",
+         "result" : "unk"
+      },
+      {
+         "text" : "install_subsurface-14.txt",
+         "result" : "ok",
+         "title" : "wait_serial"
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "install_subsurface-16.png"
+      },
+      {
+         "title" : "wait_serial",
+         "text" : "install_subsurface-17.txt",
+         "result" : "ok"
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "install_subsurface-19.png"
+      },
+      {
+         "title" : "wait_serial",
+         "text" : "install_subsurface-20.txt",
+         "result" : "ok"
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "install_subsurface-22.png"
+      },
+      {
+         "title" : "wait_serial",
+         "result" : "ok",
+         "text" : "install_subsurface-23.txt"
+      },
+      {
+         "screenshot" : "install_subsurface-25.png",
+         "result" : "unk"
+      },
+      {
+         "title" : "wait_serial",
+         "result" : "ok",
+         "text" : "install_subsurface-26.txt"
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "install_subsurface-28.png"
+      },
+      {
+         "text" : "install_subsurface-29.txt",
+         "result" : "ok",
+         "title" : "wait_serial"
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "install_subsurface-31.png"
+      },
+      {
+         "title" : "wait_serial",
+         "text" : "install_subsurface-32.txt",
+         "result" : "ok"
+      },
+      {
+         "title" : "subsurface_version",
+         "result" : "ok",
+         "text" : "install_subsurface-33.txt"
+      },
+      {
+         "result" : "ok",
+         "needle" : "desktop-opensuse-tw-live-kde-20171010",
+         "json" : "needles/desktop-opensuse-tw-live-kde-20171010.json",
+         "properties" : [],
+         "tags" : [
+            "desktop"
+         ],
+         "area" : [
+            {
+               "h" : 730,
+               "similarity" : 100,
+               "x" : 0,
+               "y" : 0,
+               "result" : "ok",
+               "w" : "1024"
+            }
+         ],
+         "screenshot" : "install_subsurface-34.png",
+         "needles" : [
+            {
+               "error" : 0.0610654651136649,
+               "area" : [
+                  {
+                     "y" : 0,
+                     "result" : "fail",
+                     "w" : "1024",
+                     "h" : 730,
+                     "similarity" : 75,
+                     "x" : 0
+                  }
+               ],
+               "name" : "desktop-opensuse-tw-live-kde-20171001",
+               "json" : "needles/desktop-opensuse-tw-live-kde-20171001.json"
+            },
+            {
+               "json" : "needles/desktop-fedora-26-live-kde.json",
+               "error" : 1,
+               "name" : "desktop-fedora-26-live-kde",
+               "area" : [
+                  {
+                     "y" : 0,
+                     "result" : "fail",
+                     "w" : "1024",
+                     "similarity" : 0,
+                     "x" : 0,
+                     "h" : 730
+                  }
+               ]
+            }
+         ]
+      }
+   ],
+   "result" : "ok",
+   "dents" : 0
+}

@@ -1,0 +1,1630 @@
+15:50:46.3286 12209 git hash of test distribution: 22fbcf9d9f3d08ed273a4b33f67b70d8ab414a02
+15:50:46.4654 12209 scheduling boot tests/subsurface/boot.pm
+15:50:46.4662 12209 scheduling install_subsurface tests/subsurface/install_subsurface.pm
+15:50:46.4670 12209 scheduling start_subsurface tests/subsurface/start_subsurface.pm
+15:50:46.4677 12209 scheduling subsurface_dive_planner tests/subsurface/subsurface_dive_planner.pm
+15:50:46.4701 12209 init needles from ..//needles
+15:50:46.4756 12209 loaded 35 needles
+15:50:46.6591 12213 started mgmt loop with pid 12213
+15:50:46.6753 12213 running /usr/bin/qemu-img create raid/1 -f qcow2 10G
+15:50:46.8519 12217 QEMU emulator version 2.9.0(openSUSE Leap 42.3)
+ Copyright (c) 2003-2017 Fabrice Bellard and the QEMU Project developers
+
+15:50:46.8520 12217 starting: /usr/bin/qemu-system-x86_64 -serial file:serial0 -soundhw ac97 -global isa-fdc.driveA= -vga cirrus -m 3072 -netdev user,id=qanet0 -device virtio-net,netdev=qanet0,mac=52:54:00:12:34:56 -device virtio-scsi-pci,id=scsi0 -device virtio-blk,drive=hd1 -drive file=raid/l1,cache=unsafe,if=none,id=hd1,format=qcow2 -drive media=cdrom,if=none,id=cd0,format=raw,file=../isos/fedora/Fedora-KDE-Live-x86_64-26-1.5.iso -device scsi-cd,drive=cd0,bus=scsi0.0 -boot once=d,menu=on,splash-time=5000 -device usb-ehci -device usb-tablet -smp 3 -enable-kvm -no-shutdown -vnc :90,share=force-shared -qmp unix:qmp_socket,server,nowait -monitor unix:hmp_socket,server,nowait -S -monitor telnet:127.0.0.1:15222,server,nowait
+15:50:47.8981 12213 pointer type 0 0 640 480 -257
+15:50:47.8985 12213 led state 0 1 1 -261
+15:50:47.9123 12213 hmpsocket 13, qmpsocket 14
+15:50:47.9142 12213 EVENT {"event":"RESUME","timestamp":{"microseconds":914114,"seconds":1508514647}}
+15:50:47.9300 12212 Snapshots are supported
+15:50:47.9309 12212 ||| starting boot tests/subsurface/boot.pm at 2017-10-20 15:50:47
+15:50:47.9384 12212 <<< testapi::assert_screen(mustmatch='bootloader', timeout=30)
+15:50:49.0079 12213 MATCH(bootloader-opensuse-tw-live-kde-20171001:0.00)
+15:50:49.0609 12213 MATCH(bootloader-fedora-26-live-kde:0.00)
+15:50:49.0612 12213 no match: 29.0s
+15:50:49.9950 12213 MATCH(bootloader-opensuse-tw-live-kde-20171001:0.00)
+15:50:50.0324 12213 MATCH(bootloader-fedora-26-live-kde:0.00)
+15:50:50.0327 12213 no match: 28.0s
+15:50:50.9922 12213 MATCH(bootloader-opensuse-tw-live-kde-20171001:0.00)
+15:50:51.0252 12213 MATCH(bootloader-fedora-26-live-kde:0.00)
+15:50:51.0255 12213 no match: 27.0s
+15:50:51.9976 12213 MATCH(bootloader-opensuse-tw-live-kde-20171001:0.00)
+15:50:52.0366 12213 MATCH(bootloader-fedora-26-live-kde:0.00)
+15:50:52.0369 12213 no match: 26.0s
+15:50:53.0058 12213 MATCH(bootloader-opensuse-tw-live-kde-20171001:0.00)
+15:50:53.0842 12213 MATCH(bootloader-fedora-26-live-kde:0.00)
+15:50:53.0844 12213 no match: 25.0s
+15:50:54.0065 12213 MATCH(bootloader-opensuse-tw-live-kde-20171001:0.00)
+15:50:54.0459 12213 MATCH(bootloader-fedora-26-live-kde:1.00)
+15:50:54.1877 12212 >>> testapi::_handle_found_needle: found bootloader-fedora-26-live-kde, similarity 1.00 @ 0/0
+15:50:54.1882 12212 <<< testapi::send_key(key='ret')
+15:50:54.3972 12212 <<< testapi::assert_screen(mustmatch='desktop', timeout=300)
+15:50:55.0262 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:50:55.1226 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:50:55.2244 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:50:55.2247 12213 no match: 299.5s
+15:50:55.9999 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:50:56.0809 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:50:56.1723 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:50:56.1727 12213 no match: 298.5s
+15:50:57.0158 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:50:57.0983 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:50:57.1751 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:50:57.1753 12213 no match: 297.5s
+15:50:58.0109 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:50:58.0877 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:50:58.1685 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:50:58.1688 12213 no match: 296.5s
+15:50:58.9998 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:50:59.0832 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:50:59.1646 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:50:59.1651 12213 no match: 295.5s
+15:50:59.1655 12213 pointer type 1 0 720 400 -257
+15:51:00.0033 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:00.0840 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:00.1617 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:00.1620 12213 no match: 294.5s
+15:51:01.0143 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:01.0939 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:01.1756 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:01.1760 12213 no match: 293.5s
+15:51:02.0061 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:02.0847 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:02.1687 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:02.1690 12213 no match: 292.5s
+15:51:03.0112 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:03.0969 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:03.1855 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:03.1859 12213 no match: 291.5s
+15:51:04.0163 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:04.1130 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:04.2027 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:04.2096 12213 no match: 290.5s
+15:51:05.0136 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:05.0973 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:05.1810 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:05.1813 12213 no match: 289.5s
+15:51:06.0132 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:06.0993 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:06.1812 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:06.1815 12213 no match: 288.5s
+15:51:07.0101 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:07.0962 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:07.1881 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:07.1884 12213 no match: 287.5s
+15:51:08.0141 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:08.1041 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:08.1943 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:08.1945 12213 no match: 286.5s
+15:51:09.0157 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:09.0922 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:09.1703 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:09.1770 12213 no match: 285.5s
+15:51:10.0114 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:10.1053 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:10.1835 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:10.1837 12213 no match: 284.5s
+15:51:11.0131 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:11.0963 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:11.1833 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:11.1835 12213 no match: 283.5s
+15:51:12.0371 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:12.1313 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:12.2231 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:12.2234 12213 no match: 282.5s
+15:51:13.0310 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:13.1096 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:13.1926 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:13.1928 12213 no match: 281.5s
+15:51:14.0194 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:14.1039 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:14.1863 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:14.1923 12213 no match: 280.5s
+15:51:15.0219 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:15.1044 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:15.1836 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:15.1838 12213 no match: 279.5s
+15:51:16.0278 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:16.1122 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:16.1884 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:16.1886 12213 no match: 278.5s
+15:51:17.0205 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:17.1047 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:17.1879 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:17.1882 12213 no match: 277.5s
+15:51:18.0222 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:18.1067 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:18.1844 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:18.1846 12213 no match: 276.5s
+15:51:19.0267 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:19.1165 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:19.1969 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:19.2034 12213 no match: 275.5s
+15:51:20.0225 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:20.1039 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:20.1815 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:20.1818 12213 no match: 274.5s
+15:51:21.0290 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:21.1155 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:21.2012 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:21.2015 12213 no match: 273.5s
+15:51:22.0278 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:22.1122 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:22.1990 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:22.1993 12213 no match: 272.5s
+15:51:23.0252 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:23.1121 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:23.1937 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:23.1939 12213 no match: 271.5s
+15:51:24.0453 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:24.1259 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:24.2150 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:24.2218 12213 no match: 270.5s
+15:51:25.0423 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:25.1307 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:25.2132 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:25.2134 12213 no match: 269.5s
+15:51:26.0368 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:26.1316 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:26.2191 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:26.2193 12213 no match: 268.5s
+15:51:27.0324 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:27.1195 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:27.1978 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:27.1980 12213 no match: 267.5s
+15:51:27.9479 12213 no change: 266.4s
+15:51:29.0304 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:29.1252 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:29.2065 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:29.2126 12213 no match: 265.4s
+15:51:30.0416 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:30.1298 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:30.2065 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:30.2067 12213 no match: 264.4s
+15:51:30.9512 12213 no change: 263.4s
+15:51:32.0379 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:32.1220 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:32.2044 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:32.2048 12213 no match: 262.4s
+15:51:33.0411 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:33.1321 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:33.2098 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:33.2101 12213 no match: 261.4s
+15:51:34.0582 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:34.1537 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:34.2295 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:34.2361 12213 no match: 260.4s
+15:51:35.0596 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:35.1550 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:35.2414 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:35.2417 12213 no match: 259.4s
+15:51:36.0403 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:36.1250 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:36.2061 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:36.2064 12213 no match: 258.4s
+15:51:37.0416 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:37.1360 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:37.2206 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:37.2212 12213 no match: 257.4s
+15:51:38.0449 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:38.1354 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:38.2135 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:38.2138 12213 no match: 256.4s
+15:51:39.0409 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:39.1273 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:39.2069 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:39.2134 12213 no match: 255.4s
+15:51:40.0578 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:40.1510 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:40.2333 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:40.2337 12213 no match: 254.4s
+15:51:41.0532 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:41.1389 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:41.2137 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:41.2140 12213 no match: 253.4s
+15:51:42.0611 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:42.1547 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:42.2377 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:42.2381 12213 no match: 252.4s
+15:51:43.0554 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:43.1570 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:43.2534 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:43.2537 12213 no match: 251.4s
+15:51:44.0478 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:44.1472 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:44.2306 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:44.2410 12213 no match: 250.4s
+15:51:45.0532 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:45.1361 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:45.2203 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:45.2206 12213 no match: 249.4s
+15:51:46.0627 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:46.1551 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:46.2342 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:46.2345 12213 no match: 248.4s
+15:51:47.0471 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:47.1377 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:47.2162 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:47.2164 12213 no match: 247.4s
+15:51:48.0530 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:48.1431 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:48.2151 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:48.2154 12213 no match: 246.4s
+15:51:49.0484 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:49.1369 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:49.2142 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:49.2203 12213 no match: 245.4s
+15:51:50.0494 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:50.1434 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:50.2180 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:50.2182 12213 no match: 244.4s
+15:51:51.0628 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:51.1521 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:51.2247 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:51.2250 12213 no match: 243.4s
+15:51:52.0528 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:52.1366 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:52.2115 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:52.2118 12213 no match: 242.4s
+15:51:53.0571 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:53.1411 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:53.2366 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:53.2368 12213 no match: 241.4s
+15:51:54.0548 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:54.1398 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:54.2145 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:54.2208 12213 no match: 240.4s
+15:51:55.0553 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:55.1420 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:55.2280 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:55.2283 12213 no match: 239.4s
+15:51:56.0612 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:56.1494 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:56.2210 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:56.2213 12213 no match: 238.4s
+15:51:57.0632 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:57.1513 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:57.2238 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:57.2240 12213 no match: 237.4s
+15:51:58.0612 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:58.1552 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:58.2311 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:58.2314 12213 no match: 236.4s
+15:51:59.0642 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:51:59.1606 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:51:59.2414 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:51:59.2483 12213 no match: 235.4s
+15:52:00.0669 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:00.1515 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:00.2250 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:00.2253 12213 no match: 234.4s
+15:52:01.0633 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:01.1644 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:01.2506 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:01.2510 12213 no match: 233.4s
+15:52:02.0595 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:02.1417 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:02.2144 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:02.2147 12213 no match: 232.4s
+15:52:03.0760 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:03.1686 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:03.2466 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:03.2468 12213 no match: 231.4s
+15:52:04.0640 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:04.1700 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:04.2464 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:04.2534 12213 no match: 230.4s
+15:52:05.0720 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:05.1604 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:05.2367 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:05.2369 12213 no match: 229.4s
+15:52:06.0774 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:06.1814 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:06.2615 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:06.2618 12213 no match: 228.4s
+15:52:07.0649 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:07.1481 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:07.2229 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:07.2232 12213 no match: 227.4s
+15:52:08.0661 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:08.1587 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:08.2329 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:08.2332 12213 no match: 226.4s
+15:52:09.0674 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:09.1565 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:09.2372 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:09.2443 12213 no match: 225.4s
+15:52:10.0665 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:10.1504 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:10.2230 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:10.2233 12213 no match: 224.4s
+15:52:11.0733 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:11.1584 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:11.2361 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:11.2364 12213 no match: 223.4s
+15:52:12.0667 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:12.1480 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:12.2192 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:12.2195 12213 no match: 222.4s
+15:52:13.0783 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:13.1632 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:13.2363 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:13.2365 12213 no match: 221.4s
+15:52:14.0712 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:14.1662 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:14.2366 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:14.2445 12213 no match: 220.4s
+15:52:15.0759 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:15.1624 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:15.2414 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:15.2417 12213 no match: 219.4s
+15:52:16.0760 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:16.1744 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:16.2628 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:16.2630 12213 no match: 218.4s
+15:52:17.0750 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:17.1586 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:17.2405 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:17.2409 12213 no match: 217.4s
+15:52:18.0762 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:18.1645 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:18.2364 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:18.2367 12213 no match: 216.4s
+15:52:19.0862 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:19.1714 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:19.2508 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:19.2569 12213 no match: 215.4s
+15:52:20.0784 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:20.1612 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:20.2395 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:20.2397 12213 no match: 214.4s
+15:52:21.0924 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:21.1789 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:21.2548 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:21.2550 12213 no match: 213.4s
+15:52:22.0840 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:22.1795 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:22.2533 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:22.2537 12213 no match: 212.4s
+15:52:23.0808 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:23.1686 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:23.2441 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:23.2444 12213 no match: 211.4s
+15:52:24.0799 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:24.1658 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:24.2466 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:24.2540 12213 no match: 210.4s
+15:52:25.0787 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:25.1623 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:25.2405 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:25.2407 12213 no match: 209.4s
+15:52:26.0819 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:26.1775 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:26.2508 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:26.2510 12213 no match: 208.4s
+15:52:27.0817 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:27.1671 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:27.2552 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:27.2555 12213 no match: 207.4s
+15:52:28.0917 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:28.1824 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:28.2546 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:28.2548 12213 no match: 206.4s
+15:52:29.0819 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:29.1658 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:29.2414 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:29.2476 12213 no match: 205.4s
+15:52:30.0822 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:30.1660 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:30.2444 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:30.2447 12213 no match: 204.4s
+15:52:31.0888 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:31.1759 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:31.2482 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:31.2485 12213 no match: 203.4s
+15:52:32.0898 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:32.1812 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:32.2579 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:32.2584 12213 no match: 202.4s
+15:52:33.0962 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:33.1895 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:33.2758 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:33.2761 12213 no match: 201.4s
+15:52:34.1052 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:34.2057 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:34.2880 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:34.2947 12213 no match: 200.4s
+15:52:35.0939 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:35.1783 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:35.2495 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:35.2498 12213 no match: 199.4s
+15:52:36.0869 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:36.1682 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:36.2456 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:36.2458 12213 no match: 198.4s
+15:52:37.0965 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:37.1829 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:37.2596 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:37.2599 12213 no match: 197.4s
+15:52:38.0936 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:38.1933 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:38.2706 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:38.2708 12213 no match: 196.4s
+15:52:39.1071 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:39.2014 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:39.2753 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:39.2814 12213 no match: 195.4s
+15:52:40.1167 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:40.2076 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:40.2868 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:40.2871 12213 no match: 194.4s
+15:52:41.1000 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:41.1902 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:41.2621 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:41.2624 12213 no match: 193.4s
+15:52:42.1129 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:42.1978 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:42.2807 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:42.2813 12213 no match: 192.4s
+15:52:43.1032 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:43.1915 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:43.2687 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:43.2690 12213 no match: 191.4s
+15:52:44.0981 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:44.1829 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:44.2558 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:44.2618 12213 no match: 190.4s
+15:52:45.1007 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:45.1952 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:45.2737 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:45.2739 12213 no match: 189.4s
+15:52:46.0982 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:46.1909 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:46.2626 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:46.2629 12213 no match: 188.4s
+15:52:47.0981 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:47.1864 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:47.2683 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:47.2685 12213 no match: 187.4s
+15:52:48.1059 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:48.2005 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:48.2743 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:48.2746 12213 no match: 186.4s
+15:52:49.0992 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:49.1930 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:49.2687 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:49.2748 12213 no match: 185.4s
+15:52:50.1005 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:50.1871 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:50.2629 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:50.2632 12213 no match: 184.4s
+15:52:51.0997 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:51.1897 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:51.2618 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:51.2621 12213 no match: 183.4s
+15:52:52.1051 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:52.2019 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:52.2858 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:52.2861 12213 no match: 182.4s
+15:52:53.1055 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:53.1918 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:53.2734 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:53.2736 12213 no match: 181.4s
+15:52:54.1113 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:54.2068 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:54.2801 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:54.2864 12213 no match: 180.4s
+15:52:55.1130 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:55.2059 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:55.2951 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:55.2955 12213 no match: 179.4s
+15:52:56.1144 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:56.2002 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:56.2711 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:56.2713 12213 no match: 178.4s
+15:52:57.1084 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:57.1996 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:57.2749 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:57.2751 12213 no match: 177.4s
+15:52:58.1058 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:58.2030 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:58.2765 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:58.2768 12213 no match: 176.4s
+15:52:59.1164 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:52:59.2072 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:52:59.2889 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:52:59.2954 12213 no match: 175.4s
+15:53:00.1238 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:00.2093 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:00.2910 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:00.2912 12213 no match: 174.4s
+15:53:01.1140 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:01.2063 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:01.2870 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:01.2873 12213 no match: 173.4s
+15:53:02.1111 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:02.2049 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:02.2793 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:02.2795 12213 no match: 172.4s
+15:53:03.1275 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:03.2176 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:03.2961 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:03.2964 12213 no match: 171.4s
+15:53:04.1113 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:04.1936 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:04.2652 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:04.2714 12213 no match: 170.4s
+15:53:05.1112 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:05.1946 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:05.2661 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:05.2664 12213 no match: 169.4s
+15:53:06.1292 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:06.2184 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:06.3016 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:06.3019 12213 no match: 168.4s
+15:53:07.1121 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:07.2031 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:07.2829 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:07.2831 12213 no match: 167.4s
+15:53:08.1189 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:08.2177 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:08.2905 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:08.2908 12213 no match: 166.4s
+15:53:09.1298 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:09.2141 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:09.2885 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:09.2948 12213 no match: 165.4s
+15:53:10.1148 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:10.2079 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:10.2875 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:10.2877 12213 no match: 164.4s
+15:53:11.1179 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:11.2012 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:11.2733 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:11.2736 12213 no match: 163.4s
+15:53:12.1168 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:12.2001 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:12.2795 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:12.2797 12213 no match: 162.4s
+15:53:13.1206 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:13.2168 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:13.2891 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:13.2894 12213 no match: 161.4s
+15:53:14.1249 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:14.2102 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:14.2899 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:14.2960 12213 no match: 160.4s
+15:53:15.1185 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:15.2085 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:15.2813 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:15.2816 12213 no match: 159.4s
+15:53:16.1270 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:16.2138 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:16.2890 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:16.2892 12213 no match: 158.4s
+15:53:17.1279 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:17.2115 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:17.2844 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:17.2847 12213 no match: 157.4s
+15:53:18.1303 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:18.2151 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:18.2957 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:18.2960 12213 no match: 156.4s
+15:53:19.1224 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:19.2148 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:19.2935 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:19.2999 12213 no match: 155.4s
+15:53:20.1285 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:20.2148 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:20.2873 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:20.2876 12213 no match: 154.4s
+15:53:21.1311 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:21.2203 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:21.3071 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:21.3074 12213 no match: 153.4s
+15:53:22.1257 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:22.2188 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:22.2916 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:22.2919 12213 no match: 152.4s
+15:53:23.1381 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:23.2216 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:23.3027 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:23.3030 12213 no match: 151.4s
+15:53:24.1370 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:24.2234 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:24.3031 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:24.3093 12213 no match: 150.4s
+15:53:25.1389 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:25.2285 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:25.3100 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:25.3102 12213 no match: 149.4s
+15:53:26.1334 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:26.2261 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:26.3008 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:26.3011 12213 no match: 148.4s
+15:53:27.1296 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:27.2129 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:27.2855 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:27.2858 12213 no match: 147.4s
+15:53:28.1325 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:28.2171 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:28.2996 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:28.2999 12213 no match: 146.4s
+15:53:29.1377 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:29.2254 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:29.3085 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:29.3148 12213 no match: 145.3s
+15:53:30.1314 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:30.2203 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:30.3035 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:30.3039 12213 no match: 144.3s
+15:53:31.1395 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:31.2240 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:31.3000 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:31.3003 12213 no match: 143.3s
+15:53:32.1420 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:32.2258 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:32.3021 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:32.3023 12213 no match: 142.3s
+15:53:33.1436 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:33.2279 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:33.3155 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:33.3157 12213 no match: 141.3s
+15:53:34.1357 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:34.2276 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:34.3004 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:34.3064 12213 no match: 140.3s
+15:53:35.1434 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:35.2275 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:35.2998 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:35.3001 12213 no match: 139.3s
+15:53:36.1378 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:36.2260 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:36.3076 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:36.3079 12213 no match: 138.3s
+15:53:37.1411 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:37.2258 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:37.3031 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:37.3034 12213 no match: 137.3s
+15:53:38.1411 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:38.2256 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:38.2994 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:38.2996 12213 no match: 136.3s
+15:53:39.1396 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:39.2280 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:39.3013 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:39.3083 12213 no match: 135.3s
+15:53:40.1407 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:40.2257 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:40.3069 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:40.3071 12213 no match: 134.3s
+15:53:41.1430 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:41.2358 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:41.3083 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:41.3086 12213 no match: 133.3s
+15:53:42.1424 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:42.2352 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:42.3091 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:42.3094 12213 no match: 132.3s
+15:53:43.1430 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:43.2287 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:43.3072 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:43.3075 12213 no match: 131.3s
+15:53:44.1508 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:44.2406 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:44.3184 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:44.3246 12213 no match: 130.3s
+15:53:45.1529 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:45.2451 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:45.3248 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:45.3252 12213 no match: 129.3s
+15:53:46.1564 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:46.2423 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:46.3198 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:46.3201 12213 no match: 128.3s
+15:53:47.1456 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:47.2393 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:47.3160 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:47.3163 12213 no match: 127.3s
+15:53:48.1484 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:48.2334 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:48.3161 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:48.3164 12213 no match: 126.3s
+15:53:49.1485 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:49.2339 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:49.3074 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:49.3135 12213 no match: 125.3s
+15:53:50.1503 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:50.2438 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:50.3195 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:50.3198 12213 no match: 124.3s
+15:53:51.1499 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:51.2373 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:51.3103 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:51.3106 12213 no match: 123.3s
+15:53:52.1510 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:52.2358 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:52.3103 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:52.3106 12213 no match: 122.3s
+15:53:53.1527 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:53.2381 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:53.3167 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:53.3170 12213 no match: 121.3s
+15:53:54.1614 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:54.2495 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:54.3261 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:54.3323 12213 no match: 120.3s
+15:53:55.1528 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:55.2417 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:55.3153 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:55.3155 12213 no match: 119.3s
+15:53:56.1554 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:56.2403 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:56.3173 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:56.3175 12213 no match: 118.3s
+15:53:57.1568 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:57.2512 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:57.3338 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:57.3340 12213 no match: 117.3s
+15:53:58.1560 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:58.2441 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:58.3213 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:58.3216 12213 no match: 116.3s
+15:53:59.1705 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:53:59.2529 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:53:59.3252 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:53:59.3313 12213 no match: 115.3s
+15:54:00.1621 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:00.2458 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:00.3187 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:00.3190 12213 no match: 114.3s
+15:54:01.1609 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:01.2537 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:01.3277 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:01.3280 12213 no match: 113.3s
+15:54:02.1656 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:02.2533 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:02.3297 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:02.3299 12213 no match: 112.3s
+15:54:03.1684 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:03.2527 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:03.3319 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:03.3322 12213 no match: 111.3s
+15:54:04.1659 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:04.2598 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:04.3419 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:04.3480 12213 no match: 110.3s
+15:54:05.1665 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:05.2509 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:05.3231 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:05.3234 12213 no match: 109.3s
+15:54:06.1657 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:06.2550 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:06.3271 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:06.3274 12213 no match: 108.3s
+15:54:07.1804 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:07.2675 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:07.3444 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:07.3446 12213 no match: 107.3s
+15:54:08.1697 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:08.2544 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:08.3266 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:08.3268 12213 no match: 106.3s
+15:54:09.1664 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:09.2526 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:09.3244 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:09.3307 12213 no match: 105.3s
+15:54:10.1717 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:10.2597 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:10.3318 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:10.3321 12213 no match: 104.3s
+15:54:11.1862 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:11.2806 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:11.3640 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:11.3643 12213 no match: 103.3s
+15:54:12.1838 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:12.2760 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:12.3557 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:12.3559 12213 no match: 102.3s
+15:54:13.1813 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:13.2668 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:13.3478 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:13.3481 12213 no match: 101.3s
+15:54:14.1866 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:14.2839 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:14.3649 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:14.3720 12213 no match: 100.3s
+15:54:15.1880 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:15.2823 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:15.3654 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:15.3656 12213 no match: 99.3s
+15:54:16.1820 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:16.2698 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:16.3445 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:16.3448 12213 no match: 98.3s
+15:54:17.1976 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:17.2893 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:17.3654 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:17.3657 12213 no match: 97.3s
+15:54:18.1807 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:18.2648 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:18.3375 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:18.3377 12213 no match: 96.3s
+15:54:19.1877 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:19.2841 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:19.3590 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:19.3653 12213 no match: 95.3s
+15:54:20.1921 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:20.2918 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:20.3681 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:20.3684 12213 no match: 94.3s
+15:54:21.1936 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:21.2794 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:21.3525 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:21.3528 12213 no match: 93.3s
+15:54:22.1944 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:22.2921 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:22.3645 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:22.3647 12213 no match: 92.3s
+15:54:23.1995 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:23.2839 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:23.3567 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:23.3570 12213 no match: 91.3s
+15:54:24.2061 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:24.2983 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:24.3699 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:24.3761 12213 no match: 90.3s
+15:54:25.2103 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:25.2965 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:25.3874 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:25.3876 12213 no match: 89.3s
+15:54:26.2056 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:26.2970 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:26.3757 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:26.3760 12213 no match: 88.3s
+15:54:27.2285 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:27.3278 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:27.4118 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:27.4121 12213 no match: 87.3s
+15:54:28.2381 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:28.3396 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:28.4186 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:28.4189 12213 no match: 86.2s
+15:54:29.2232 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:29.3194 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:29.4034 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:29.4103 12213 no match: 85.3s
+15:54:30.2167 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:30.3106 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:30.3959 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:30.3962 12213 no match: 84.3s
+15:54:31.2218 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:31.3161 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:31.3978 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:31.3983 12213 no match: 83.3s
+15:54:32.2169 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:32.3160 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:32.4031 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:32.4034 12213 no match: 82.3s
+15:54:33.2114 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:33.3084 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:33.3921 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:33.3924 12213 no match: 81.3s
+15:54:34.2029 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:34.3109 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:34.3983 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:34.4052 12213 no match: 80.3s
+15:54:35.1151 12213 no change: 79.3s
+15:54:36.1162 12213 no change: 78.3s
+15:54:36.2889 12213 QEMU: ehci warning: guest updated active QH
+15:54:37.1172 12213 no change: 77.3s
+15:54:38.2261 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:38.3169 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:38.4022 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:38.4025 12213 no match: 76.3s
+15:54:39.2058 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:39.3031 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:39.3799 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:39.3864 12213 no match: 75.3s
+15:54:40.1201 12213 no change: 74.3s
+15:54:41.1200 12213 no change: 73.3s
+15:54:42.2276 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:42.3207 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:42.4068 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:42.4070 12213 no match: 72.3s
+15:54:43.1221 12213 no change: 71.3s
+15:54:44.2147 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:44.3071 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:44.3870 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:44.3940 12213 no match: 70.3s
+15:54:45.1245 12213 no change: 69.3s
+15:54:46.1252 12213 no change: 68.3s
+15:54:47.1257 12213 no change: 67.3s
+15:54:48.2217 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:48.3181 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:48.4017 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:48.4020 12213 no match: 66.3s
+15:54:49.2310 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:49.3263 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:49.4082 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:49.4162 12213 no match: 65.3s
+15:54:50.2317 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:50.3269 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:50.4153 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:50.4156 12213 no match: 64.3s
+15:54:51.2397 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:51.3461 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:51.4295 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:51.4298 12213 no match: 63.3s
+15:54:52.2477 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:52.3520 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:52.4357 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:52.4360 12213 no match: 62.3s
+15:54:53.1309 12213 no change: 61.3s
+15:54:54.2828 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:54:54.3855 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:54:54.4689 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:54:54.4758 12213 no match: 60.3s
+15:54:55.1321 12213 no change: 59.3s
+15:54:56.1332 12213 no change: 58.3s
+15:54:57.1393 12213 no change: 57.3s
+15:54:58.1405 12213 no change: 56.3s
+15:54:59.1417 12213 no change: 55.3s
+15:55:00.2718 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:55:00.4154 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:55:00.5961 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:55:00.5966 12213 no match: 54.3s
+15:55:01.2458 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:55:01.3523 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:55:01.4396 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:55:01.4399 12213 no match: 53.3s
+15:55:02.1435 12213 no change: 52.3s
+15:55:03.1446 12213 no change: 51.3s
+15:55:04.2442 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:55:04.3415 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:55:04.4269 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:55:04.4340 12213 no match: 50.3s
+15:55:05.2333 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:55:05.3119 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:55:05.3932 12213 MATCH(desktop-fedora-26-live-kde:0.97)
+15:55:05.5839 12212 >>> testapi::_handle_found_needle: found desktop-fedora-26-live-kde, similarity 0.97 @ 0/0
+15:55:05.5843 12212 <<< testapi::x11_start_program(timeout=undef, options=undef)
+15:55:05.5844 12212 <<< testapi::send_key(key='alt-f2')
+15:55:05.7918 12212 <<< testapi::assert_screen(mustmatch='desktop_runner', timeout=30)
+15:55:06.1944 12213 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+15:55:06.2348 12213 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:55:06.2351 12213 no match: 29.6s
+15:55:07.1655 12213 MATCH(desktop-runner-fedora-26-live-kde:0.98)
+15:55:07.1803 12213 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:55:07.3274 12212 >>> testapi::_handle_found_needle: found desktop-runner-fedora-26-live-kde, similarity 0.98 @ 270/0
+15:55:07.3277 12212 <<< testapi::type_string(string='konsole', max_interval=20, wait_screen_changes=0)
+15:55:09.0711 12212 <<< testapi::wait_idle(timeout=5)
+15:55:11.0737 12213 wait_idle 0 d=12
+15:55:12.0753 12213 wait_idle 1 d=29
+15:55:13.0767 12213 wait_idle 0 d=12
+15:55:14.0780 12213 wait_idle 1 d=12
+15:55:14.0792 12212 >>> testapi::wait_idle: idle detected
+15:55:14.0798 12212 <<< testapi::send_key(key='ret')
+15:55:14.2882 12212 <<< testapi::wait_idle(timeout=19)
+15:55:16.2897 12213 wait_idle 0 d=188
+15:55:17.2905 12213 wait_idle 0 d=10
+15:55:18.2914 12213 wait_idle 1 d=3
+15:55:18.2922 12212 >>> testapi::wait_idle: idle detected
+15:55:18.2924 12212 <<< testapi::assert_screen(mustmatch='konsole', timeout=300)
+15:55:18.3798 12213 MATCH(konsole-fedora-26:1.00)
+15:55:18.4573 12213 MATCH(konsole-live-kde-20171001:0.00)
+15:55:18.6038 12212 >>> testapi::_handle_found_needle: found konsole-fedora-26, similarity 1.00 @ 0/0
+15:55:18.6041 12212 <<< testapi::script_sudo(name='bash', wait=0)
+15:55:18.6043 12212 <<< testapi::type_string(string='sudo bash
+', max_interval=250, wait_screen_changes=0)
+15:55:18.8614 12212 <<< testapi::check_screen(mustmatch='sudo-passwordprompt', timeout=3)
+15:55:18.8622 12213 NO matching needles for sudo-passwordprompt
+15:55:19.2952 12213 no match: 2.6s
+15:55:20.2964 12213 no change: 1.6s
+15:55:21.2977 12213 no match: 0.6s
+15:55:22.5946 12212 >>> testapi::_check_backend_response: match=sudo-passwordprompt timed out after 3
+15:55:22.6473 12212 <<< testapi::script_run(cmd='test $(id -u) -eq 0 && echo "imroot" > /dev/ttyS0', wait=0)
+15:55:22.6475 12212 <<< testapi::type_string(string='test $(id -u) -eq 0 && echo "imroot" > /dev/ttyS0', max_interval=250, wait_screen_changes=0)
+15:55:23.8801 12212 <<< testapi::send_key(key='ret')
+15:55:24.0887 12212 <<< testapi::wait_serial(timeout=5, regexp='imroot')
+15:55:25.2618 12212 >>> testapi::wait_serial: imroot: ok
+15:55:25.2621 12212 <<< testapi::script_run(cmd='cd /tmp', wait=undef)
+15:55:25.2622 12212 <<< testapi::type_string(string='cd /tmp', max_interval=250, wait_screen_changes=0)
+15:55:25.4414 12212 <<< testapi::type_string(string=' ; echo FW~3R-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:55:26.2327 12212 <<< testapi::wait_serial(regexp=qr/(?^:FW~3R-\d+-)/, timeout=30)
+15:55:28.3859 12212 >>> testapi::wait_serial: (?^:FW~3R-\d+-): ok
+15:55:28.3862 12212 <<< testapi::assert_script_run(cmd='chmod 666 /dev/ttyS0', wait=90, fail_message=undef)
+15:55:28.3864 12212 <<< testapi::type_string(string='chmod 666 /dev/ttyS0', max_interval=250, wait_screen_changes=0)
+15:55:28.8846 12212 <<< testapi::type_string(string=' ; echo A6OHh-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:55:29.6592 12212 <<< testapi::wait_serial(regexp=qr/(?^:A6OHh-\d+-)/, timeout=90)
+15:55:31.8179 12212 >>> testapi::wait_serial: (?^:A6OHh-\d+-): ok
+15:55:31.8182 12212 <<< testapi::type_string(string='exit
+', max_interval=250, wait_screen_changes=0)
+15:55:31.9434 12212 <<< testapi::assert_script_run(cmd='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/scripthG~aq.sh', wait=90, fail_message=undef)
+15:55:31.9436 12212 <<< testapi::type_string(string='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/scripthG~aq.sh', max_interval=250, wait_screen_changes=0)
+15:55:33.9482 12212 <<< testapi::type_string(string=' ; echo N2FN_-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:55:34.7690 12212 <<< testapi::wait_serial(regexp=qr/(?^:N2FN_-\d+-)/, timeout=90)
+15:55:36.9319 12212 >>> testapi::wait_serial: (?^:N2FN_-\d+-): ok
+15:55:36.9324 12212 <<< testapi::script_run(cmd='clear', wait=undef)
+15:55:36.9327 12212 <<< testapi::type_string(string='clear', max_interval=250, wait_screen_changes=0)
+15:55:37.0572 12212 <<< testapi::type_string(string=' ; echo JgRME-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:55:37.8435 12212 <<< testapi::wait_serial(timeout=30, regexp=qr/(?^:JgRME-\d+-)/)
+15:55:39.9820 12212 >>> testapi::wait_serial: (?^:JgRME-\d+-): ok
+15:55:39.9823 12212 <<< testapi::type_string(string='(/bin/bash -eox pipefail /tmp/scripthG~aq.sh ; echo SCRIPT_FINISHEDhG~aq-$?-)| tee /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:55:42.3498 12212 <<< testapi::wait_serial(timeout=90, record_output=1, regexp='SCRIPT_FINISHEDhG~aq-\\d+-')
+15:55:44.4888 12212 >>> testapi::wait_serial: SCRIPT_FINISHEDhG~aq-\d+-: ok
+15:55:44.4892 12212 <<< testapi::record_info(title='linux_id', output='fedora', result='ok')
+15:55:44.4896 12212 <<< testapi::assert_script_run(cmd='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/scriptFdQAU.sh', wait=90, fail_message=undef)
+15:55:44.4898 12212 <<< testapi::type_string(string='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/scriptFdQAU.sh', max_interval=250, wait_screen_changes=0)
+15:55:46.4949 12212 <<< testapi::type_string(string=' ; echo oWtpC-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:55:47.2770 12212 <<< testapi::wait_serial(regexp=qr/(?^:oWtpC-\d+-)/, timeout=90)
+15:55:49.4171 12212 >>> testapi::wait_serial: (?^:oWtpC-\d+-): ok
+15:55:49.4174 12212 <<< testapi::script_run(cmd='clear', wait=undef)
+15:55:49.4175 12212 <<< testapi::type_string(string='clear', max_interval=250, wait_screen_changes=0)
+15:55:49.5433 12212 <<< testapi::type_string(string=' ; echo JgRME-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:55:50.3177 12212 <<< testapi::wait_serial(timeout=30, regexp=qr/(?^:JgRME-\d+-)/)
+15:55:52.4594 12212 >>> testapi::wait_serial: (?^:JgRME-\d+-): ok
+15:55:52.4597 12212 <<< testapi::type_string(string='(/bin/bash -eox pipefail /tmp/scriptFdQAU.sh ; echo SCRIPT_FINISHEDFdQAU-$?-)| tee /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:55:54.8007 12212 <<< testapi::wait_serial(regexp='SCRIPT_FINISHEDFdQAU-\\d+-', record_output=1, timeout=90)
+15:55:56.9411 12212 >>> testapi::wait_serial: SCRIPT_FINISHEDFdQAU-\d+-: ok
+15:55:56.9414 12212 <<< testapi::record_info(title='linux_name', output='Fedora', result='ok')
+15:55:56.9419 12212 <<< testapi::assert_script_run(cmd='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/scriptIIqOL.sh', wait=90, fail_message=undef)
+15:55:56.9421 12212 <<< testapi::type_string(string='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/scriptIIqOL.sh', max_interval=250, wait_screen_changes=0)
+15:55:58.9395 12212 <<< testapi::type_string(string=' ; echo DMZbK-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:55:59.7119 12212 <<< testapi::wait_serial(timeout=90, regexp=qr/(?^:DMZbK-\d+-)/)
+15:56:01.8615 12212 >>> testapi::wait_serial: (?^:DMZbK-\d+-): ok
+15:56:01.8618 12212 <<< testapi::script_run(cmd='clear', wait=undef)
+15:56:01.8619 12212 <<< testapi::type_string(string='clear', max_interval=250, wait_screen_changes=0)
+15:56:01.9859 12212 <<< testapi::type_string(string=' ; echo JgRME-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:56:02.7563 12212 <<< testapi::wait_serial(regexp=qr/(?^:JgRME-\d+-)/, timeout=30)
+15:56:04.9018 12212 >>> testapi::wait_serial: (?^:JgRME-\d+-): ok
+15:56:04.9021 12212 <<< testapi::type_string(string='(/bin/bash -eox pipefail /tmp/scriptIIqOL.sh ; echo SCRIPT_FINISHEDIIqOL-$?-)| tee /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:56:07.2467 12212 <<< testapi::wait_serial(regexp='SCRIPT_FINISHEDIIqOL-\\d+-', timeout=90, record_output=1)
+15:56:09.3870 12212 >>> testapi::wait_serial: SCRIPT_FINISHEDIIqOL-\d+-: ok
+15:56:09.3873 12212 <<< testapi::record_info(title='linux_version', output='26', result='ok')
+15:56:09.3878 12212 <<< testapi::assert_script_run(cmd='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/script6xeoq.sh', wait=90, fail_message=undef)
+15:56:09.3879 12212 <<< testapi::type_string(string='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/script6xeoq.sh', max_interval=250, wait_screen_changes=0)
+15:56:11.3796 12212 <<< testapi::type_string(string=' ; echo ~vJTr-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:56:12.1544 12212 <<< testapi::wait_serial(regexp=qr/(?^:~vJTr-\d+-)/, timeout=90)
+15:56:14.3060 12212 >>> testapi::wait_serial: (?^:~vJTr-\d+-): ok
+15:56:14.3065 12212 <<< testapi::script_run(cmd='clear', wait=undef)
+15:56:14.3067 12212 <<< testapi::type_string(string='clear', max_interval=250, wait_screen_changes=0)
+15:56:14.4469 12212 <<< testapi::type_string(string=' ; echo JgRME-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:56:15.2123 12212 <<< testapi::wait_serial(timeout=30, regexp=qr/(?^:JgRME-\d+-)/)
+15:56:17.3662 12212 >>> testapi::wait_serial: (?^:JgRME-\d+-): ok
+15:56:17.3667 12212 <<< testapi::type_string(string='(/bin/bash -eox pipefail /tmp/script6xeoq.sh ; echo SCRIPT_FINISHED6xeoq-$?-)| tee /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:56:19.7077 12212 <<< testapi::wait_serial(timeout=90, record_output=1, regexp='SCRIPT_FINISHED6xeoq-\\d+-')
+15:56:21.8535 12212 >>> testapi::wait_serial: SCRIPT_FINISHED6xeoq-\d+-: ok
+15:56:21.8538 12212 <<< testapi::record_info(title='linux_prettyname', output='Fedora 26 (Twenty Six)', result='ok')
+15:56:21.8541 12212 <<< testapi::type_string(string='exit
+', max_interval=250, wait_screen_changes=0)
+15:56:21.9779 12212 <<< testapi::assert_screen(mustmatch='desktop', timeout=300)
+15:56:22.0811 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:56:22.1804 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:56:22.2729 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+15:56:22.2732 12213 no match: 300.0s
+15:56:23.0465 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+15:56:23.1117 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+15:56:23.1915 12213 MATCH(desktop-fedora-26-live-kde:1.00)
+15:56:23.3401 12212 >>> testapi::_handle_found_needle: found desktop-fedora-26-live-kde, similarity 1.00 @ 0/0
+15:56:23.3412 12212 ||| finished boot subsurface at 2017-10-20 15:56:23 (336 s)
+15:56:23.3415 12212 ||| starting install_subsurface tests/subsurface/install_subsurface.pm at 2017-10-20 15:56:23
+15:56:23.3423 12212 <<< testapi::x11_start_program(timeout=undef, options=undef)
+15:56:23.3425 12212 <<< testapi::send_key(key='alt-f2')
+15:56:23.5512 12212 <<< testapi::assert_screen(mustmatch='desktop_runner', timeout=30)
+15:56:24.0189 12213 MATCH(desktop-runner-fedora-26-live-kde:0.98)
+15:56:24.0528 12213 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+15:56:24.1893 12212 >>> testapi::_handle_found_needle: found desktop-runner-fedora-26-live-kde, similarity 0.98 @ 270/0
+15:56:24.1896 12212 <<< testapi::type_string(string='konsole', max_interval=20, wait_screen_changes=0)
+15:56:25.9423 12212 <<< testapi::wait_idle(timeout=5)
+15:56:27.9434 12213 wait_idle 0 d=11
+15:56:28.9439 12213 wait_idle 1 d=13
+15:56:28.9443 12212 >>> testapi::wait_idle: idle detected
+15:56:28.9446 12212 <<< testapi::send_key(key='ret')
+15:56:29.1549 12212 <<< testapi::wait_idle(timeout=19)
+15:56:31.1567 12213 wait_idle 0 d=138
+15:56:32.1580 12213 wait_idle 0 d=6
+15:56:33.1593 12213 wait_idle 1 d=2
+15:56:33.1603 12212 >>> testapi::wait_idle: idle detected
+15:56:33.1610 12212 <<< testapi::assert_screen(mustmatch='konsole', timeout=300)
+15:56:33.2541 12213 MATCH(konsole-fedora-26:1.00)
+15:56:33.3348 12213 MATCH(konsole-live-kde-20171001:0.00)
+15:56:33.4693 12212 >>> testapi::_handle_found_needle: found konsole-fedora-26, similarity 1.00 @ 0/0
+15:56:33.4696 12212 <<< testapi::script_sudo(name='bash', wait=0)
+15:56:33.4697 12212 <<< testapi::type_string(string='sudo bash
+', max_interval=250, wait_screen_changes=0)
+15:56:33.7203 12212 <<< testapi::check_screen(mustmatch='sudo-passwordprompt', timeout=3)
+15:56:33.7216 12213 NO matching needles for sudo-passwordprompt
+15:56:34.1637 12213 no match: 2.6s
+15:56:35.1650 12213 no change: 1.6s
+15:56:36.1659 12213 no match: 0.6s
+15:56:37.4422 12212 >>> testapi::_check_backend_response: match=sudo-passwordprompt timed out after 3
+15:56:37.4888 12212 <<< testapi::script_run(cmd='test $(id -u) -eq 0 && echo "imroot" > /dev/ttyS0', wait=0)
+15:56:37.4891 12212 <<< testapi::type_string(string='test $(id -u) -eq 0 && echo "imroot" > /dev/ttyS0', max_interval=250, wait_screen_changes=0)
+15:56:38.7051 12212 <<< testapi::send_key(key='ret')
+15:56:38.9196 12212 <<< testapi::wait_serial(timeout=5, regexp='imroot')
+15:56:40.0564 12212 >>> testapi::wait_serial: imroot: ok
+15:56:40.0566 12212 <<< testapi::script_run(cmd='cd /tmp', wait=undef)
+15:56:40.0567 12212 <<< testapi::type_string(string='cd /tmp', max_interval=250, wait_screen_changes=0)
+15:56:40.2324 12212 <<< testapi::type_string(string=' ; echo FW~3R-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:56:41.0027 12212 <<< testapi::wait_serial(timeout=30, regexp=qr/(?^:FW~3R-\d+-)/)
+15:56:43.1385 12212 >>> testapi::wait_serial: (?^:FW~3R-\d+-): ok
+15:56:43.1388 12212 <<< testapi::script_run(cmd='systemctl mask packagekit.service', wait=undef)
+15:56:43.1389 12212 <<< testapi::type_string(string='systemctl mask packagekit.service', max_interval=250, wait_screen_changes=0)
+15:56:43.9744 12212 <<< testapi::type_string(string=' ; echo qn0D_-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:56:44.7377 12212 <<< testapi::wait_serial(timeout=30, regexp=qr/(?^:qn0D_-\d+-)/)
+15:56:46.8994 12212 >>> testapi::wait_serial: (?^:qn0D_-\d+-): ok
+15:56:46.8996 12212 <<< testapi::script_run(cmd='systemctl stop packagekit.service', wait=undef)
+15:56:46.8998 12212 <<< testapi::type_string(string='systemctl stop packagekit.service', max_interval=250, wait_screen_changes=0)
+15:56:47.7156 12212 <<< testapi::type_string(string=' ; echo UuEDj-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:56:48.4927 12212 <<< testapi::wait_serial(regexp=qr/(?^:UuEDj-\d+-)/, timeout=30)
+15:56:50.6170 12212 >>> testapi::wait_serial: (?^:UuEDj-\d+-): ok
+15:56:50.6174 12212 <<< testapi::assert_script_run(cmd='rpm --import https://download.opensuse.org/repositories/home:/Subsurface-Divelog/Fedora_26/repodata/repomd.xml.key', wait=90, fail_message=undef)
+15:56:50.6175 12212 <<< testapi::type_string(string='rpm --import https://download.opensuse.org/repositories/home:/Subsurface-Divelog/Fedora_26/repodata/repomd.xml.key', max_interval=250, wait_screen_changes=0)
+15:56:53.4765 12212 <<< testapi::type_string(string=' ; echo 6WXGa-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:56:54.2472 12212 <<< testapi::wait_serial(timeout=90, regexp=qr/(?^:6WXGa-\d+-)/)
+15:56:56.3978 12212 >>> testapi::wait_serial: (?^:6WXGa-\d+-): ok
+15:56:56.3982 12212 <<< testapi::assert_script_run(cmd='dnf config-manager --add-repo "https://download.opensuse.org/repositories/home:/Subsurface-Divelog/Fedora_26/home:Subsurface-Divelog.repo"', wait=300, fail_message=undef)
+15:56:56.3983 12212 <<< testapi::type_string(string='dnf config-manager --add-repo "https://download.opensuse.org/repositories/home:/Subsurface-Divelog/Fedora_26/home:Subsurface-Divelog.repo"', max_interval=250, wait_screen_changes=0)
+15:56:59.8609 12212 <<< testapi::type_string(string=' ; echo qtO5b-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:57:00.6308 12212 <<< testapi::wait_serial(timeout=300, regexp=qr/(?^:qtO5b-\d+-)/)
+15:57:03.7843 12212 >>> testapi::wait_serial: (?^:qtO5b-\d+-): ok
+15:57:03.7846 12212 <<< testapi::assert_script_run(cmd='yum --assumeyes install subsurfacedaily', wait=1000, fail_message=undef)
+15:57:03.7847 12212 <<< testapi::type_string(string='yum --assumeyes install subsurfacedaily', max_interval=250, wait_screen_changes=0)
+15:57:04.7651 12212 <<< testapi::type_string(string=' ; echo zcrYa-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+15:57:05.5405 12212 <<< testapi::wait_serial(timeout=1000, regexp=qr/(?^:zcrYa-\d+-)/)
+16:01:18.0739 12212 >>> testapi::wait_serial: (?^:zcrYa-\d+-): ok
+16:01:18.0742 12212 <<< testapi::type_string(string='exit
+', max_interval=250, wait_screen_changes=0)
+16:01:18.1990 12212 <<< testapi::assert_script_run(cmd='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/scriptuXALj.sh', wait=90, fail_message=undef)
+16:01:18.1996 12212 <<< testapi::type_string(string='curl -f -v http://10.0.2.2:15223/NpODwSAcWt/current_script > /tmp/scriptuXALj.sh', max_interval=250, wait_screen_changes=0)
+16:01:20.2423 12212 <<< testapi::type_string(string=' ; echo 9AW7C-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+16:01:21.0110 12212 <<< testapi::wait_serial(regexp=qr/(?^:9AW7C-\d+-)/, timeout=90)
+16:01:23.1478 12212 >>> testapi::wait_serial: (?^:9AW7C-\d+-): ok
+16:01:23.1481 12212 <<< testapi::script_run(cmd='clear', wait=undef)
+16:01:23.1483 12212 <<< testapi::type_string(string='clear', max_interval=250, wait_screen_changes=0)
+16:01:23.2744 12212 <<< testapi::type_string(string=' ; echo JgRME-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+16:01:24.0594 12212 <<< testapi::wait_serial(timeout=30, regexp=qr/(?^:JgRME-\d+-)/)
+16:01:26.1881 12212 >>> testapi::wait_serial: (?^:JgRME-\d+-): ok
+16:01:26.1884 12212 <<< testapi::type_string(string='(/bin/bash -eox pipefail /tmp/scriptuXALj.sh ; echo SCRIPT_FINISHEDuXALj-$?-)| tee /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+16:01:28.5525 12212 <<< testapi::wait_serial(regexp='SCRIPT_FINISHEDuXALj-\\d+-', record_output=1, timeout=90)
+16:01:31.6863 12212 >>> testapi::wait_serial: SCRIPT_FINISHEDuXALj-\d+-: ok
+16:01:31.6866 12212 <<< testapi::record_info(title='subsurface_version', output='Subsurface v4.6.4-1031, built with libdivecomputer v0.6.0-devel-Subsurface-branch (0099aeeb7088c7ff3c4513f100b1cb5516f48233)', result='ok')
+16:01:31.6869 12212 <<< testapi::type_string(string='exit
+', max_interval=250, wait_screen_changes=0)
+16:01:31.8149 12212 <<< testapi::assert_screen(mustmatch='desktop', timeout=300)
+16:01:31.9021 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+16:01:31.9804 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+16:01:32.0598 12213 MATCH(desktop-fedora-26-live-kde:0.00)
+16:01:32.0601 12213 no match: 300.0s
+16:01:32.8862 12213 MATCH(desktop-opensuse-tw-live-kde-20171010:0.00)
+16:01:32.9449 12213 MATCH(desktop-opensuse-tw-live-kde-20171001:0.00)
+16:01:33.0034 12213 MATCH(desktop-fedora-26-live-kde:1.00)
+16:01:33.1454 12212 >>> testapi::_handle_found_needle: found desktop-fedora-26-live-kde, similarity 1.00 @ 0/0
+16:01:33.1463 12212 ||| finished install_subsurface subsurface at 2017-10-20 16:01:33 (310 s)
+16:01:33.1467 12212 ||| starting start_subsurface tests/subsurface/start_subsurface.pm at 2017-10-20 16:01:33
+16:01:33.1476 12212 <<< testapi::x11_start_program(timeout=undef, options=undef)
+16:01:33.1479 12212 <<< testapi::send_key(key='alt-f2')
+16:01:33.3546 12212 <<< testapi::assert_screen(mustmatch='desktop_runner', timeout=30)
+16:01:33.8712 12213 MATCH(desktop-runner-fedora-26-live-kde:0.98)
+16:01:33.9061 12213 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+16:01:34.0383 12212 >>> testapi::_handle_found_needle: found desktop-runner-fedora-26-live-kde, similarity 0.98 @ 270/0
+16:01:34.0387 12212 <<< testapi::type_string(string='konsole', max_interval=20, wait_screen_changes=0)
+16:01:35.7850 12212 <<< testapi::wait_idle(timeout=5)
+16:01:37.7871 12213 wait_idle 0 d=13
+16:01:38.7883 12213 wait_idle 1 d=12
+16:01:38.7892 12212 >>> testapi::wait_idle: idle detected
+16:01:38.7899 12212 <<< testapi::send_key(key='ret')
+16:01:38.9971 12212 <<< testapi::wait_idle(timeout=19)
+16:01:41.0114 12213 wait_idle 0 d=176
+16:01:42.0127 12213 wait_idle 0 d=7
+16:01:43.0143 12213 wait_idle 1 d=8
+16:01:43.0153 12212 >>> testapi::wait_idle: idle detected
+16:01:43.0160 12212 <<< testapi::assert_screen(mustmatch='konsole', timeout=300)
+16:01:43.1017 12213 MATCH(konsole-fedora-26:1.00)
+16:01:43.1815 12213 MATCH(konsole-live-kde-20171001:0.00)
+16:01:43.3161 12212 >>> testapi::_handle_found_needle: found konsole-fedora-26, similarity 1.00 @ 0/0
+16:01:43.3164 12212 <<< testapi::assert_script_run(cmd='mkdir -p ~/.subsurface/', wait=90, fail_message=undef)
+16:01:43.3165 12212 <<< testapi::type_string(string='mkdir -p ~/.subsurface/', max_interval=250, wait_screen_changes=0)
+16:01:43.8831 12212 <<< testapi::type_string(string=' ; echo 7hhux-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+16:01:44.6557 12212 <<< testapi::wait_serial(regexp=qr/(?^:7hhux-\d+-)/, timeout=90)
+16:01:46.7882 12212 >>> testapi::wait_serial: (?^:7hhux-\d+-): ok
+16:01:46.7885 12212 <<< testapi::assert_script_run(cmd='curl https://raw.githubusercontent.com/Subsurface-divelog/subsurface/master/dives/test13.xml -o ~/.subsurface/test13.xml', wait=90, fail_message=undef)
+16:01:46.7886 12212 <<< testapi::type_string(string='curl https://raw.githubusercontent.com/Subsurface-divelog/subsurface/master/dives/test13.xml -o ~/.subsurface/test13.xml', max_interval=250, wait_screen_changes=0)
+16:01:49.8057 12212 <<< testapi::type_string(string=' ; echo 7KaGh-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+16:01:50.5675 12212 <<< testapi::wait_serial(regexp=qr/(?^:7KaGh-\d+-)/, timeout=90)
+16:01:52.7137 12212 >>> testapi::wait_serial: (?^:7KaGh-\d+-): ok
+16:01:52.7140 12212 <<< testapi::assert_script_run(cmd='curl https://raw.githubusercontent.com/Subsurface-divelog/subsurface/master/dives/test16.xml -o ~/.subsurface/test16.xml', wait=90, fail_message=undef)
+16:01:52.7141 12212 <<< testapi::type_string(string='curl https://raw.githubusercontent.com/Subsurface-divelog/subsurface/master/dives/test16.xml -o ~/.subsurface/test16.xml', max_interval=250, wait_screen_changes=0)
+16:01:55.7118 12212 <<< testapi::type_string(string=' ; echo 87WJe-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+16:01:56.4918 12212 <<< testapi::wait_serial(timeout=90, regexp=qr/(?^:87WJe-\d+-)/)
+16:01:58.6244 12212 >>> testapi::wait_serial: (?^:87WJe-\d+-): ok
+16:01:58.6247 12212 <<< testapi::assert_script_run(cmd='curl https://raw.githubusercontent.com/Subsurface-divelog/subsurface/master/dives/test47.xml -o ~/.subsurface/test47.xml', wait=90, fail_message=undef)
+16:01:58.6249 12212 <<< testapi::type_string(string='curl https://raw.githubusercontent.com/Subsurface-divelog/subsurface/master/dives/test47.xml -o ~/.subsurface/test47.xml', max_interval=250, wait_screen_changes=0)
+16:02:01.6308 12212 <<< testapi::type_string(string=' ; echo Yg2mh-$?- > /dev/ttyS0
+', max_interval=250, wait_screen_changes=0)
+16:02:02.4203 12212 <<< testapi::wait_serial(timeout=90, regexp=qr/(?^:Yg2mh-\d+-)/)
+16:02:04.5458 12212 >>> testapi::wait_serial: (?^:Yg2mh-\d+-): ok
+16:02:04.5461 12212 <<< testapi::type_string(string='exit
+', max_interval=250, wait_screen_changes=0)
+16:02:04.6713 12212 <<< testapi::x11_start_program(timeout=undef, options=undef)
+16:02:04.6715 12212 <<< testapi::send_key(key='alt-f2')
+16:02:04.8777 12212 <<< testapi::assert_screen(mustmatch='desktop_runner', timeout=30)
+16:02:04.9174 12213 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+16:02:04.9507 12213 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+16:02:04.9509 12213 no match: 30.0s
+16:02:05.8954 12213 MATCH(desktop-runner-fedora-26-live-kde:1.00)
+16:02:05.9084 12213 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+16:02:06.0466 12212 >>> testapi::_handle_found_needle: found desktop-runner-fedora-26-live-kde, similarity 1.00 @ 270/0
+16:02:06.0469 12212 <<< testapi::type_string(string='subsurface', max_interval=20, wait_screen_changes=0)
+16:02:08.5658 12212 <<< testapi::wait_idle(timeout=5)
+16:02:10.5703 12213 wait_idle 0 d=12
+16:02:11.5717 12213 wait_idle 1 d=10
+16:02:11.5725 12212 >>> testapi::wait_idle: idle detected
+16:02:11.5731 12212 <<< testapi::send_key(key='ret')
+16:02:11.7797 12212 <<< testapi::wait_idle(timeout=19)
+16:02:13.7831 12213 wait_idle 0 d=222
+16:02:14.7849 12213 wait_idle 0 d=217
+16:02:15.7863 12213 wait_idle 0 d=242
+16:02:16.7901 12213 wait_idle 0 d=217
+16:02:17.7916 12213 wait_idle 0 d=207
+16:02:18.7930 12213 wait_idle 0 d=165
+16:02:19.7942 12213 wait_idle 0 d=110
+16:02:20.7956 12213 wait_idle 0 d=122
+16:02:21.7990 12213 wait_idle 0 d=159
+16:02:22.8002 12213 wait_idle 0 d=124
+16:02:23.8053 12213 wait_idle 0 d=89
+16:02:24.8184 12213 wait_idle 0 d=195
+16:02:25.8199 12213 wait_idle 0 d=132
+16:02:26.8213 12213 wait_idle 0 d=3
+16:02:27.8225 12213 wait_idle 1 d=3
+16:02:27.8233 12212 >>> testapi::wait_idle: idle detected
+16:02:27.8238 12212 <<< testapi::check_screen(mustmatch='subsurface-check-for-updates', timeout=30)
+16:02:27.9097 12213 MATCH(subsurface-check-for-updates-dive-test47-20171001:0.00)
+16:02:27.9809 12213 MATCH(subsurface-check-for-updates-nodive-20171001:0.00)
+16:02:28.0621 12213 MATCH(subsurface-check-for-updates-nodive-fedora-26:0.00)
+16:02:28.0624 12213 no match: 30.0s
+16:02:28.8267 12213 no change: 29.0s
+16:02:29.8274 12213 no change: 28.0s
+16:02:30.8290 12213 no change: 27.0s
+16:02:31.8957 12213 MATCH(subsurface-check-for-updates-dive-test47-20171001:0.00)
+16:02:31.9624 12213 MATCH(subsurface-check-for-updates-nodive-20171001:0.00)
+16:02:32.0224 12213 MATCH(subsurface-check-for-updates-nodive-fedora-26:0.00)
+16:02:32.0227 12213 no match: 26.0s
+16:02:32.8311 12213 no change: 25.0s
+16:02:33.8322 12213 no change: 24.0s
+16:02:34.8331 12213 no change: 23.0s
+16:02:35.8344 12213 no change: 22.0s
+16:02:36.8358 12213 no change: 21.0s
+16:02:37.8369 12213 no change: 20.0s
+16:02:38.8377 12213 no change: 19.0s
+16:02:39.8388 12213 no change: 18.0s
+16:02:40.8399 12213 no change: 17.0s
+16:02:41.8413 12213 no change: 16.0s
+16:02:42.8423 12213 no change: 15.0s
+16:02:43.8434 12213 no change: 14.0s
+16:02:44.8446 12213 no change: 13.0s
+16:02:45.8457 12213 no change: 12.0s
+16:02:46.8472 12213 no change: 11.0s
+16:02:47.8485 12213 no change: 10.0s
+16:02:48.8491 12213 no change: 9.0s
+16:02:49.8502 12213 no change: 8.0s
+16:02:50.8513 12213 no change: 7.0s
+16:02:51.8524 12213 no change: 6.0s
+16:02:52.8529 12213 no change: 5.0s
+16:02:53.8535 12213 no change: 4.0s
+16:02:54.8545 12213 no change: 3.0s
+16:02:55.8559 12213 no change: 2.0s
+16:02:56.8570 12213 no change: 1.0s
+16:02:57.9257 12213 MATCH(subsurface-check-for-updates-dive-test47-20171001:0.00)
+16:02:57.9852 12213 MATCH(subsurface-check-for-updates-nodive-20171001:0.00)
+16:02:58.0469 12213 MATCH(subsurface-check-for-updates-nodive-fedora-26:0.00)
+16:02:58.3057 12212 >>> testapi::_check_backend_response: match=subsurface-check-for-updates timed out after 30
+16:02:58.3433 12212 <<< testapi::mouse_set(x=700, y=370)
+16:02:58.3440 12213 mouse_move 700, 370
+16:02:58.3441 12213 send_pointer_event 0, 700, 370, 1
+16:02:58.3446 12212 <<< testapi::assert_screen(mustmatch='subsurface-auto-check-for-updates', timeout=30)
+16:02:58.9116 12213 MATCH(subsurface-auto-check-for-updates-20171001:0.00)
+16:02:58.9478 12213 MATCH(subsurface-auto-check-for-updates-fedora-26:1.00)
+16:02:59.0681 12212 >>> testapi::_handle_found_needle: found subsurface-auto-check-for-updates-fedora-26, similarity 1.00 @ 173/262
+16:02:59.0683 12212 <<< testapi::mouse_set(x=520, y=385)
+16:02:59.0689 12213 mouse_move 520, 385
+16:02:59.0690 12213 send_pointer_event 0, 520, 385, 1
+16:02:59.0696 12212 <<< testapi::mouse_click(button='left', cursor_down='0.15')
+16:02:59.0702 12213 pointer_event 1 520, 385
+16:02:59.0704 12213 send_pointer_event 1, 520, 385, 1
+16:02:59.2226 12213 pointer_event 0 520, 385
+16:02:59.2228 12213 send_pointer_event 0, 520, 385, 1
+16:02:59.2240 12212 <<< testapi::mouse_set(x=822, y=13)
+16:02:59.2251 12213 mouse_move 822, 13
+16:02:59.2253 12213 send_pointer_event 0, 822, 13, 1
+16:02:59.2259 12212 <<< testapi::mouse_click(button='left', cursor_down='0.15')
+16:02:59.2264 12213 pointer_event 1 822, 13
+16:02:59.2265 12213 send_pointer_event 1, 822, 13, 1
+16:02:59.3781 12213 pointer_event 0 822, 13
+16:02:59.3784 12213 send_pointer_event 0, 822, 13, 1
+16:02:59.3800 12212 <<< testapi::assert_screen(mustmatch='subsurface-main-screen-nodive', timeout=30)
+16:02:59.9300 12213 MATCH(subsurface-main-window-nodive2-fedora-26:0.00)
+16:03:00.0031 12213 MATCH(subsurface-main-window-nodive-fedora-26:0.00)
+16:03:00.0762 12213 MATCH(subsurface-main-window-nodive-opensuse:0.00)
+16:03:00.0765 12213 no match: 29.5s
+16:03:00.9274 12213 MATCH(subsurface-main-window-nodive2-fedora-26:1.00)
+16:03:00.9861 12213 MATCH(subsurface-main-window-nodive-fedora-26:0.85)
+16:03:01.0467 12213 MATCH(subsurface-main-window-nodive-opensuse:0.00)
+16:03:01.1597 12212 >>> testapi::_handle_found_needle: found subsurface-main-window-nodive2-fedora-26, similarity 1.00 @ 0/28
+16:03:16.1604 12212 <<< testapi::send_key(key='alt-f4')
+16:03:16.3679 12212 <<< testapi::x11_start_program(timeout=undef, options=undef)
+16:03:16.3684 12212 <<< testapi::send_key(key='alt-f2')
+16:03:16.5761 12212 <<< testapi::assert_screen(mustmatch='desktop_runner', timeout=30)
+16:03:16.6242 12213 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+16:03:16.6632 12213 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+16:03:16.6635 12213 no match: 30.0s
+16:03:17.5963 12213 MATCH(desktop-runner-fedora-26-live-kde:1.00)
+16:03:17.6094 12213 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+16:03:17.7642 12212 >>> testapi::_handle_found_needle: found desktop-runner-fedora-26-live-kde, similarity 1.00 @ 270/0
+16:03:17.7647 12212 <<< testapi::type_string(string='subsurface ~/.subsurface/test13.xml', max_interval=20, wait_screen_changes=0)
+16:03:26.4836 12212 <<< testapi::wait_idle(timeout=5)
+16:03:28.4862 12213 wait_idle 0 d=11
+16:03:29.4873 12213 wait_idle 1 d=10
+16:03:29.4883 12212 >>> testapi::wait_idle: idle detected
+16:03:29.4889 12212 <<< testapi::send_key(key='ret')
+16:03:29.6963 12212 <<< testapi::wait_idle(timeout=19)
+16:03:31.7004 12213 wait_idle 0 d=228
+16:03:32.7041 12213 wait_idle 0 d=228
+16:03:33.7052 12213 wait_idle 0 d=222
+16:03:34.7061 12213 wait_idle 0 d=189
+16:03:35.7075 12213 wait_idle 0 d=24
+16:03:36.7086 12213 wait_idle 0 d=3
+16:03:37.7100 12213 wait_idle 1 d=3
+16:03:37.7110 12212 >>> testapi::wait_idle: idle detected
+16:03:37.7117 12212 <<< testapi::check_screen(mustmatch='subsurface-warning-old-datafile', timeout=30)
+16:03:37.7638 12213 MATCH(subsurface-warning-old-datafile-fedora:1.00)
+16:03:37.8021 12213 MATCH(subsurface-warning-old-datafile-opensuse:0.00)
+16:03:37.9223 12212 >>> testapi::_handle_found_needle: found subsurface-warning-old-datafile-fedora, similarity 1.00 @ 165/238
+16:03:37.9225 12212 <<< testapi::send_key(key='ret')
+16:03:38.1301 12212 <<< testapi::assert_screen(mustmatch='subsurface-main-screen-dive-test13', timeout=30)
+16:03:38.8136 12213 MATCH(subsurface-main-window-dive-test13-opensuse:0.00)
+16:03:38.8876 12213 MATCH(subsurface-main-window-dive-test13-fedora:1.00)
+16:03:39.0250 12212 >>> testapi::_handle_found_needle: found subsurface-main-window-dive-test13-fedora, similarity 1.00 @ 0/28
+16:03:54.0258 12212 <<< testapi::send_key(key='alt-f4')
+16:03:54.2337 12212 <<< testapi::x11_start_program(timeout=undef, options=undef)
+16:03:54.2339 12212 <<< testapi::send_key(key='alt-f2')
+16:03:54.4415 12212 <<< testapi::assert_screen(mustmatch='desktop_runner', timeout=30)
+16:03:54.5032 12213 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+16:03:54.5442 12213 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+16:03:54.5444 12213 no match: 30.0s
+16:03:55.4648 12213 MATCH(desktop-runner-fedora-26-live-kde:1.00)
+16:03:55.4813 12213 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+16:03:55.6314 12212 >>> testapi::_handle_found_needle: found desktop-runner-fedora-26-live-kde, similarity 1.00 @ 270/0
+16:03:55.6317 12212 <<< testapi::type_string(string='subsurface ~/.subsurface/test16.xml', max_interval=20, wait_screen_changes=0)
+16:04:04.3537 12212 <<< testapi::wait_idle(timeout=5)
+16:04:06.3558 12213 wait_idle 0 d=11
+16:04:07.3568 12213 wait_idle 1 d=12
+16:04:07.3577 12212 >>> testapi::wait_idle: idle detected
+16:04:07.3579 12212 <<< testapi::send_key(key='ret')
+16:04:07.5779 12212 <<< testapi::wait_idle(timeout=19)
+16:04:09.5927 12213 wait_idle 0 d=231
+16:04:10.5963 12213 wait_idle 0 d=217
+16:04:11.6016 12213 wait_idle 0 d=213
+16:04:12.6021 12213 wait_idle 0 d=165
+16:04:13.6024 12213 wait_idle 0 d=20
+16:04:14.6028 12213 wait_idle 0 d=3
+16:04:15.6062 12213 wait_idle 1 d=3
+16:04:15.6071 12212 >>> testapi::wait_idle: idle detected
+16:04:15.6078 12212 <<< testapi::check_screen(mustmatch='subsurface-warning-old-datafile', timeout=30)
+16:04:15.6571 12213 MATCH(subsurface-warning-old-datafile-fedora:1.00)
+16:04:15.6964 12213 MATCH(subsurface-warning-old-datafile-opensuse:0.00)
+16:04:15.8200 12212 >>> testapi::_handle_found_needle: found subsurface-warning-old-datafile-fedora, similarity 1.00 @ 165/238
+16:04:15.8203 12212 <<< testapi::send_key(key='ret')
+16:04:16.0276 12212 <<< testapi::assert_screen(mustmatch='subsurface-main-screen-dive-test16', timeout=30)
+16:04:16.6965 12213 MATCH(subsurface-main-window-dive-test16-fedora:1.00)
+16:04:16.7735 12213 MATCH(subsurface-main-window-dive-test16-opensuse:0.00)
+16:04:16.9041 12212 >>> testapi::_handle_found_needle: found subsurface-main-window-dive-test16-fedora, similarity 1.00 @ 0/28
+16:04:31.9048 12212 <<< testapi::send_key(key='alt-f4')
+16:04:32.1129 12212 <<< testapi::x11_start_program(timeout=undef, options=undef)
+16:04:32.1134 12212 <<< testapi::send_key(key='alt-f2')
+16:04:32.3203 12212 <<< testapi::assert_screen(mustmatch='desktop_runner', timeout=30)
+16:04:32.3639 12213 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+16:04:32.4001 12213 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+16:04:32.4003 12213 no match: 30.0s
+16:04:33.3415 12213 MATCH(desktop-runner-fedora-26-live-kde:1.00)
+16:04:33.3554 12213 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+16:04:33.4998 12212 >>> testapi::_handle_found_needle: found desktop-runner-fedora-26-live-kde, similarity 1.00 @ 270/0
+16:04:33.5003 12212 <<< testapi::type_string(string='subsurface ~/.subsurface/test47.xml', max_interval=20, wait_screen_changes=0)
+16:04:42.2320 12212 <<< testapi::wait_idle(timeout=5)
+16:04:44.2338 12213 wait_idle 0 d=12
+16:04:45.2343 12213 wait_idle 1 d=11
+16:04:45.2354 12212 >>> testapi::wait_idle: idle detected
+16:04:45.2360 12212 <<< testapi::send_key(key='ret')
+16:04:45.4440 12212 <<< testapi::wait_idle(timeout=19)
+16:04:47.4474 12213 wait_idle 0 d=242
+16:04:48.4483 12213 wait_idle 0 d=136
+16:04:49.4514 12213 wait_idle 0 d=19
+16:04:50.4606 12213 wait_idle 0 d=165
+16:04:51.4618 12213 wait_idle 0 d=214
+16:04:52.4630 12213 wait_idle 0 d=74
+16:04:53.4643 12213 wait_idle 0 d=3
+16:04:54.4655 12213 wait_idle 1 d=2
+16:04:54.4665 12212 >>> testapi::wait_idle: idle detected
+16:04:54.4672 12212 <<< testapi::assert_screen(mustmatch='subsurface-main-screen-dive-test47', timeout=30)
+16:04:54.5584 12213 MATCH(subsurface-main-window-dive-test47-fedora-highlighted:0.71)
+16:04:54.6365 12213 MATCH(subsurface-main-window-dive-test47-20171010:0.18)
+16:04:54.7109 12213 MATCH(subsurface-main-window-dive-test47-fedora:1.00)
+16:04:54.7904 12213 MATCH(subsurface-main-window-dive-test47-at1.16-fedora:0.00)
+16:04:54.8760 12213 MATCH(subsurface-main-window-dive-test47-at5-20171010:0.00)
+16:04:54.9527 12213 MATCH(subsurface-main-window-dive-test47-20171001:0.00)
+16:04:55.0314 12213 MATCH(subsurface-main-window-dive-test47-at5-20171001:0.00)
+16:04:55.1494 12212 >>> testapi::_handle_found_needle: found subsurface-main-window-dive-test47-fedora, similarity 1.00 @ 0/28
+16:05:10.1501 12212 <<< testapi::send_key(key='alt-f4')
+16:05:10.3609 12212 <<< testapi::x11_start_program(timeout=undef, options=undef)
+16:05:10.3611 12212 <<< testapi::send_key(key='alt-f2')
+16:05:10.5672 12212 <<< testapi::assert_screen(mustmatch='desktop_runner', timeout=30)
+16:05:10.6182 12213 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+16:05:10.6606 12213 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+16:05:10.6608 12213 no match: 30.0s
+16:05:11.5938 12213 MATCH(desktop-runner-fedora-26-live-kde:1.00)
+16:05:11.6074 12213 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+16:05:11.7617 12212 >>> testapi::_handle_found_needle: found desktop-runner-fedora-26-live-kde, similarity 1.00 @ 270/0
+16:05:11.7620 12212 <<< testapi::type_string(string='subsurface --import ~/.subsurface/test47.xml', max_interval=20, wait_screen_changes=0)
+16:05:22.7673 12212 <<< testapi::wait_idle(timeout=5)
+16:05:24.7684 12213 wait_idle 0 d=11
+16:05:25.7688 12213 wait_idle 1 d=12
+16:05:25.7696 12212 >>> testapi::wait_idle: idle detected
+16:05:25.7702 12212 <<< testapi::send_key(key='ret')
+16:05:25.9786 12212 <<< testapi::wait_idle(timeout=19)
+16:05:27.9819 12213 wait_idle 0 d=242
+16:05:28.9830 12213 wait_idle 0 d=138
+16:05:29.9926 12213 wait_idle 0 d=17
+16:05:30.9978 12213 wait_idle 1 d=162
+16:05:31.9986 12213 wait_idle 0 d=201
+16:05:32.9995 12213 wait_idle 0 d=87
+16:05:34.0004 12213 wait_idle 0 d=2
+16:05:35.0013 12213 wait_idle 1 d=4
+16:05:35.0022 12212 >>> testapi::wait_idle: idle detected
+16:05:35.0029 12212 <<< testapi::assert_screen(mustmatch='subsurface-main-screen-dive-test47', timeout=30)
+16:05:35.0789 12213 MATCH(subsurface-main-window-dive-test47-fedora-highlighted:0.71)
+16:05:35.1607 12213 MATCH(subsurface-main-window-dive-test47-20171010:0.18)
+16:05:35.2381 12213 MATCH(subsurface-main-window-dive-test47-fedora:1.00)
+16:05:35.3202 12213 MATCH(subsurface-main-window-dive-test47-at1.16-fedora:0.00)
+16:05:35.3953 12213 MATCH(subsurface-main-window-dive-test47-at5-20171010:0.00)
+16:05:35.4771 12213 MATCH(subsurface-main-window-dive-test47-20171001:0.00)
+16:05:35.5627 12213 MATCH(subsurface-main-window-dive-test47-at5-20171001:0.00)
+16:05:35.6817 12212 >>> testapi::_handle_found_needle: found subsurface-main-window-dive-test47-fedora, similarity 1.00 @ 0/28
+16:05:50.6823 12212 <<< testapi::send_key(key='alt-f4')
+16:05:50.8896 12212 <<< testapi::assert_screen(mustmatch='subsurface-warning-save-changes', timeout=30)
+16:05:50.9363 12213 MATCH(subsurface-warning-save-changes-fedora:0.00)
+16:05:50.9756 12213 MATCH(subsurface-warning-save-changes-opensuse:0.00)
+16:05:50.9759 12213 no match: 30.0s
+16:05:51.9267 12213 MATCH(subsurface-warning-save-changes-fedora:1.00)
+16:05:51.9518 12213 MATCH(subsurface-warning-save-changes-opensuse:0.00)
+16:05:52.0761 12212 >>> testapi::_handle_found_needle: found subsurface-warning-save-changes-fedora, similarity 1.00 @ 247/251
+16:05:52.0764 12212 <<< testapi::mouse_set(x=581, y=377)
+16:05:52.0772 12213 mouse_move 581, 377
+16:05:52.0775 12213 send_pointer_event 0, 581, 377, 1
+16:05:52.0787 12212 <<< testapi::mouse_click(button='left', cursor_down='0.15')
+16:05:52.0796 12213 pointer_event 1 581, 377
+16:05:52.0798 12213 send_pointer_event 1, 581, 377, 1
+16:05:52.2314 12213 pointer_event 0 581, 377
+16:05:52.2316 12213 send_pointer_event 0, 581, 377, 1
+16:05:52.2326 12212 <<< testapi::x11_start_program(timeout=undef, options=undef)
+16:05:52.2329 12212 <<< testapi::send_key(key='alt-f2')
+16:05:52.4412 12212 <<< testapi::assert_screen(mustmatch='desktop_runner', timeout=30)
+16:05:52.9371 12213 MATCH(desktop-runner-fedora-26-live-kde:0.00)
+16:05:52.9721 12213 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+16:05:52.9723 12213 no match: 29.5s
+16:05:53.9075 12213 MATCH(desktop-runner-fedora-26-live-kde:0.98)
+16:05:53.9267 12213 MATCH(desktop-runner-fedora-26-live-kde-misplaced:0.00)
+16:05:54.0588 12212 >>> testapi::_handle_found_needle: found desktop-runner-fedora-26-live-kde, similarity 0.98 @ 270/0
+16:05:54.0591 12212 <<< testapi::type_string(string='subsurface ~/.subsurface/$USER.xml', max_interval=20, wait_screen_changes=0)
+16:06:02.5442 12212 <<< testapi::wait_idle(timeout=5)
+16:06:04.5471 12213 wait_idle 0 d=11
+16:06:05.5484 12213 wait_idle 1 d=12
+16:06:05.5495 12212 >>> testapi::wait_idle: idle detected
+16:06:05.5501 12212 <<< testapi::send_key(key='ret')
+16:06:05.7568 12212 <<< testapi::wait_idle(timeout=19)
+16:06:07.7582 12213 wait_idle 0 d=248
+16:06:08.7587 12213 wait_idle 0 d=111
+16:06:09.7590 12213 wait_idle 0 d=14
+16:06:10.7594 12213 wait_idle 1 d=184
+16:06:11.7599 12213 wait_idle 0 d=212
+16:06:12.7602 12213 wait_idle 0 d=63
+16:06:13.7606 12213 wait_idle 0 d=3
+16:06:14.7610 12213 wait_idle 1 d=3
+16:06:14.7618 12212 >>> testapi::wait_idle: idle detected
+16:06:14.7625 12212 <<< testapi::assert_screen(mustmatch='subsurface-main-screen-nodive', timeout=30)
+16:06:14.8466 12213 MATCH(subsurface-main-window-nodive2-fedora-26:1.00)
+16:06:14.9234 12213 MATCH(subsurface-main-window-nodive-fedora-26:0.88)
+16:06:15.0040 12213 MATCH(subsurface-main-window-nodive-opensuse:0.00)
+16:06:15.1115 12212 >>> testapi::_handle_found_needle: found subsurface-main-window-nodive2-fedora-26, similarity 1.00 @ 0/28
+16:06:30.1132 12212 ||| finished start_subsurface subsurface at 2017-10-20 16:06:30 (297 s)
+16:06:30.1149 12212 ||| starting subsurface_dive_planner tests/subsurface/subsurface_dive_planner.pm at 2017-10-20 16:06:30
+16:06:30.1165 12212 <<< testapi::mouse_set(x=520, y=385)
+16:06:30.1171 12213 mouse_move 520, 385
+16:06:30.1172 12213 send_pointer_event 0, 520, 385, 1
+16:06:30.1176 12212 <<< testapi::mouse_click(button='left', cursor_down='0.15')
+16:06:30.1179 12213 pointer_event 1 520, 385
+16:06:30.1179 12213 send_pointer_event 1, 520, 385, 1
+16:06:30.2695 12213 pointer_event 0 520, 385
+16:06:30.2696 12213 send_pointer_event 0, 520, 385, 1
+16:06:30.2701 12212 <<< testapi::send_key(key='ctrl-l')
+16:06:30.4755 12212 <<< testapi::mouse_set(x=515, y=405)
+16:06:30.4760 12213 mouse_move 515, 405
+16:06:30.4761 12213 send_pointer_event 0, 515, 405, 1
+16:06:30.4789 12212 <<< testapi::assert_screen(mustmatch='subsurface-dive-planner-start', timeout=30)
+16:06:30.5794 12213 MATCH(subsurface-dive-planner-start-opensuse:0.00)
+16:06:30.6713 12213 MATCH(subsurface-dive-planner-start-fedora-26:0.00)
+16:06:30.6716 12213 no match: 30.0s
+16:06:31.5531 12213 MATCH(subsurface-dive-planner-start-opensuse:0.00)
+16:06:31.6184 12213 MATCH(subsurface-dive-planner-start-fedora-26:0.99)
+16:06:31.7403 12212 >>> testapi::_handle_found_needle: found subsurface-dive-planner-start-fedora-26, similarity 0.99 @ 0/0
+16:06:46.7411 12212 <<< testapi::mouse_set(x=375, y=95)
+16:06:46.7424 12213 mouse_move 375, 95
+16:06:46.7427 12213 send_pointer_event 0, 375, 95, 1
+16:06:46.7439 12212 <<< testapi::mouse_click(button='left', cursor_down='0.15')
+16:06:46.7450 12213 pointer_event 1 375, 95
+16:06:46.7452 12213 send_pointer_event 1, 375, 95, 1
+16:06:46.8965 12213 pointer_event 0 375, 95
+16:06:46.8966 12213 send_pointer_event 0, 375, 95, 1
+16:07:01.8975 12212 <<< testapi::assert_screen(mustmatch='subsurface-main-screen', timeout=30)
+16:07:01.9721 12213 MATCH(subsurface-main-window-dive-test16-fedora:0.00)
+16:07:02.0541 12213 MATCH(subsurface-main-window-dive-test47-fedora-highlighted:0.00)
+16:07:02.1277 12213 MATCH(subsurface-main-window-dive-test16-opensuse:0.00)
+16:07:02.2081 12213 MATCH(subsurface-main-window-dive-test47-20171010:0.00)
+16:07:02.2840 12213 MATCH(subsurface-main-window-dive-test13-opensuse:0.00)
+16:07:02.3651 12213 MATCH(subsurface-main-window-dive-test47-fedora:0.00)
+16:07:02.4494 12213 MATCH(subsurface-main-window-nodive2-fedora-26:0.98)
+16:07:02.5226 12213 MATCH(subsurface-main-window-dive-test47-at1.16-fedora:0.00)
+16:07:02.6008 12213 MATCH(subsurface-main-window-dive-test47-at5-20171010:0.00)
+16:07:02.6828 12213 MATCH(subsurface-main-window-nodive-fedora-26:0.83)
+16:07:02.7616 12213 MATCH(subsurface-main-window-dive-test47-20171001:0.00)
+16:07:02.8645 12213 MATCH(subsurface-main-window-nodive-opensuse:0.00)
+16:07:02.9483 12213 MATCH(subsurface-main-window-dive-test13-fedora:0.00)
+16:07:03.0277 12213 MATCH(subsurface-main-window-dive-test47-at5-20171001:0.00)
+16:07:03.1564 12212 >>> testapi::_handle_found_needle: found subsurface-main-window-nodive2-fedora-26, similarity 0.98 @ 0/28
+16:07:03.1576 12212 ||| finished subsurface_dive_planner subsurface at 2017-10-20 16:07:03 (33 s)
+16:07:03.1584 12209 awaiting death of testpid 12212
+16:07:03.1613 12209 test process exited: 12212
+16:07:03.1614 12209 awaiting death of commands process
+16:07:03.1638 12209 commands process exited: 12211
+16:07:03.1639 12209 isotovideo done
+16:07:03.1662 12213 EVENT {"timestamp":{"seconds":1508514872,"microseconds":831877},"data":{"path":"/machine/peripheral-anon/device[0]/virtio-backend"},"event":"NIC_RX_FILTER_CHANGED"}
+16:07:03.1667 12213 EVENT {"event":"VNC_CONNECTED","data":{"server":{"host":"0.0.0.0","websocket":false,"family":"ipv4","auth":"none","service":"5990"},"client":{"family":"ipv4","service":"40206","websocket":false,"host":"127.0.0.1"}},"timestamp":{"seconds":1508514985,"microseconds":173210}}
+16:07:03.1670 12213 EVENT {"event":"VNC_INITIALIZED","timestamp":{"microseconds":174785,"seconds":1508514985},"data":{"client":{"service":"40206","family":"ipv4","websocket":false,"host":"127.0.0.1"},"server":{"auth":"none","service":"5990","family":"ipv4","host":"0.0.0.0","websocket":false}}}
+16:07:03.1673 12213 EVENT {"timestamp":{"seconds":1508514995,"microseconds":817339},"data":{"client":{"host":"127.0.0.1","websocket":false,"family":"ipv4","service":"40206"},"server":{"family":"ipv4","auth":"none","service":"5990","host":"0.0.0.0","websocket":false}},"event":"VNC_DISCONNECTED"}
+16:07:03.1676 12213 EVENT {"event":"VNC_CONNECTED","timestamp":{"seconds":1508515176,"microseconds":168459},"data":{"client":{"websocket":false,"host":"127.0.0.1","family":"ipv4","service":"40258"},"server":{"host":"0.0.0.0","websocket":false,"auth":"none","service":"5990","family":"ipv4"}}}
+16:07:03.1678 12213 EVENT {"data":{"server":{"host":"0.0.0.0","websocket":false,"family":"ipv4","auth":"none","service":"5990"},"client":{"host":"127.0.0.1","websocket":false,"family":"ipv4","service":"40258"}},"timestamp":{"microseconds":170016,"seconds":1508515176},"event":"VNC_INITIALIZED"}
+16:07:03.1681 12213 EVENT {"event":"VNC_DISCONNECTED","data":{"client":{"family":"ipv4","service":"40258","websocket":false,"host":"127.0.0.1"},"server":{"websocket":false,"host":"0.0.0.0","service":"5990","auth":"none","family":"ipv4"}},"timestamp":{"seconds":1508515183,"microseconds":345769}}
+16:07:03.1684 12213 EVENT {"event":"VNC_CONNECTED","data":{"client":{"family":"ipv4","service":"40312","host":"127.0.0.1","websocket":false},"server":{"service":"5990","auth":"none","family":"ipv4","websocket":false,"host":"0.0.0.0"}},"timestamp":{"microseconds":163737,"seconds":1508515347}}
+16:07:03.1686 12213 EVENT {"data":{"server":{"host":"0.0.0.0","websocket":false,"auth":"none","service":"5990","family":"ipv4"},"client":{"websocket":false,"host":"127.0.0.1","family":"ipv4","service":"40312"}},"timestamp":{"microseconds":164415,"seconds":1508515347},"event":"VNC_INITIALIZED"}
+16:07:03.1690 12209 BACKEND SHUTDOWN 
+16:07:03.1695 12213 waitpid for 12217 returned 0
+16:07:03.1697 12213 sending TERM to qemu pid: 12217
+16:07:04.1708 12213 waitpid for 12217 returned 12217
+16:07:04.2618 12213 QEMU: qemu-system-x86_64: terminating on signal 15 from pid 12213 (/usr/bin/isotovideo: backend)
+16:07:04.2624 12213 sending magic and exit
+16:07:04.2627 12209 received magic close

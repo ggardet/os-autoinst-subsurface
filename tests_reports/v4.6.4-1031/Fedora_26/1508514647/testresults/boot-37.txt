@@ -1,0 +1,5 @@
+# wait_serial expected: qr/(?^:DMZbK-\d+-)/
+
+# Result:
+DMZbK-0-
+

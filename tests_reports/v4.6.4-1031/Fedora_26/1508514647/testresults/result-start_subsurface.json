@@ -1,0 +1,942 @@
+{
+   "details" : [
+      {
+         "tags" : [
+            "desktop_runner"
+         ],
+         "needle" : "desktop-runner-fedora-26-live-kde",
+         "screenshot" : "start_subsurface-1.png",
+         "result" : "ok",
+         "properties" : [],
+         "json" : "needles/desktop-runner-fedora-26-live-kde.json",
+         "area" : [
+            {
+               "result" : "ok",
+               "h" : 40,
+               "w" : "481",
+               "similarity" : 97,
+               "y" : 0,
+               "x" : 270
+            }
+         ],
+         "needles" : [
+            {
+               "name" : "desktop-runner-fedora-26-live-kde-misplaced",
+               "json" : "needles/desktop-runner-fedora-26-live-kde-misplaced.json",
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "h" : 40,
+                     "y" : 0,
+                     "similarity" : 0,
+                     "w" : "477",
+                     "x" : 69
+                  }
+               ],
+               "error" : 1
+            }
+         ]
+      },
+      {
+         "needle" : "konsole-fedora-26",
+         "tags" : [
+            "konsole"
+         ],
+         "needles" : [
+            {
+               "error" : 1,
+               "json" : "needles/konsole-live-kde-20171001.json",
+               "area" : [
+                  {
+                     "h" : 730,
+                     "result" : "fail",
+                     "x" : 0,
+                     "w" : "1024",
+                     "similarity" : 0,
+                     "y" : 0
+                  }
+               ],
+               "name" : "konsole-live-kde-20171001"
+            }
+         ],
+         "area" : [
+            {
+               "h" : 730,
+               "result" : "ok",
+               "x" : 0,
+               "w" : "1024",
+               "similarity" : 99,
+               "y" : 0
+            }
+         ],
+         "json" : "needles/konsole-fedora-26.json",
+         "properties" : [],
+         "result" : "ok",
+         "screenshot" : "start_subsurface-2.png"
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "start_subsurface-4.png"
+      },
+      {
+         "title" : "wait_serial",
+         "result" : "ok",
+         "text" : "start_subsurface-5.txt"
+      },
+      {
+         "screenshot" : "start_subsurface-7.png",
+         "result" : "unk"
+      },
+      {
+         "text" : "start_subsurface-8.txt",
+         "result" : "ok",
+         "title" : "wait_serial"
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "start_subsurface-10.png"
+      },
+      {
+         "text" : "start_subsurface-11.txt",
+         "result" : "ok",
+         "title" : "wait_serial"
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "start_subsurface-13.png"
+      },
+      {
+         "result" : "ok",
+         "title" : "wait_serial",
+         "text" : "start_subsurface-14.txt"
+      },
+      {
+         "screenshot" : "start_subsurface-15.png",
+         "result" : "ok",
+         "json" : "needles/desktop-runner-fedora-26-live-kde.json",
+         "area" : [
+            {
+               "similarity" : 100,
+               "y" : 0,
+               "w" : "481",
+               "x" : 270,
+               "result" : "ok",
+               "h" : 40
+            }
+         ],
+         "properties" : [],
+         "needles" : [
+            {
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "h" : 40,
+                     "similarity" : 0,
+                     "y" : 0,
+                     "w" : "477",
+                     "x" : 69
+                  }
+               ],
+               "json" : "needles/desktop-runner-fedora-26-live-kde-misplaced.json",
+               "name" : "desktop-runner-fedora-26-live-kde-misplaced",
+               "error" : 1
+            }
+         ],
+         "tags" : [
+            "desktop_runner"
+         ],
+         "needle" : "desktop-runner-fedora-26-live-kde"
+      },
+      {
+         "needles" : [
+            {
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "h" : 730,
+                     "similarity" : 0,
+                     "y" : 0,
+                     "w" : "1024",
+                     "x" : 0
+                  }
+               ],
+               "json" : "needles/subsurface-check-for-updates-dive-test47-20171001.json",
+               "name" : "subsurface-check-for-updates-dive-test47-20171001",
+               "error" : 1
+            },
+            {
+               "json" : "needles/subsurface-check-for-updates-nodive-20171001.json",
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "h" : 730,
+                     "w" : "1024",
+                     "similarity" : 0,
+                     "y" : 0,
+                     "x" : 0
+                  }
+               ],
+               "name" : "subsurface-check-for-updates-nodive-20171001",
+               "error" : 1
+            },
+            {
+               "error" : 1,
+               "name" : "subsurface-check-for-updates-nodive-fedora-26",
+               "json" : "needles/subsurface-check-for-updates-nodive-fedora-26.json",
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "h" : 730,
+                     "y" : 0,
+                     "similarity" : 0,
+                     "w" : "1024",
+                     "x" : 0
+                  }
+               ]
+            }
+         ],
+         "tags" : [
+            "subsurface-check-for-updates"
+         ],
+         "result" : "unk",
+         "screenshot" : "start_subsurface-16.png"
+      },
+      {
+         "needle" : "subsurface-auto-check-for-updates-fedora-26",
+         "tags" : [
+            "subsurface-auto-check-for-updates"
+         ],
+         "needles" : [
+            {
+               "json" : "needles/subsurface-auto-check-for-updates-20171001.json",
+               "area" : [
+                  {
+                     "similarity" : 0,
+                     "y" : 263,
+                     "w" : "506",
+                     "x" : 173,
+                     "result" : "fail",
+                     "h" : 153
+                  }
+               ],
+               "name" : "subsurface-auto-check-for-updates-20171001",
+               "error" : 1
+            }
+         ],
+         "properties" : [],
+         "area" : [
+            {
+               "x" : 173,
+               "similarity" : 100,
+               "y" : 262,
+               "w" : "506",
+               "h" : 153,
+               "result" : "ok"
+            }
+         ],
+         "json" : "needles/subsurface-auto-check-for-updates-fedora-26.json",
+         "result" : "ok",
+         "screenshot" : "start_subsurface-17.png"
+      },
+      {
+         "tags" : [
+            "subsurface-main-screen-nodive"
+         ],
+         "needle" : "subsurface-main-window-nodive2-fedora-26",
+         "area" : [
+            {
+               "similarity" : 100,
+               "w" : "1024",
+               "y" : 28,
+               "x" : 0,
+               "result" : "ok",
+               "h" : 702
+            }
+         ],
+         "json" : "needles/subsurface-main-window-nodive2-fedora-26.json",
+         "properties" : [],
+         "needles" : [
+            {
+               "area" : [
+                  {
+                     "similarity" : 85,
+                     "w" : "1024",
+                     "y" : 28,
+                     "x" : 0,
+                     "result" : "fail",
+                     "h" : 702
+                  }
+               ],
+               "json" : "needles/subsurface-main-window-nodive-fedora-26.json",
+               "name" : "subsurface-main-window-nodive-fedora-26",
+               "error" : 0.0214094620985008
+            },
+            {
+               "error" : 1,
+               "name" : "subsurface-main-window-nodive-opensuse",
+               "area" : [
+                  {
+                     "h" : 702,
+                     "result" : "fail",
+                     "x" : 0,
+                     "similarity" : 0,
+                     "y" : 32,
+                     "w" : "1024"
+                  }
+               ],
+               "json" : "needles/subsurface-main-window-nodive-opensuse.json"
+            }
+         ],
+         "screenshot" : "start_subsurface-18.png",
+         "result" : "ok"
+      },
+      {
+         "needles" : [
+            {
+               "error" : 1,
+               "name" : "desktop-runner-fedora-26-live-kde-misplaced",
+               "area" : [
+                  {
+                     "x" : 69,
+                     "similarity" : 0,
+                     "y" : 0,
+                     "w" : "477",
+                     "h" : 40,
+                     "result" : "fail"
+                  }
+               ],
+               "json" : "needles/desktop-runner-fedora-26-live-kde-misplaced.json"
+            }
+         ],
+         "area" : [
+            {
+               "result" : "ok",
+               "h" : 40,
+               "y" : 0,
+               "similarity" : 100,
+               "w" : "481",
+               "x" : 270
+            }
+         ],
+         "json" : "needles/desktop-runner-fedora-26-live-kde.json",
+         "properties" : [],
+         "result" : "ok",
+         "screenshot" : "start_subsurface-19.png",
+         "tags" : [
+            "desktop_runner"
+         ],
+         "needle" : "desktop-runner-fedora-26-live-kde"
+      },
+      {
+         "screenshot" : "start_subsurface-20.png",
+         "result" : "ok",
+         "json" : "needles/subsurface-warning-old-datafile-fedora.json",
+         "area" : [
+            {
+               "h" : 217,
+               "result" : "ok",
+               "x" : 165,
+               "similarity" : 100,
+               "y" : 238,
+               "w" : "508"
+            }
+         ],
+         "properties" : [],
+         "needles" : [
+            {
+               "error" : 1,
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "h" : 202,
+                     "similarity" : 0,
+                     "y" : 238,
+                     "w" : "508",
+                     "x" : 165
+                  }
+               ],
+               "json" : "needles/subsurface-warning-old-datafile-opensuse.json",
+               "name" : "subsurface-warning-old-datafile-opensuse"
+            }
+         ],
+         "tags" : [
+            "subsurface-warning-old-datafile"
+         ],
+         "needle" : "subsurface-warning-old-datafile-fedora"
+      },
+      {
+         "needles" : [
+            {
+               "name" : "subsurface-main-window-dive-test13-opensuse",
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "h" : 702,
+                     "similarity" : 0,
+                     "w" : "1024",
+                     "y" : 31,
+                     "x" : 0
+                  }
+               ],
+               "json" : "needles/subsurface-main-window-dive-test13-opensuse.json",
+               "error" : 1
+            }
+         ],
+         "properties" : [],
+         "area" : [
+            {
+               "x" : 0,
+               "w" : "1024",
+               "similarity" : 100,
+               "y" : 28,
+               "h" : 702,
+               "result" : "ok"
+            }
+         ],
+         "json" : "needles/subsurface-main-window-dive-test13-fedora.json",
+         "result" : "ok",
+         "screenshot" : "start_subsurface-21.png",
+         "tags" : [
+            "subsurface-main-screen-dive-test13"
+         ],
+         "needle" : "subsurface-main-window-dive-test13-fedora"
+      },
+      {
+         "tags" : [
+            "desktop_runner"
+         ],
+         "needle" : "desktop-runner-fedora-26-live-kde",
+         "area" : [
+            {
+               "result" : "ok",
+               "h" : 40,
+               "similarity" : 100,
+               "w" : "481",
+               "y" : 0,
+               "x" : 270
+            }
+         ],
+         "json" : "needles/desktop-runner-fedora-26-live-kde.json",
+         "properties" : [],
+         "needles" : [
+            {
+               "error" : 1,
+               "name" : "desktop-runner-fedora-26-live-kde-misplaced",
+               "json" : "needles/desktop-runner-fedora-26-live-kde-misplaced.json",
+               "area" : [
+                  {
+                     "h" : 40,
+                     "result" : "fail",
+                     "x" : 69,
+                     "similarity" : 0,
+                     "y" : 0,
+                     "w" : "477"
+                  }
+               ]
+            }
+         ],
+         "screenshot" : "start_subsurface-22.png",
+         "result" : "ok"
+      },
+      {
+         "needle" : "subsurface-warning-old-datafile-fedora",
+         "tags" : [
+            "subsurface-warning-old-datafile"
+         ],
+         "json" : "needles/subsurface-warning-old-datafile-fedora.json",
+         "area" : [
+            {
+               "x" : 165,
+               "similarity" : 100,
+               "y" : 238,
+               "w" : "508",
+               "h" : 217,
+               "result" : "ok"
+            }
+         ],
+         "properties" : [],
+         "needles" : [
+            {
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "h" : 202,
+                     "similarity" : 0,
+                     "y" : 238,
+                     "w" : "508",
+                     "x" : 165
+                  }
+               ],
+               "json" : "needles/subsurface-warning-old-datafile-opensuse.json",
+               "name" : "subsurface-warning-old-datafile-opensuse",
+               "error" : 1
+            }
+         ],
+         "screenshot" : "start_subsurface-23.png",
+         "result" : "ok"
+      },
+      {
+         "needle" : "subsurface-main-window-dive-test16-fedora",
+         "tags" : [
+            "subsurface-main-screen-dive-test16"
+         ],
+         "needles" : [
+            {
+               "json" : "needles/subsurface-main-window-dive-test16-opensuse.json",
+               "area" : [
+                  {
+                     "similarity" : 0,
+                     "y" : 32,
+                     "w" : "1024",
+                     "x" : 0,
+                     "result" : "fail",
+                     "h" : 702
+                  }
+               ],
+               "name" : "subsurface-main-window-dive-test16-opensuse",
+               "error" : 1
+            }
+         ],
+         "properties" : [],
+         "json" : "needles/subsurface-main-window-dive-test16-fedora.json",
+         "area" : [
+            {
+               "h" : 702,
+               "result" : "ok",
+               "x" : 0,
+               "similarity" : 100,
+               "w" : "1024",
+               "y" : 28
+            }
+         ],
+         "result" : "ok",
+         "screenshot" : "start_subsurface-24.png"
+      },
+      {
+         "screenshot" : "start_subsurface-25.png",
+         "result" : "ok",
+         "json" : "needles/desktop-runner-fedora-26-live-kde.json",
+         "area" : [
+            {
+               "similarity" : 100,
+               "w" : "481",
+               "y" : 0,
+               "x" : 270,
+               "result" : "ok",
+               "h" : 40
+            }
+         ],
+         "properties" : [],
+         "needles" : [
+            {
+               "area" : [
+                  {
+                     "x" : 69,
+                     "similarity" : 0,
+                     "w" : "477",
+                     "y" : 0,
+                     "h" : 40,
+                     "result" : "fail"
+                  }
+               ],
+               "json" : "needles/desktop-runner-fedora-26-live-kde-misplaced.json",
+               "name" : "desktop-runner-fedora-26-live-kde-misplaced",
+               "error" : 1
+            }
+         ],
+         "tags" : [
+            "desktop_runner"
+         ],
+         "needle" : "desktop-runner-fedora-26-live-kde"
+      },
+      {
+         "json" : "needles/subsurface-main-window-dive-test47-fedora.json",
+         "area" : [
+            {
+               "x" : 0,
+               "similarity" : 100,
+               "w" : "1024",
+               "y" : 28,
+               "h" : 702,
+               "result" : "ok"
+            }
+         ],
+         "properties" : [],
+         "needles" : [
+            {
+               "error" : 0.0850951405166438,
+               "json" : "needles/subsurface-main-window-dive-test47-fedora-highlighted.json",
+               "area" : [
+                  {
+                     "h" : 702,
+                     "result" : "fail",
+                     "x" : 0,
+                     "y" : 28,
+                     "similarity" : 70,
+                     "w" : "1024"
+                  }
+               ],
+               "name" : "subsurface-main-window-dive-test47-fedora-highlighted"
+            },
+            {
+               "error" : 0.677535845599002,
+               "name" : "subsurface-main-window-dive-test47-20171010",
+               "json" : "needles/subsurface-main-window-dive-test47-20171010.json",
+               "area" : [
+                  {
+                     "similarity" : 17,
+                     "y" : 32,
+                     "w" : "1024",
+                     "x" : 0,
+                     "result" : "fail",
+                     "h" : 702
+                  }
+               ]
+            },
+            {
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "h" : 702,
+                     "similarity" : 0,
+                     "w" : "1024",
+                     "y" : 32,
+                     "x" : 0
+                  }
+               ],
+               "json" : "needles/subsurface-main-window-dive-test47-20171001.json",
+               "name" : "subsurface-main-window-dive-test47-20171001",
+               "error" : 1
+            },
+            {
+               "name" : "subsurface-main-window-dive-test47-at1.16-fedora",
+               "json" : "needles/subsurface-main-window-dive-test47-at1.16-fedora.json",
+               "area" : [
+                  {
+                     "x" : 0,
+                     "w" : "1024",
+                     "similarity" : 0,
+                     "y" : 28,
+                     "h" : 702,
+                     "result" : "fail"
+                  }
+               ],
+               "error" : 1
+            },
+            {
+               "error" : 1,
+               "area" : [
+                  {
+                     "similarity" : 0,
+                     "y" : 32,
+                     "w" : "1024",
+                     "x" : 0,
+                     "result" : "fail",
+                     "h" : 702
+                  }
+               ],
+               "json" : "needles/subsurface-main-window-dive-test47-at5-20171001.json",
+               "name" : "subsurface-main-window-dive-test47-at5-20171001"
+            },
+            {
+               "json" : "needles/subsurface-main-window-dive-test47-at5-20171010.json",
+               "area" : [
+                  {
+                     "w" : "1024",
+                     "similarity" : 0,
+                     "y" : 32,
+                     "x" : 0,
+                     "result" : "fail",
+                     "h" : 702
+                  }
+               ],
+               "name" : "subsurface-main-window-dive-test47-at5-20171010",
+               "error" : 1
+            }
+         ],
+         "screenshot" : "start_subsurface-26.png",
+         "result" : "ok",
+         "tags" : [
+            "subsurface-main-screen-dive-test47"
+         ],
+         "needle" : "subsurface-main-window-dive-test47-fedora"
+      },
+      {
+         "result" : "ok",
+         "screenshot" : "start_subsurface-27.png",
+         "needles" : [
+            {
+               "name" : "desktop-runner-fedora-26-live-kde-misplaced",
+               "json" : "needles/desktop-runner-fedora-26-live-kde-misplaced.json",
+               "area" : [
+                  {
+                     "h" : 40,
+                     "result" : "fail",
+                     "x" : 69,
+                     "similarity" : 0,
+                     "y" : 0,
+                     "w" : "477"
+                  }
+               ],
+               "error" : 1
+            }
+         ],
+         "json" : "needles/desktop-runner-fedora-26-live-kde.json",
+         "area" : [
+            {
+               "similarity" : 100,
+               "w" : "481",
+               "y" : 0,
+               "x" : 270,
+               "result" : "ok",
+               "h" : 40
+            }
+         ],
+         "properties" : [],
+         "tags" : [
+            "desktop_runner"
+         ],
+         "needle" : "desktop-runner-fedora-26-live-kde"
+      },
+      {
+         "tags" : [
+            "subsurface-main-screen-dive-test47"
+         ],
+         "needle" : "subsurface-main-window-dive-test47-fedora",
+         "needles" : [
+            {
+               "error" : 0.0850951405166438,
+               "name" : "subsurface-main-window-dive-test47-fedora-highlighted",
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "h" : 702,
+                     "similarity" : 70,
+                     "w" : "1024",
+                     "y" : 28,
+                     "x" : 0
+                  }
+               ],
+               "json" : "needles/subsurface-main-window-dive-test47-fedora-highlighted.json"
+            },
+            {
+               "error" : 0.677535845599002,
+               "name" : "subsurface-main-window-dive-test47-20171010",
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "h" : 702,
+                     "similarity" : 17,
+                     "y" : 32,
+                     "w" : "1024",
+                     "x" : 0
+                  }
+               ],
+               "json" : "needles/subsurface-main-window-dive-test47-20171010.json"
+            },
+            {
+               "error" : 1,
+               "json" : "needles/subsurface-main-window-dive-test47-20171001.json",
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "h" : 702,
+                     "similarity" : 0,
+                     "w" : "1024",
+                     "y" : 32,
+                     "x" : 0
+                  }
+               ],
+               "name" : "subsurface-main-window-dive-test47-20171001"
+            },
+            {
+               "error" : 1,
+               "name" : "subsurface-main-window-dive-test47-at1.16-fedora",
+               "json" : "needles/subsurface-main-window-dive-test47-at1.16-fedora.json",
+               "area" : [
+                  {
+                     "w" : "1024",
+                     "similarity" : 0,
+                     "y" : 28,
+                     "x" : 0,
+                     "result" : "fail",
+                     "h" : 702
+                  }
+               ]
+            },
+            {
+               "error" : 1,
+               "name" : "subsurface-main-window-dive-test47-at5-20171001",
+               "area" : [
+                  {
+                     "similarity" : 0,
+                     "w" : "1024",
+                     "y" : 32,
+                     "x" : 0,
+                     "result" : "fail",
+                     "h" : 702
+                  }
+               ],
+               "json" : "needles/subsurface-main-window-dive-test47-at5-20171001.json"
+            },
+            {
+               "name" : "subsurface-main-window-dive-test47-at5-20171010",
+               "area" : [
+                  {
+                     "h" : 702,
+                     "result" : "fail",
+                     "x" : 0,
+                     "similarity" : 0,
+                     "y" : 32,
+                     "w" : "1024"
+                  }
+               ],
+               "json" : "needles/subsurface-main-window-dive-test47-at5-20171010.json",
+               "error" : 1
+            }
+         ],
+         "properties" : [],
+         "json" : "needles/subsurface-main-window-dive-test47-fedora.json",
+         "area" : [
+            {
+               "x" : 0,
+               "similarity" : 100,
+               "y" : 28,
+               "w" : "1024",
+               "h" : 702,
+               "result" : "ok"
+            }
+         ],
+         "result" : "ok",
+         "screenshot" : "start_subsurface-28.png"
+      },
+      {
+         "tags" : [
+            "subsurface-warning-save-changes"
+         ],
+         "needle" : "subsurface-warning-save-changes-fedora",
+         "properties" : [],
+         "json" : "needles/subsurface-warning-save-changes-fedora.json",
+         "area" : [
+            {
+               "result" : "ok",
+               "h" : 157,
+               "y" : 251,
+               "similarity" : 100,
+               "w" : "508",
+               "x" : 247
+            }
+         ],
+         "needles" : [
+            {
+               "error" : 1,
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "h" : 154,
+                     "y" : 252,
+                     "similarity" : 0,
+                     "w" : "504",
+                     "x" : 249
+                  }
+               ],
+               "json" : "needles/subsurface-warning-save-changes-opensuse.json",
+               "name" : "subsurface-warning-save-changes-opensuse"
+            }
+         ],
+         "screenshot" : "start_subsurface-29.png",
+         "result" : "ok"
+      },
+      {
+         "needle" : "desktop-runner-fedora-26-live-kde",
+         "tags" : [
+            "desktop_runner"
+         ],
+         "needles" : [
+            {
+               "error" : 1,
+               "json" : "needles/desktop-runner-fedora-26-live-kde-misplaced.json",
+               "area" : [
+                  {
+                     "x" : 69,
+                     "w" : "477",
+                     "similarity" : 0,
+                     "y" : 0,
+                     "h" : 40,
+                     "result" : "fail"
+                  }
+               ],
+               "name" : "desktop-runner-fedora-26-live-kde-misplaced"
+            }
+         ],
+         "json" : "needles/desktop-runner-fedora-26-live-kde.json",
+         "area" : [
+            {
+               "h" : 40,
+               "result" : "ok",
+               "x" : 270,
+               "y" : 0,
+               "similarity" : 97,
+               "w" : "481"
+            }
+         ],
+         "properties" : [],
+         "result" : "ok",
+         "screenshot" : "start_subsurface-30.png"
+      },
+      {
+         "needles" : [
+            {
+               "area" : [
+                  {
+                     "w" : "1024",
+                     "similarity" : 87,
+                     "y" : 28,
+                     "x" : 0,
+                     "result" : "fail",
+                     "h" : 702
+                  }
+               ],
+               "json" : "needles/subsurface-main-window-nodive-fedora-26.json",
+               "name" : "subsurface-main-window-nodive-fedora-26",
+               "error" : 0.0153147119670747
+            },
+            {
+               "error" : 1,
+               "name" : "subsurface-main-window-nodive-opensuse",
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "h" : 702,
+                     "w" : "1024",
+                     "similarity" : 0,
+                     "y" : 32,
+                     "x" : 0
+                  }
+               ],
+               "json" : "needles/subsurface-main-window-nodive-opensuse.json"
+            }
+         ],
+         "properties" : [],
+         "area" : [
+            {
+               "result" : "ok",
+               "h" : 702,
+               "similarity" : 99,
+               "y" : 28,
+               "w" : "1024",
+               "x" : 0
+            }
+         ],
+         "json" : "needles/subsurface-main-window-nodive2-fedora-26.json",
+         "result" : "ok",
+         "screenshot" : "start_subsurface-31.png",
+         "needle" : "subsurface-main-window-nodive2-fedora-26",
+         "tags" : [
+            "subsurface-main-screen-nodive"
+         ]
+      }
+   ],
+   "dents" : 0,
+   "result" : "ok"
+}

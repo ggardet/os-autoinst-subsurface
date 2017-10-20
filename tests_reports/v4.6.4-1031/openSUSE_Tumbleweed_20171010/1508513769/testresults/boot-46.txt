@@ -1,0 +1,5 @@
+# wait_serial expected: qr/(?^:~vJTr-\d+-)/
+
+# Result:
+~vJTr-0-
+

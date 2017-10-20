@@ -1,0 +1,1 @@
+Subsurface v4.6.4-1031, built with libdivecomputer v0.6.0-devel-Subsurface-branch (0099aeeb7088c7ff3c4513f100b1cb5516f48233)

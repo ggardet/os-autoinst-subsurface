@@ -1,0 +1,383 @@
+{
+   "dents" : 0,
+   "result" : "ok",
+   "details" : [
+      {
+         "needles" : [
+            {
+               "area" : [
+                  {
+                     "x" : 0,
+                     "similarity" : 0,
+                     "w" : "1024",
+                     "y" : 0,
+                     "h" : 768,
+                     "result" : "fail"
+                  }
+               ],
+               "json" : "needles/bootloader-opensuse-tw-live-kde-20171001.json",
+               "name" : "bootloader-opensuse-tw-live-kde-20171001",
+               "error" : 1
+            }
+         ],
+         "properties" : [],
+         "area" : [
+            {
+               "x" : 0,
+               "similarity" : 100,
+               "y" : 0,
+               "w" : "640",
+               "h" : 370,
+               "result" : "ok"
+            }
+         ],
+         "json" : "needles/bootloader-fedora-26-live-kde.json",
+         "result" : "ok",
+         "screenshot" : "boot-1.png",
+         "tags" : [
+            "bootloader"
+         ],
+         "needle" : "bootloader-fedora-26-live-kde"
+      },
+      {
+         "needle" : "desktop-fedora-26-live-kde",
+         "tags" : [
+            "desktop"
+         ],
+         "needles" : [
+            {
+               "name" : "desktop-opensuse-tw-live-kde-20171001",
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "h" : 730,
+                     "similarity" : 0,
+                     "y" : 0,
+                     "w" : "1024",
+                     "x" : 0
+                  }
+               ],
+               "json" : "needles/desktop-opensuse-tw-live-kde-20171001.json",
+               "error" : 1
+            },
+            {
+               "name" : "desktop-opensuse-tw-live-kde-20171010",
+               "json" : "needles/desktop-opensuse-tw-live-kde-20171010.json",
+               "area" : [
+                  {
+                     "h" : 730,
+                     "result" : "fail",
+                     "x" : 0,
+                     "y" : 0,
+                     "similarity" : 0,
+                     "w" : "1024"
+                  }
+               ],
+               "error" : 1
+            }
+         ],
+         "properties" : [],
+         "json" : "needles/desktop-fedora-26-live-kde.json",
+         "area" : [
+            {
+               "x" : 0,
+               "w" : "1024",
+               "similarity" : 97,
+               "y" : 0,
+               "h" : 730,
+               "result" : "ok"
+            }
+         ],
+         "result" : "ok",
+         "screenshot" : "boot-2.png"
+      },
+      {
+         "needle" : "desktop-runner-fedora-26-live-kde",
+         "tags" : [
+            "desktop_runner"
+         ],
+         "result" : "ok",
+         "screenshot" : "boot-3.png",
+         "needles" : [
+            {
+               "name" : "desktop-runner-fedora-26-live-kde-misplaced",
+               "area" : [
+                  {
+                     "result" : "fail",
+                     "h" : 40,
+                     "similarity" : 0,
+                     "w" : "477",
+                     "y" : 0,
+                     "x" : 69
+                  }
+               ],
+               "json" : "needles/desktop-runner-fedora-26-live-kde-misplaced.json",
+               "error" : 1
+            }
+         ],
+         "properties" : [],
+         "area" : [
+            {
+               "h" : 40,
+               "result" : "ok",
+               "x" : 270,
+               "similarity" : 97,
+               "y" : 0,
+               "w" : "481"
+            }
+         ],
+         "json" : "needles/desktop-runner-fedora-26-live-kde.json"
+      },
+      {
+         "area" : [
+            {
+               "h" : 730,
+               "result" : "ok",
+               "x" : 0,
+               "similarity" : 99,
+               "w" : "1024",
+               "y" : 0
+            }
+         ],
+         "json" : "needles/konsole-fedora-26.json",
+         "properties" : [],
+         "needles" : [
+            {
+               "area" : [
+                  {
+                     "h" : 730,
+                     "result" : "fail",
+                     "x" : 0,
+                     "similarity" : 0,
+                     "w" : "1024",
+                     "y" : 0
+                  }
+               ],
+               "json" : "needles/konsole-live-kde-20171001.json",
+               "name" : "konsole-live-kde-20171001",
+               "error" : 1
+            }
+         ],
+         "screenshot" : "boot-4.png",
+         "result" : "ok",
+         "needle" : "konsole-fedora-26",
+         "tags" : [
+            "konsole"
+         ]
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "boot-5.png",
+         "tags" : [
+            "sudo-passwordprompt"
+         ]
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "boot-7.png"
+      },
+      {
+         "result" : "ok",
+         "title" : "wait_serial",
+         "text" : "boot-8.txt"
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "boot-10.png"
+      },
+      {
+         "title" : "wait_serial",
+         "result" : "ok",
+         "text" : "boot-11.txt"
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "boot-13.png"
+      },
+      {
+         "text" : "boot-14.txt",
+         "result" : "ok",
+         "title" : "wait_serial"
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "boot-16.png"
+      },
+      {
+         "text" : "boot-17.txt",
+         "title" : "wait_serial",
+         "result" : "ok"
+      },
+      {
+         "screenshot" : "boot-19.png",
+         "result" : "unk"
+      },
+      {
+         "result" : "ok",
+         "title" : "wait_serial",
+         "text" : "boot-20.txt"
+      },
+      {
+         "screenshot" : "boot-22.png",
+         "result" : "unk"
+      },
+      {
+         "text" : "boot-23.txt",
+         "title" : "wait_serial",
+         "result" : "ok"
+      },
+      {
+         "result" : "ok",
+         "title" : "linux_id",
+         "text" : "boot-24.txt"
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "boot-26.png"
+      },
+      {
+         "result" : "ok",
+         "title" : "wait_serial",
+         "text" : "boot-27.txt"
+      },
+      {
+         "screenshot" : "boot-29.png",
+         "result" : "unk"
+      },
+      {
+         "result" : "ok",
+         "title" : "wait_serial",
+         "text" : "boot-30.txt"
+      },
+      {
+         "screenshot" : "boot-32.png",
+         "result" : "unk"
+      },
+      {
+         "text" : "boot-33.txt",
+         "title" : "wait_serial",
+         "result" : "ok"
+      },
+      {
+         "title" : "linux_name",
+         "result" : "ok",
+         "text" : "boot-34.txt"
+      },
+      {
+         "screenshot" : "boot-36.png",
+         "result" : "unk"
+      },
+      {
+         "text" : "boot-37.txt",
+         "result" : "ok",
+         "title" : "wait_serial"
+      },
+      {
+         "screenshot" : "boot-39.png",
+         "result" : "unk"
+      },
+      {
+         "text" : "boot-40.txt",
+         "title" : "wait_serial",
+         "result" : "ok"
+      },
+      {
+         "screenshot" : "boot-42.png",
+         "result" : "unk"
+      },
+      {
+         "text" : "boot-43.txt",
+         "result" : "ok",
+         "title" : "wait_serial"
+      },
+      {
+         "text" : "boot-44.txt",
+         "title" : "linux_version",
+         "result" : "ok"
+      },
+      {
+         "screenshot" : "boot-46.png",
+         "result" : "unk"
+      },
+      {
+         "result" : "ok",
+         "title" : "wait_serial",
+         "text" : "boot-47.txt"
+      },
+      {
+         "screenshot" : "boot-49.png",
+         "result" : "unk"
+      },
+      {
+         "text" : "boot-50.txt",
+         "result" : "ok",
+         "title" : "wait_serial"
+      },
+      {
+         "result" : "unk",
+         "screenshot" : "boot-52.png"
+      },
+      {
+         "text" : "boot-53.txt",
+         "result" : "ok",
+         "title" : "wait_serial"
+      },
+      {
+         "title" : "linux_prettyname",
+         "result" : "ok",
+         "text" : "boot-54.txt"
+      },
+      {
+         "result" : "ok",
+         "screenshot" : "boot-55.png",
+         "needles" : [
+            {
+               "error" : 1,
+               "area" : [
+                  {
+                     "x" : 0,
+                     "y" : 0,
+                     "similarity" : 0,
+                     "w" : "1024",
+                     "h" : 730,
+                     "result" : "fail"
+                  }
+               ],
+               "json" : "needles/desktop-opensuse-tw-live-kde-20171001.json",
+               "name" : "desktop-opensuse-tw-live-kde-20171001"
+            },
+            {
+               "area" : [
+                  {
+                     "h" : 730,
+                     "result" : "fail",
+                     "x" : 0,
+                     "similarity" : 0,
+                     "y" : 0,
+                     "w" : "1024"
+                  }
+               ],
+               "json" : "needles/desktop-opensuse-tw-live-kde-20171010.json",
+               "name" : "desktop-opensuse-tw-live-kde-20171010",
+               "error" : 1
+            }
+         ],
+         "area" : [
+            {
+               "x" : 0,
+               "w" : "1024",
+               "similarity" : 100,
+               "y" : 0,
+               "h" : 730,
+               "result" : "ok"
+            }
+         ],
+         "json" : "needles/desktop-fedora-26-live-kde.json",
+         "properties" : [],
+         "needle" : "desktop-fedora-26-live-kde",
+         "tags" : [
+            "desktop"
+         ]
+      }
+   ]
+}

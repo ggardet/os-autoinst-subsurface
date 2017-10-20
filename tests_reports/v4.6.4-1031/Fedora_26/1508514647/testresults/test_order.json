@@ -1,0 +1,34 @@
+[
+   {
+      "script" : "tests/subsurface/boot.pm",
+      "name" : "boot",
+      "flags" : {
+         "fatal" : 1
+      },
+      "category" : "subsurface"
+   },
+   {
+      "script" : "tests/subsurface/install_subsurface.pm",
+      "name" : "install_subsurface",
+      "flags" : {
+         "fatal" : 1
+      },
+      "category" : "subsurface"
+   },
+   {
+      "script" : "tests/subsurface/start_subsurface.pm",
+      "flags" : {
+         "fatal" : 1
+      },
+      "name" : "start_subsurface",
+      "category" : "subsurface"
+   },
+   {
+      "script" : "tests/subsurface/subsurface_dive_planner.pm",
+      "name" : "subsurface_dive_planner",
+      "flags" : {
+         "fatal" : 1
+      },
+      "category" : "subsurface"
+   }
+]

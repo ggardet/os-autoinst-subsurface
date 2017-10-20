@@ -1,0 +1,6 @@
+# wait_serial expected: 'SCRIPT_FINISHED6xeoq-\\d+-'
+
+# Result:
+openSUSE Tumbleweed
+SCRIPT_FINISHED6xeoq-0-
+

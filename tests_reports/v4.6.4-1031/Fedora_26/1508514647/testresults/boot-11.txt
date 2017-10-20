@@ -1,0 +1,5 @@
+# wait_serial expected: qr/(?^:FW~3R-\d+-)/
+
+# Result:
+FW~3R-0-
+

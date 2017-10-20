@@ -1,0 +1,6 @@
+# wait_serial expected: 'SCRIPT_FINISHEDIIqOL-\\d+-'
+
+# Result:
+26
+SCRIPT_FINISHEDIIqOL-0-
+

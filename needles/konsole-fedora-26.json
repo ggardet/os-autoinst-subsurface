@@ -1,0 +1,16 @@
+{
+  "properties": [],
+  "area": [
+    {
+      "ypos": 0,
+      "xpos": 0,
+      "width": 1024,
+      "height": 730,
+      "match": 90,
+      "type": "match"
+    }
+  ],
+  "tags": [
+    "konsole"
+  ]
+}

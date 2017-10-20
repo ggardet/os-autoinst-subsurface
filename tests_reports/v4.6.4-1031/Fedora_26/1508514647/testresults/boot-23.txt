@@ -1,0 +1,6 @@
+# wait_serial expected: 'SCRIPT_FINISHEDhG~aq-\\d+-'
+
+# Result:
+fedora
+SCRIPT_FINISHEDhG~aq-0-
+

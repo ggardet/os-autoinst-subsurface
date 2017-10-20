@@ -1,0 +1,5 @@
+# wait_serial expected: qr/(?^:6WXGa-\d+-)/
+
+# Result:
+6WXGa-0-
+

@@ -1,0 +1,5 @@
+# wait_serial expected: qr/(?^:qn0D_-\d+-)/
+
+# Result:
+qn0D_-0-
+

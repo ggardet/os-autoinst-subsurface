@@ -1,0 +1,5 @@
+# wait_serial expected: qr/(?^:7hhux-\d+-)/
+
+# Result:
+7hhux-0-
+

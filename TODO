@@ -1,0 +1,6 @@
+
+Here is a TODO list to enhance the automated tests of Subsurface.
+
+- Add more tests to test Subsurface deeper (dive planner, map plugin, ...)
+- Add more operating systems
+- Enhance HTML reports

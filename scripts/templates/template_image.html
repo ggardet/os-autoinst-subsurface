@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id="{$image_name}" src="{$image_path}" alt="{$image_name}" width="1024" height="768" style="display: none">
+
+<canvas id="myCanvas" width="1024" height="768">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+window.onload = function() \{
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var img = document.getElementById("{$image_name}");
+    ctx.drawImage(img, 0, 0);
+    ctx.beginPath();
+    ctx.rect({$xpos}, {$ypos}, {$width}, {$height});
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = 'yellow';
+    ctx.stroke();
+\}
+</script>
+
+</body>
+</html>
