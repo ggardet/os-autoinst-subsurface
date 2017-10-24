@@ -1,0 +1,16 @@
+{
+  "area": [
+    {
+      "xpos": 0,
+      "ypos": 0,
+      "width": 1024,
+      "height": 730,
+      "type": "match",
+      "match": 90
+    }
+  ],
+  "tags": [
+    "subsurface-dive-planner-start"
+  ],
+  "properties": []
+}
