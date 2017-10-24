@@ -85,5 +85,15 @@ It will show information in the console, and also generate HTML reports.
 # Create / update needles (tests) 
 
 - Please have a look at: 
- - existing needles
- - openqa test api page : [http://open.qa/api/testapi/](http://open.qa/api/testapi/)
+  - existing needles
+  - openqa test api page : [http://open.qa/api/testapi/](http://open.qa/api/testapi/)
+
+- To speed-up development of new tests, you can add:
+  ```
+  "TEST_DEBUG" : 1,
+  ```
+  in your `vars.json` file. It will create a snapshot for the last succeeded test. That way, you can restart the test by skipping all test that run ok. If all tests ran ok until `subsurface-start_subsurface` failed, you can restart the test by adding:
+  ```
+  "SKIP_TO" : "subsurface-start_subsurface",
+  ```
+  in your `vars.json` file.
