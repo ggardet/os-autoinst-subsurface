@@ -28,27 +28,32 @@ sub run {
     script_run 'systemctl mask packagekit.service';
     script_run 'systemctl stop packagekit.service';
     
+    # Check if we should test subsurface 'stable' or 'daily' (default)
+    my $subsurface_package = 'subsurfacedaily';
+    if( testapi::get_var('SUBSURFACE_PACKAGE') eq "stable") {
+	    $subsurface_package = 'subsurface';
+    }
+    
     if( testapi::get_var('DISTRI') eq "opensuse") {
-	# TODO: check openSUSE version to select repo on the fly
+	# Convert pretty name to match the name used in repo URL
+	my $os_pretty_name = script_output('source /etc/os-release && echo $PRETTY_NAME');
+	$os_pretty_name =~ s/\ /_/g;
+	
 	# Import GPG key
-	assert_script_run 'rpm --import https://download.opensuse.org/repositories/home:/Subsurface-Divelog/openSUSE_Tumbleweed/repodata/repomd.xml.key';
+	assert_script_run 'rpm --import https://download.opensuse.org/repositories/home:/Subsurface-Divelog/' . $os_pretty_name . '/repodata/repomd.xml.key';
 	
 	# Install subsurface daily from OBS repo
-	assert_script_run 'zypper --non-interactive ar -f https://download.opensuse.org/repositories/home:/Subsurface-Divelog/openSUSE_Tumbleweed/home:Subsurface-Divelog.repo', 300;
-	assert_script_run 'zypper --non-interactive install subsurfacedaily', 600;
-# 	assert_script_run 'zypper --non-interactive install subsurface', 600;
-# 	FIXME: We should use ensure_installed() instead to be generic, but ATM it fails for an unknown reason
-#	ensure_installed 'subsurfacedaily';
+	assert_script_run 'zypper --non-interactive ar -f https://download.opensuse.org/repositories/home:/Subsurface-Divelog/' . $os_pretty_name . '/home:Subsurface-Divelog.repo', 300;
+	assert_script_run 'zypper --non-interactive install ' . $subsurface_package, 600;
     }
     elsif(testapi::get_var('DISTRI') eq "fedora") {
-	# TODO: check Fedora version to select repo on the fly
+	my $linux_version = script_output('source /etc/os-release && echo $VERSION_ID');
 	# Import GPG key
-	assert_script_run 'rpm --import https://download.opensuse.org/repositories/home:/Subsurface-Divelog/Fedora_26/repodata/repomd.xml.key';
+	assert_script_run 'rpm --import https://download.opensuse.org/repositories/home:/Subsurface-Divelog/Fedora_' . $linux_version  . '/repodata/repomd.xml.key';
 	
 	# Install subsurface daily from OBS repo
-	assert_script_run 'dnf config-manager --add-repo "https://download.opensuse.org/repositories/home:/Subsurface-Divelog/Fedora_26/home:Subsurface-Divelog.repo"', 300;
-	assert_script_run 'yum --assumeyes install subsurfacedaily', 1000; # Some Fedora mirrors are _very_ slow
-# 	assert_script_run 'yum --assumeyes install subsurface', 1000; # Some Fedora mirrors are _very_ slow
+	assert_script_run 'dnf config-manager --add-repo "https://download.opensuse.org/repositories/home:/Subsurface-Divelog/Fedora_' . $linux_version  . '/home:Subsurface-Divelog.repo"', 300;
+	assert_script_run 'yum --assumeyes install ' . $subsurface_package, 1000; # Some Fedora mirrors are _very_ slow
     }
 #     elsif(testapi::get_var('DISTRI') eq "appimage"){
 # 	# TODO: test AppImage: https://subsurface-divelog.org/downloads/Subsurface-4.6.4-x86_64.AppImage
