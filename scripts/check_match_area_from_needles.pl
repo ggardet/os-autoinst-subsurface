@@ -47,33 +47,17 @@ foreach my $file (@files) {
 	
 	my $areas = $data->{area};
 	my $nbAreas = scalar @$areas;
-
-	# TODO: handle multi area instead of 1st one only
-# 	my $xpos = $data->{"area"}[0]->{"xpos"} . "\n";
-# 	my $ypos = $data->{"area"}[0]->{"ypos"} . "\n";
-# 	my $width= $data->{"area"}[0]->{"width"} . "\n";
-# 	my $height = $data->{"area"}[0]->{"height"} . "\n";
 	
 	# Generate HTML file from template and JSON infos
 	system("mkdir -p ./needles_match_area/");
 	my $filename = "./needles_match_area/" . substr($image_name, 0, -3) . "html";
-# 	copy("$template_filename","$filename") or die "Copy failed: $!";
-# 	my $file = path($filename);
-# 	my $data2 = $file->slurp_utf8;
-# 	$data2 =~ s/_IMAGE_PATH_/$image_path/g;
-# 	$data2 =~ s/_IMAGE_/$image_name/g;
-# 	$data2 =~ s/_X_POS_/$xpos/g;
-# 	$data2 =~ s/_Y_POS_/$ypos/g;
-# 	$data2 =~ s/_X_SIZE_/$width/g;
-# 	$data2 =~ s/_Y_SIZE_/$height/g;
-# 	$file->spew_utf8( $data2 );
+
 	my $template = Text::Template->new(TYPE => "FILE", SOURCE => $template_filename);
 	my $output_file = path("$filename");
 	
 	my $ctxline = '';
 	
 	for (my $i = 0; $i < $nbAreas; $i++) {
-		# TODO: handle multi area instead of 1st one only
 		my $xpos = $data->{"area"}[$i]->{"xpos"};
 		my $ypos = $data->{"area"}[$i]->{"ypos"};
 		my $width= $data->{"area"}[$i]->{"width"};
