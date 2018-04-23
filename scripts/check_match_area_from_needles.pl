@@ -1,4 +1,6 @@
 #/usr/lib/perl
+# 2018.04.23: Update to handle multiple area
+
 use strict;
 use warnings;
 use JSON qw( );
@@ -41,13 +43,16 @@ foreach my $file (@files) {
 	
 	# Parse JSON to get match area infos
 	my $json = JSON->new;
-	my $data = $json->decode($json_text);	
+	my $data = $json->decode($json_text);
 	
+	my $areas = $data->{area};
+	my $nbAreas = scalar @$areas;
+
 	# TODO: handle multi area instead of 1st one only
-	my $xpos = $data->{"area"}[0]->{"xpos"} . "\n";
-	my $ypos = $data->{"area"}[0]->{"ypos"} . "\n";
-	my $width= $data->{"area"}[0]->{"width"} . "\n";
-	my $height = $data->{"area"}[0]->{"height"} . "\n";
+# 	my $xpos = $data->{"area"}[0]->{"xpos"} . "\n";
+# 	my $ypos = $data->{"area"}[0]->{"ypos"} . "\n";
+# 	my $width= $data->{"area"}[0]->{"width"} . "\n";
+# 	my $height = $data->{"area"}[0]->{"height"} . "\n";
 	
 	# Generate HTML file from template and JSON infos
 	system("mkdir -p ./needles_match_area/");
@@ -63,14 +68,22 @@ foreach my $file (@files) {
 # 	$data2 =~ s/_Y_SIZE_/$height/g;
 # 	$file->spew_utf8( $data2 );
 	my $template = Text::Template->new(TYPE => "FILE", SOURCE => $template_filename);
+	my $output_file = path("$filename");
+	
+	my $ctxline = '';
+	
+	for (my $i = 0; $i < $nbAreas; $i++) {
+		# TODO: handle multi area instead of 1st one only
+		my $xpos = $data->{"area"}[$i]->{"xpos"};
+		my $ypos = $data->{"area"}[$i]->{"ypos"};
+		my $width= $data->{"area"}[$i]->{"width"};
+		my $height = $data->{"area"}[$i]->{"height"};
+		$ctxline = $ctxline."\n    ctx.rect($xpos, $ypos, $width, $height); "
+	}
 	my $fragment = $template->fill_in(HASH => {
 		image_path => $image_path,
 		image_name => $image_name,
-		xpos => $xpos,
-		ypos => $ypos,
-		width => $width,
-		height => $height
+		ctxline => "$ctxline"
 	});
-	my $output_file = path("$filename");
 	$output_file->spew_utf8( $fragment );
 }
