@@ -1,4 +1,4 @@
-#/usr/lib/perl
+#!/usr/bin/perl
 use strict;
 use warnings;
 use lib qw(..);
@@ -234,6 +234,7 @@ foreach my $f ( @{$json_data} ) {
 		$HTML_output_file->append( $fragment );
 		## Prepare for next HTML part
 		$HTML_input_file = path("templates/template_results_details_screenshot.html.inc");
+		my $HTML_input_file_serial = path("templates/template_results_details_serial.html.inc");
 		
 		my $details = $result_data->{"details"};
 		my $nb_details = scalar @$details;
@@ -290,6 +291,18 @@ foreach my $f ( @{$json_data} ) {
 							case "linux_version" 	{ $linux_version = $tmp_val; }
 							else 			{ }
 						}
+					}
+					elsif($result_data->{"details"}[$i]->{"title"} eq "wait_serial"){
+						my $file_content = `cat $folder/$result_data->{"details"}[$i]->{"text"}`;
+						$file_content =~ s/\n/<br>\n/g;
+						# HTML
+						$template = Text::Template->new(TYPE => "FILE", SOURCE => "$HTML_input_file_serial");
+						$fragment = $template->fill_in(HASH => {
+							file => $result_data->{"details"}[$i]->{"text"},
+							content => "$file_content",
+							result => $result_data->{"details"}[$i]->{"result"}
+						});
+						$HTML_output_file->append( $fragment );
 					}
 					print "\t\t* Title: ".$result_data->{"details"}[$i]->{"title"}."\n";
 					print "\t\t  Text: ".$result_data->{"details"}[$i]->{"text"}."\n";

@@ -76,7 +76,9 @@
 		var img = document.getElementById("img_in_overlay");
 		ctx.drawImage(img, 0, 0);
 		ctx.beginPath();
-		ctx.rect(rect_xpos, rect_ypos, rect_xsize, rect_ysize);
+		if(img_title.endsWith("png")){
+			ctx.rect(rect_xpos, rect_ypos, rect_xsize, rect_ysize);
+		}
 		ctx.lineWidth = 2;
 		ctx.strokeStyle = rect_color;
 		ctx.stroke();
