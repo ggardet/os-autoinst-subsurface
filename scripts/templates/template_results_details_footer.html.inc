@@ -70,17 +70,17 @@
 		fieldNameElement = document.getElementById('img_subtitle');
 		fieldNameElement.innerHTML = needle;
 		
-		// Draw image and area used for match
 		var canvas = document.getElementById("myCanvas");
 		var ctx = canvas.getContext("2d");
 		var img = document.getElementById("img_in_overlay");
 		ctx.drawImage(img, 0, 0);
-		ctx.beginPath();
 		if(img_title.endsWith("png")){
+			// Draw image and area used for match
+			ctx.beginPath();
 			ctx.rect(rect_xpos, rect_ypos, rect_xsize, rect_ysize);
+			ctx.lineWidth = 2;
+			ctx.strokeStyle = rect_color;
 		}
-		ctx.lineWidth = 2;
-		ctx.strokeStyle = rect_color;
 		ctx.stroke();
 	}
 	// Click on tab
